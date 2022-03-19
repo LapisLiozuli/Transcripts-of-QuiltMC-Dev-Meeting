@@ -1,6 +1,6 @@
 **Gdude**: Hello and welcome to the QuiltMC Developer Meetings Podcast. The podcast that eh, isn’t really a podcast. If you’re new here, this is just a collection of recordings of each public Quilt Project Developer Meeting, lightly edited for comfort and uploaded as a podcast for ease of accessibility. Our meetings are held on Discord every two weeks, relayed from a Mumble server and recorded live. Hence the lower audio quality. For more information on what the Quilt Project is and what we do here, please head to https://quiltmc.org.
 
-**~~?~~**: Hey, it works.
+**Emmaffle**: Hey, it works.
 
 **CheaterCodes**: Finally. It only took a few minutes, but at least it gave everybody enough time to join. OK, well, welcome to our fortnightly Developer Meeting as Gdude likes to call it. Please a round of applause for **Gdude** in chat, who’s not here but still fixed our issues. Thank you.
 
@@ -50,7 +50,7 @@ Those are the things that are happening right now, it’s moving. Now to lead my
 
 Something else that just came up just yesterday was that **MartrixX** updated Enigma so that synthetic classes and methods and fields and stuff like that weren’t included in the percentages that Enigma reports for how much of the mappings you’ve completed. So we have better representation of how close we are to completing all the mappings, which is very nice. Other than that, I don’t think there’s really much else to say about where Quilt Mappings is right now.
 
-**~~D~~**: I’d like to add something. We have a lot more triage members now, but we are still looking for more. So if you want to be a Mappings Triage member, then go ahead to the #mappings-general channel.
+**Emmaffle**: I’d like to add something. We have a lot more triage members now, but we are still looking for more. So if you want to be a Mappings Triage member, then go ahead to the #mappings-general channel.
 
 **OroArmor**: If you want to be in Mappings Triage, feel free to ping me as many time as you want. I will see that and help you, hehe.
 
