@@ -154,7 +154,7 @@ So the answer to your question is, CHASM won’t do anything like that, but ther
 
 **CheaterCodes**: Anything else? I think I’ll close out this one in particular by saying that we’re waiting for full release as general libraries that might be added later.
 
-**Glitch**: Generally we love it to be bigger and cover new things that aren’t in Fabric API and also eventually make it so you can do almost everything Fabric API does. It’s not the goal right now, but eventually, we would like essentially to request modders to not use Fabric API in addition to QSL.
+**Glitch**: Generally we love it to be bigger and cover new things that aren’t in Fabric API and also eventually make it so you can do almost everything Fabric API does. It’s not a goal right now, but eventually, we would like to not essentially require modders to use Fabric API in addition to QSL.
 
 **CheaterCodes**: I hope **Southpaw**, that gives you enough fuel for the blog article, otherwise just feel free to ping us again. You know where we are, where you can find us. Alright, **OroArmor**, you still here?
 
