@@ -43,15 +43,6 @@ path_transcript_dir = r"C:\Users\Public\Documents\LapisLiozuli\Transcripts-of-Qu
 path_shorthand_dict = path.join(path_transcript_dir, 'shorthand_dict.txt')
 path_temp = path.join(path_transcript_dir, "temp.txt")
 
-# path_popular_dolph = path.join(path_transcript_dir, "popular_dolph.txt")
-# path_top5k = path.join(path_transcript_dir, "top5K_wordfreqnet.txt")
-# path_deriv = path.join(path_transcript_dir, "deriv_top5K.txt")
-# path_actderiv = path.join(path_transcript_dir, "actual_deriv_top5K.txt")
-# path_rootwords = path.join(path_transcript_dir, "rootwords_dict.txt")
-# path_longshand = path.join(path_transcript_dir, "long_shorthand_dict.txt")
-# path_post_lshand = path.join(path_transcript_dir, "post_lshand_dict.txt")
-# path_stl = path.join(path_transcript_dir, "stl_dict.txt")
-
 # # Setup of lemmatizer.
 # import nltk
 # nltk.download()
@@ -60,6 +51,7 @@ path_temp = path.join(path_transcript_dir, "temp.txt")
 # nltk.download('punkt')
 # # Installed WordNet in the end instead.
 # nltk.download('wordnet')
+
 
 # Use open-clause to avoid leaving files open.
 def read_text_into_collection(filename, dstrc_collection):
@@ -140,60 +132,67 @@ def convert_raw_transcript(shand_dict, idx=-1):
       with open(path_tlong, 'w') as f:
           f.writelines(longlines)
 
-# Import word list.
-# 25323 words.
-dolph_list = read_text_into_collection("popular_dolph", 'list')
+
+# Can kind of extract the lemmas from any word list.
+def create_lem_list(input_wordlist, filename_deriv):
+    wn_lem = WordNetLemmatizer()
+    punctuations = "?:!.,;"
+
+    # 3.3K words. Reduces words to basic word form (lemma) over different parts of speech.
+    lem_list = [wn_lem.lemmatize(word, pos="n") for word in input_wordlist]
+    lem_list = [wn_lem.lemmatize(word, pos="v") for word in lem_list]
+    lem_list = [wn_lem.lemmatize(word, pos="a") for word in lem_list]
+    lem_list = [wn_lem.lemmatize(word, pos="r") for word in lem_list]
+    lem_list = [wn_lem.lemmatize(word, pos="s") for word in lem_list]
+    # 4198 words. Remove dupes.
+    lem_list = list(set(lem_list))
+    lem_list.sort()
+    # 3278 words. Remove words of length <= 4.
+    big_list = [word for word in lem_list if len(word) > 4]
+
+    # Lemmatizer is unable to find root of larger nouns/adjectives, so use this brutal nested loop.
+    blist_copy = big_list.copy()
+    deriv_list = []
+    for word in big_list:
+          for blord in blist_copy:
+                if word != blord and word in blord:
+                      deriv_list.append(blord)
+    deriv_list = list(set(deriv_list))
+    deriv_list.sort()
+
+    # Export to check for compound words.
+    write_collection_into_text(filename_deriv, 'list', deriv_list)
+
+# Import word list. 25323 words.
+popular_dolph = read_text_into_collection("popular_dolph", 'list')
 # 5050 words.
-top_5k = read_text_into_collection("top5K_wordfreqnet", 'list')
-
-wn_lem = WordNetLemmatizer()
-punctuations = "?:!.,;"
-# Reduces words to basic word form (lemma). Cuts word count from 5K to 3.3K
-lem_list = [wn_lem.lemmatize(word, pos="n") for word in top_5k]
-lem_list = [wn_lem.lemmatize(word, pos="v") for word in lem_list]
-lem_list = [wn_lem.lemmatize(word, pos="a") for word in lem_list]
-lem_list = [wn_lem.lemmatize(word, pos="r") for word in lem_list]
-lem_list = [wn_lem.lemmatize(word, pos="s") for word in lem_list]
-# 4373 words.
-lem_list = list(set(lem_list))
-lem_list.sort()
-# Remove words of length <= 4. 3449 words.
-big_list = [word for word in lem_list if len(word) > 4]
-
-# Lemmatizer is unable to find root of larger nouns/adjectives, so use this brutal nested loop.
-blist_copy = big_list.copy()
-deriv_list = []
-for word in big_list:
-      for blord in blist_copy:
-            if word != blord and word in blord:
-                  deriv_list.append(blord)
-deriv_list = list(set(deriv_list))
-deriv_list.sort()
-
-# Export to check for compound words.
-write_collection_into_text("deriv_top5K", 'list', deriv_list)
-# 567 words after elimination.
-actderiv_list = read_text_into_collection("actual_deriv_top5K", 'list')
-# This will serve as the basic dict.
-rootword_list = [word for word in big_list if word not in actderiv_list]
-# Take the dict and export to edit it.
+top5K_wordfreqnet = read_text_into_collection("top5K_wordfreqnet", 'list')
+# create_lem_list(top5K_wordfreqnet, "deriv_top5K")
+# 567 words after elimination. All these words contain lemmas.
+post_deriv_list = read_text_into_collection("post_deriv", 'list')
+# The basic list that should contain only lemmas.
+rootword_list = [word for word in big_list if word not in post_deriv_list]
+# The dict of each word and its short-form.
 abrv_dict = {word: abbreviate_word(word) for word in rootword_list}
-# Export to check for compound words.
-write_collection_into_text("rootwords_dict", 'dict', abrv_dict)
-# shorthand_dict = compress_words_to_shorthand([])
+# Export to edit it e.g. check for compound words, use truncated form instead.
+write_collection_into_text("lem_dict", 'dict', abrv_dict)
 
 # Import dict of abbreviations.
-# Currently my own written dict, but will be outputted from another function.
-shand_dict = read_text_into_collection("shorthand_dict", 'dict')
-longshand_dict = read_text_into_collection("long_shorthand_dict", 'dict')
+# # Currently my own written dict based on the past two QDM transcripts.
+# shand_dict = read_text_into_collection("shorthand_dict", 'dict')
+# shorthand_dict = compress_words_to_shorthand([])
 
+# Collated from the lemmas and derivative words from top5K_wordfreqnet, past QDMs and post_deriv_list.
+# This was manually hardcoded. Ideally it can be automated in future, but hopefully these few thousand words should cover most use cases.
+collated_dict = read_text_into_collection("collated_dict", 'dict')
 # Sort keys alphabetically.
-longshand_dict = {key: value for key, value in sorted(longshand_dict.items())}
-# Flip keys (long-forms) and values (short-forms).
-longshand_dict = dict((v,k) for k,v in longshand_dict.items())
-# find_keys_w_duped_values(longshand_dict)
-write_collection_into_text("post_lshand_dict", 'dict', longshand_dict)
+collated_dict = {key: value for key, value in sorted(collated_dict.items())}
+# Flip keys (long-forms) and values (short-forms). This allows for a word to have multiple short-forms.
+collated_dict = dict((v,k) for k,v in collated_dict.items())
+# # Check if collated_dict has any words that share the same short-form.
+# find_keys_w_duped_values(collated_dict)
+write_collection_into_text("post_collated_dict", 'dict', collated_dict)
+# Short-to-Long dict that contains a few other custom short-forms. Mainly altv short-forms for existing words.
 stl_dict = read_text_into_collection("stl_dict", 'dict')
-
 
 # convert_raw_transcript(shand_dict, idx=-1)
