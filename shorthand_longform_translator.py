@@ -21,6 +21,7 @@ The transcriber must still develop the skill of transcription, esp while listeni
 JSONDecodeError: Expecting ',' delimiter
 Means that one of the dict entries is missing a double quote ("") or a comma (,)
 Can use binary search to iden the offending entry.
+OR use https://jsonlint.com/ to validate JSON.
 
 Start compressing longer words/short-forms. Only compress words of length >4.
 Add punctuation behind them like ' ',.: and also take note of spaces in front.
@@ -30,20 +31,12 @@ Higher-level: Handle the adjective ([) and noun (]) suffixes. Maybe find altv sy
                                      
 https://stackoverflow.com/questions/71229376/why-nltks-wordnet-lemmatizer-does-not-lemmatize-adverbs-and-adjectives
 TLDR: It's hard.
-
-https://jsonlint.com/ to validate JSON.
 """
 from os import path
 import json
 from nltk.stem import WordNetLemmatizer
 
-# This goes in reverse chrono order. Will have to revert back once all the existing archives are completed.
-dates = ["20220312", "20220226"]
-path_transcript_dir = r"C:\Users\Public\Documents\LapisLiozuli\Transcripts-of-QuiltMC-Dev-Meeting"
-path_shorthand_dict = path.join(path_transcript_dir, 'shorthand_dict.txt')
-path_temp = path.join(path_transcript_dir, "temp.txt")
-
-# # Setup of lemmatizer.
+# # Initial setup of the Lemmatizer and its dependencies.
 # import nltk
 # nltk.download()
 # # Tried to install Open English Wordnet.
@@ -51,6 +44,13 @@ path_temp = path.join(path_transcript_dir, "temp.txt")
 # nltk.download('punkt')
 # # Installed WordNet in the end instead.
 # nltk.download('wordnet')
+
+# This goes in reverse chrono order. Will have to revert back once all the existing archives are completed.
+dates = ["20220312", "20220226"]
+path_transcript_dir = r"C:\Users\Public\Documents\LapisLiozuli\Transcripts-of-QuiltMC-Dev-Meeting"
+path_shorthand_dict = path.join(path_transcript_dir, 'shorthand_dict.txt')
+# This path is for quick and dirty testing.
+path_temp = path.join(path_transcript_dir, "temp.txt")
 
 
 # Use open-clause to avoid leaving files open.
@@ -66,7 +66,7 @@ def read_text_into_collection(filename, dstrc_collection):
         output_collection = json.loads(read_str)
     return output_collection
 
-
+# Use open-clause to avoid leaving files open.
 def write_collection_into_text(filename, dstrc_collection, input_collection):
     output_path = path.join(path_transcript_dir, filename + ".txt")
     if dstrc_collection == 'list':
@@ -77,14 +77,8 @@ def write_collection_into_text(filename, dstrc_collection, input_collection):
             f.write(json.dumps(input_collection).replace(", ", ",\n"))
 
 
-# Check for keys with duplicate values.
-def find_keys_w_duped_values(dict01):
-      rev_multidict = {}
-      for key, value in dict01.items():
-           rev_multidict.setdefault(value, set()).add(key)
-      return [key for key, values in rev_multidict.items() if len(values) > 1]
-
-
+# Generates a short-form by removal of vowels.
+# An alternative would be to truncate the word and use the first four or so letters.
 def abbreviate_word(word):
       # Ignore the first letter.
       brev = word[1:]
@@ -94,6 +88,45 @@ def abbreviate_word(word):
             brev = brev.replace(vowel, '')
       brev = word[0] + brev
       return brev
+
+
+# Check for keys with duplicate values.
+def find_keys_w_duped_values(dict01):
+      rev_multidict = {}
+      for key, value in dict01.items():
+           rev_multidict.setdefault(value, set()).add(key)
+      return [key for key, values in rev_multidict.items() if len(values) > 1]
+
+
+# Can kind of extract the lemmas from any word list.
+def create_lem_list(input_wordlist, filename_deriv):
+    wn_lem = WordNetLemmatizer()
+    punctuations = "?:!.,;"
+
+    # 3.3K words. Reduces words to basic word form (lemma) over different parts of speech.
+    lem_list = [wn_lem.lemmatize(word, pos="n") for word in input_wordlist]
+    lem_list = [wn_lem.lemmatize(word, pos="v") for word in lem_list]
+    lem_list = [wn_lem.lemmatize(word, pos="a") for word in lem_list]
+    lem_list = [wn_lem.lemmatize(word, pos="r") for word in lem_list]
+    lem_list = [wn_lem.lemmatize(word, pos="s") for word in lem_list]
+    # 4198 words. Remove dupes.
+    lem_list = list(set(lem_list))
+    lem_list.sort()
+    # 3278 words. Remove words of length <= 4.
+    big_list = [word for word in lem_list if len(word) > 4]
+
+    # Lemmatizer is unable to find root of larger nouns/adjectives, so use this brutal nested loop.
+    blist_copy = big_list.copy()
+    deriv_list = []
+    for word in big_list:
+          for blord in blist_copy:
+                if word != blord and word in blord:
+                      deriv_list.append(blord)
+    deriv_list = list(set(deriv_list))
+    deriv_list.sort()
+
+    # Export to check for compound words.
+    write_collection_into_text(filename_deriv, 'list', deriv_list)
 
 
 # Takes a list of words. Eventually can feed the processed transcripts back into this function.
@@ -132,36 +165,6 @@ def convert_raw_transcript(shand_dict, idx=-1):
       with open(path_tlong, 'w') as f:
           f.writelines(longlines)
 
-
-# Can kind of extract the lemmas from any word list.
-def create_lem_list(input_wordlist, filename_deriv):
-    wn_lem = WordNetLemmatizer()
-    punctuations = "?:!.,;"
-
-    # 3.3K words. Reduces words to basic word form (lemma) over different parts of speech.
-    lem_list = [wn_lem.lemmatize(word, pos="n") for word in input_wordlist]
-    lem_list = [wn_lem.lemmatize(word, pos="v") for word in lem_list]
-    lem_list = [wn_lem.lemmatize(word, pos="a") for word in lem_list]
-    lem_list = [wn_lem.lemmatize(word, pos="r") for word in lem_list]
-    lem_list = [wn_lem.lemmatize(word, pos="s") for word in lem_list]
-    # 4198 words. Remove dupes.
-    lem_list = list(set(lem_list))
-    lem_list.sort()
-    # 3278 words. Remove words of length <= 4.
-    big_list = [word for word in lem_list if len(word) > 4]
-
-    # Lemmatizer is unable to find root of larger nouns/adjectives, so use this brutal nested loop.
-    blist_copy = big_list.copy()
-    deriv_list = []
-    for word in big_list:
-          for blord in blist_copy:
-                if word != blord and word in blord:
-                      deriv_list.append(blord)
-    deriv_list = list(set(deriv_list))
-    deriv_list.sort()
-
-    # Export to check for compound words.
-    write_collection_into_text(filename_deriv, 'list', deriv_list)
 
 # Import word list. 25323 words.
 popular_dolph = read_text_into_collection("popular_dolph", 'list')
