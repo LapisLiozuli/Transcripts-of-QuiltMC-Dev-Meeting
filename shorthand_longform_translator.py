@@ -30,6 +30,8 @@ Higher-level: Handle the adjective ([) and noun (]) suffixes. Maybe find altv sy
 """
 from os import path
 import json
+import nltk
+from nltk.stem import WordNetLemmatizer
 from nltk.stem.lancaster import LancasterStemmer
 
 # This goes in reverse chrono order. Will have to revert back once all the existing archives are completed.
@@ -90,11 +92,34 @@ def convert_raw_transcript(idx=-1):
 with open(path_popular_dolph, encoding='utf-8') as f:
     popular_dolph = f.read()
 dolph_list = popular_dolph.split("\n")
-# Remove words with same roots. Cuts word count by about half.
+# Remove words with same roots. Cuts word count by more than half.
 st = LancasterStemmer()
 stem_dolph_list = [st.stem(word) for word in dolph_list]
 stem_dolph_list = list(set(stem_dolph_list))
-# Remove words of length <= 4. Cuts word count by 3K.
+
+# nltk.download()
+# Installed Open English Wordnet.
+# from nltk.corpus import wordnet as wn
+# nltk.download('punkt')
+# nltk.download('wordnet')
+wordnet_lemmatizer = WordNetLemmatizer()
+sentence = "He was running and eating at same time. He has bad habit of swimming after playing long hours in the Sun."
+punctuations="?:!.,;"
+sentence_words = nltk.word_tokenize(sentence)
+for word in sentence_words:
+    if word in punctuations:
+        sentence_words.remove(word)
+
+sentence_words
+print("{0:20}{1:20}".format("Word","Lemma"))
+for word in sentence_words:
+    print ("{0:20}{1:20}".format(word,wordnet_lemmatizer.lemmatize(word)))
+
+for word in sentence_words:
+    print ("{0:20}{1:20}".format(word,wordnet_lemmatizer.lemmatize(word, pos="v")))
+
+
+# Remove words of length <= 4. Cuts word count by 3.5K.
 big_dolph_list = [word for word in stem_dolph_list if len(word) > 4]
 
 abrv_dolph_dict = {word: abbreviate_word(word) for word in stem_dolph_list}
