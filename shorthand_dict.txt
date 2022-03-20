@@ -9,7 +9,11 @@
 "Qloader": "Quilt Loader",
 "Qbeta": "Quilt Beta",
 "Qmappings": "Quilt Mappings",
+"Qlod": "Quilt Loader",
+"Qbeta": "Quilt Beta",
+"Qmap": "Quilt Mappings",
 "Floom": "Fabric Loom",
+"FAPI": "Fabric API",
 " eth ": " everything ",
 " ath ": " anything ",
 " ath.": " anything.",
@@ -266,5 +270,6 @@
 "defs": "definitions",
 "tslv": "themselves",
 "oslv": "ourselves",
-"nvr": "never"
+"nvr": "never",
+"acty": "activity"
 }
