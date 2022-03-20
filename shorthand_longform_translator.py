@@ -27,6 +27,9 @@ Add punctuation behind them like ' ',.: and also take note of spaces in front.
 Differentiate between dashes and hyphens (maybe rep as '=').
 Might possibly add short-forms for frequent word parts like '-tion'
 Higher-level: Handle the adjective ([) and noun (]) suffixes. Maybe find altv symbols to rep them?
+                                     
+https://stackoverflow.com/questions/71229376/why-nltks-wordnet-lemmatizer-does-not-lemmatize-adverbs-and-adjectives
+TLDR: It's hard.
 """
 from os import path
 import json
@@ -38,6 +41,8 @@ from nltk.stem.lancaster import LancasterStemmer
 dates = ["20220312", "20220226"]
 path_transcript_dir = r"C:\Users\Public\Documents\LapisLiozuli\Transcripts-of-QuiltMC-Dev-Meeting"
 path_popular_dolph = path.join(path_transcript_dir, "popular_dolph.txt")
+path_top5k = path.join(path_transcript_dir, "top5K_wordfreqnet.txt")
+path_deriv = path.join(path_transcript_dir, "deriv_top5K.txt")
 
 
 def abbreviate_word(word):
@@ -89,40 +94,59 @@ def convert_raw_transcript(idx=-1):
           f.writelines(longlines)
 
 # Import word list.
+# 25323 words.
 with open(path_popular_dolph, encoding='utf-8') as f:
     popular_dolph = f.read()
 dolph_list = popular_dolph.split("\n")
-# Remove words with same roots. Cuts word count by more than half.
-st = LancasterStemmer()
-stem_dolph_list = [st.stem(word) for word in dolph_list]
-stem_dolph_list = list(set(stem_dolph_list))
 
+# 5050 words.
+with open(path_top5k, encoding='utf-8') as f:
+    wordfreqinfo_top_5k = f.read()
+top_5k = wordfreqinfo_top_5k.split("\n")
+
+# # Setup of lemmatizer.
 # nltk.download()
-# Installed Open English Wordnet.
+# # Installed Open English Wordnet.
 # from nltk.corpus import wordnet as wn
 # nltk.download('punkt')
 # nltk.download('wordnet')
-wordnet_lemmatizer = WordNetLemmatizer()
-sentence = "He was running and eating at same time. He has bad habit of swimming after playing long hours in the Sun."
-punctuations="?:!.,;"
-sentence_words = nltk.word_tokenize(sentence)
-for word in sentence_words:
-    if word in punctuations:
-        sentence_words.remove(word)
 
-sentence_words
-print("{0:20}{1:20}".format("Word","Lemma"))
-for word in sentence_words:
-    print ("{0:20}{1:20}".format(word,wordnet_lemmatizer.lemmatize(word)))
+wn_lem = WordNetLemmatizer()
+punctuations = "?:!.,;"
 
-for word in sentence_words:
-    print ("{0:20}{1:20}".format(word,wordnet_lemmatizer.lemmatize(word, pos="v")))
+# print("{0:20}{1:20}".format("Word","Lemma"))
+# for word in sentence_words:
+#     print ("{0:20}{1:20}".format(word, wn_lem.lemmatize(word, pos="v")))
+
+# Reduces words to basic word form (lemma). Cuts word count from 5K to 3.3K
+lem_list = [wn_lem.lemmatize(word, pos="n") for word in top_5k]
+lem_list = [wn_lem.lemmatize(word, pos="v") for word in top_5k]
+lem_list = [wn_lem.lemmatize(word, pos="a") for word in top_5k]
+lem_list = [wn_lem.lemmatize(word, pos="r") for word in top_5k]
+lem_list = [wn_lem.lemmatize(word, pos="s") for word in top_5k]
+# 4373 words.
+lem_list = list(set(lem_list))
+lem_list.sort()
+
+# Remove words of length <= 4. 3449 words.
+big_list = [word for word in lem_list if len(word) > 4]
+
+# Lemmatizer is unable to find root of larger nouns/adjectives, so use this brutal nested loop.
+blist_copy = big_list.copy()
+deriv_list = []
+
+for word in big_list:
+      for blord in blist_copy:
+            if word != blord and word in blord:
+                  deriv_list.append(blord)
+deriv_list = list(set(deriv_list))
+deriv_list.sort()
+with open(path_deriv, 'w') as f:
+    # f.writelines(deriv_list)
+    f.writelines("\n".join(deriv_list))
 
 
-# Remove words of length <= 4. Cuts word count by 3.5K.
-big_dolph_list = [word for word in stem_dolph_list if len(word) > 4]
-
-abrv_dolph_dict = {word: abbreviate_word(word) for word in stem_dolph_list}
+abrv_dict = {word: abbreviate_word(word) for word in big_list}
 # shorthand_dict = compress_words_to_shorthand([])
 
 # Import dict of abbreviations.
