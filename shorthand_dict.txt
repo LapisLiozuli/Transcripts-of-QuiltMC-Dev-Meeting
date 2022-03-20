@@ -1,5 +1,4 @@
-{
-"mtg": "meeting",
+{"mtg": "meeting",
 "comy": "community",
 "Comy": "Community",
 "mng": "manage",
@@ -9,9 +8,6 @@
 "Qloader": "Quilt Loader",
 "Qbeta": "Quilt Beta",
 "Qmappings": "Quilt Mappings",
-"Qlod": "Quilt Loader",
-"Qbeta": "Quilt Beta",
-"Qmap": "Quilt Mappings",
 "Floom": "Fabric Loom",
 "FAPI": "Fabric API",
 " eth ": " everything ",
@@ -266,10 +262,9 @@
 "obv[": "obviously",
 "dedi ": "dedicate ",
 "def ": "define ",
-"def]": "definition"
+"def]": "definition",
 "defs": "definitions",
 "tslv": "themselves",
 "oslv": "ourselves",
 "nvr": "never",
-"acty": "activity"
-}
+"acty": "activity"}

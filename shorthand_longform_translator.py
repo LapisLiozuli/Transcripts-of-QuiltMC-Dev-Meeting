@@ -30,19 +30,67 @@ Higher-level: Handle the adjective ([) and noun (]) suffixes. Maybe find altv sy
                                      
 https://stackoverflow.com/questions/71229376/why-nltks-wordnet-lemmatizer-does-not-lemmatize-adverbs-and-adjectives
 TLDR: It's hard.
+
+https://jsonlint.com/ to validate JSON.
 """
 from os import path
 import json
-import nltk
 from nltk.stem import WordNetLemmatizer
-from nltk.stem.lancaster import LancasterStemmer
 
 # This goes in reverse chrono order. Will have to revert back once all the existing archives are completed.
 dates = ["20220312", "20220226"]
 path_transcript_dir = r"C:\Users\Public\Documents\LapisLiozuli\Transcripts-of-QuiltMC-Dev-Meeting"
-path_popular_dolph = path.join(path_transcript_dir, "popular_dolph.txt")
-path_top5k = path.join(path_transcript_dir, "top5K_wordfreqnet.txt")
-path_deriv = path.join(path_transcript_dir, "deriv_top5K.txt")
+path_shorthand_dict = path.join(path_transcript_dir, 'shorthand_dict.txt')
+path_temp = path.join(path_transcript_dir, "temp.txt")
+
+# path_popular_dolph = path.join(path_transcript_dir, "popular_dolph.txt")
+# path_top5k = path.join(path_transcript_dir, "top5K_wordfreqnet.txt")
+# path_deriv = path.join(path_transcript_dir, "deriv_top5K.txt")
+# path_actderiv = path.join(path_transcript_dir, "actual_deriv_top5K.txt")
+# path_rootwords = path.join(path_transcript_dir, "rootwords_dict.txt")
+# path_longshand = path.join(path_transcript_dir, "long_shorthand_dict.txt")
+# path_post_lshand = path.join(path_transcript_dir, "post_lshand_dict.txt")
+# path_stl = path.join(path_transcript_dir, "stl_dict.txt")
+
+# # Setup of lemmatizer.
+# import nltk
+# nltk.download()
+# # Tried to install Open English Wordnet.
+# from nltk.corpus import wordnet as wn
+# nltk.download('punkt')
+# # Installed WordNet in the end instead.
+# nltk.download('wordnet')
+
+# Use open-clause to avoid leaving files open.
+def read_text_into_collection(filename, dstrc_collection):
+    input_path = path.join(path_transcript_dir, filename + ".txt")
+    if dstrc_collection == 'list':
+        with open(input_path, encoding='utf-8') as f:
+            read_str = f.read()
+        output_collection = read_str.split("\n")
+    elif dstrc_collection == 'dict':
+        with open(input_path, encoding='utf-8') as f:
+            read_str = f.read()
+        output_collection = json.loads(read_str)
+    return output_collection
+
+
+def write_collection_into_text(filename, dstrc_collection, input_collection):
+    output_path = path.join(path_transcript_dir, filename + ".txt")
+    if dstrc_collection == 'list':
+        with open(output_path, 'w') as f:
+            f.writelines("\n".join(input_collection))
+    elif dstrc_collection == 'dict':
+        with open(output_path, 'w') as f:
+            f.write(json.dumps(input_collection).replace(", ", ",\n"))
+
+
+# Check for keys with duplicate values.
+def find_keys_w_duped_values(dict01):
+      rev_multidict = {}
+      for key, value in dict01.items():
+           rev_multidict.setdefault(value, set()).add(key)
+      return [key for key, values in rev_multidict.items() if len(values) > 1]
 
 
 def abbreviate_word(word):
@@ -75,7 +123,7 @@ def compress_words_to_shorthand(wordlist):
 
 
 # Defaults to latest entry which is the earliest date.
-def convert_raw_transcript(idx=-1):
+def convert_raw_transcript(shand_dict, idx=-1):
       # Use markdown files for inline text formatting. Have to avoid certain symb in shorthand.
       path_raw = path.join(path_transcript_dir, 'transcript_raw_qmcdevmtg_' + dates[idx] + '.md')
       # Transcript long.
@@ -83,9 +131,8 @@ def convert_raw_transcript(idx=-1):
       
       with open(path_raw, encoding='utf-8') as traw:
           lines = traw.readlines()
-          
-      js = json.loads(data)
       longlines = lines.copy()
+
       # List comprehension for brevity.
       for shand in js:
             longlines = [line.replace(shand, js[shand]) for line in longlines]
@@ -95,65 +142,58 @@ def convert_raw_transcript(idx=-1):
 
 # Import word list.
 # 25323 words.
-with open(path_popular_dolph, encoding='utf-8') as f:
-    popular_dolph = f.read()
-dolph_list = popular_dolph.split("\n")
-
+dolph_list = read_text_into_collection("popular_dolph", 'list')
 # 5050 words.
-with open(path_top5k, encoding='utf-8') as f:
-    wordfreqinfo_top_5k = f.read()
-top_5k = wordfreqinfo_top_5k.split("\n")
-
-# # Setup of lemmatizer.
-# nltk.download()
-# # Installed Open English Wordnet.
-# from nltk.corpus import wordnet as wn
-# nltk.download('punkt')
-# nltk.download('wordnet')
+top_5k = read_text_into_collection("top5K_wordfreqnet", 'list')
 
 wn_lem = WordNetLemmatizer()
 punctuations = "?:!.,;"
-
-# print("{0:20}{1:20}".format("Word","Lemma"))
-# for word in sentence_words:
-#     print ("{0:20}{1:20}".format(word, wn_lem.lemmatize(word, pos="v")))
-
 # Reduces words to basic word form (lemma). Cuts word count from 5K to 3.3K
 lem_list = [wn_lem.lemmatize(word, pos="n") for word in top_5k]
-lem_list = [wn_lem.lemmatize(word, pos="v") for word in top_5k]
-lem_list = [wn_lem.lemmatize(word, pos="a") for word in top_5k]
-lem_list = [wn_lem.lemmatize(word, pos="r") for word in top_5k]
-lem_list = [wn_lem.lemmatize(word, pos="s") for word in top_5k]
+lem_list = [wn_lem.lemmatize(word, pos="v") for word in lem_list]
+lem_list = [wn_lem.lemmatize(word, pos="a") for word in lem_list]
+lem_list = [wn_lem.lemmatize(word, pos="r") for word in lem_list]
+lem_list = [wn_lem.lemmatize(word, pos="s") for word in lem_list]
 # 4373 words.
 lem_list = list(set(lem_list))
 lem_list.sort()
-
 # Remove words of length <= 4. 3449 words.
 big_list = [word for word in lem_list if len(word) > 4]
 
 # Lemmatizer is unable to find root of larger nouns/adjectives, so use this brutal nested loop.
 blist_copy = big_list.copy()
 deriv_list = []
-
 for word in big_list:
       for blord in blist_copy:
             if word != blord and word in blord:
                   deriv_list.append(blord)
 deriv_list = list(set(deriv_list))
 deriv_list.sort()
-with open(path_deriv, 'w') as f:
-    # f.writelines(deriv_list)
-    f.writelines("\n".join(deriv_list))
 
-
-abrv_dict = {word: abbreviate_word(word) for word in big_list}
+# Export to check for compound words.
+write_collection_into_text("deriv_top5K", 'list', deriv_list)
+# 567 words after elimination.
+actderiv_list = read_text_into_collection("actual_deriv_top5K", 'list')
+# This will serve as the basic dict.
+rootword_list = [word for word in big_list if word not in actderiv_list]
+# Take the dict and export to edit it.
+abrv_dict = {word: abbreviate_word(word) for word in rootword_list}
+# Export to check for compound words.
+write_collection_into_text("rootwords_dict", 'dict', abrv_dict)
 # shorthand_dict = compress_words_to_shorthand([])
 
 # Import dict of abbreviations.
 # Currently my own written dict, but will be outputted from another function.
-path_shorthand_dict = path.join(path_transcript_dir, 'shorthand_dict.txt')
- # Use open-clause to avoid leaving files open.
-with open(path_shorthand_dict, encoding='utf-8') as f:
-    data = f.read()
-    
-# convert_raw_transcript()
+shand_dict = read_text_into_collection("shorthand_dict", 'dict')
+longshand_dict = read_text_into_collection("long_shorthand_dict", 'dict')
+
+# Sort keys alphabetically.
+longshand_dict = {key: value for key, value in sorted(longshand_dict.items())}
+# Flip keys (long-forms) and values (short-forms).
+longshand_dict = dict((v,k) for k,v in longshand_dict.items())
+# find_keys_w_duped_values(longshand_dict)
+write_collection_into_text("post_lshand_dict", 'dict', longshand_dict)
+stl_dict = read_text_into_collection("stl_dict", 'dict')
+
+
+# convert_raw_transcript(shand_dict, idx=-1)
