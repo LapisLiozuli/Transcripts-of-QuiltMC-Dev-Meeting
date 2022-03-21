@@ -46,7 +46,7 @@ from nltk.stem import WordNetLemmatizer
 # nltk.download('wordnet')
 
 # This goes in reverse chrono order. Will have to revert back once all the existing archives are completed.
-dates = ["20220312", "20220226"]
+dates = ["20220312", "20220226", "20220212"]
 path_transcript_dir = r"C:\Users\Public\Documents\LapisLiozuli\Transcripts-of-QuiltMC-Dev-Meeting"
 path_shorthand_dict = path.join(path_transcript_dir, 'shorthand_dict.txt')
 # This path is for quick and dirty testing.
@@ -128,24 +128,66 @@ def create_lem_list(input_wordlist, filename_deriv):
     # Export to check for compound words.
     write_collection_into_text(filename_deriv, 'list', deriv_list)
 
+    return big_list
 
+
+punctuations = "?:!.,;"
+punctuation_list = ['?', ':', '!', ' ', ',', '.', ':', ';']
 # Takes a list of words. Eventually can feed the processed transcripts back into this function.
-def compress_words_to_shorthand(wordlist):
-      # Compress by removing all vowels, unless the word begins with a vowel.
-      # I.e. remove vowels from __word__[1:].
-      # Rearrange short-forms from long to short.
-      # Capitalise words also.
-      # Add trailing punctuations: spaces, commas, periods, colons, semicolons.
-      # Perhaps add an list of exceptions that won't have any trailing punc, such as contractions ('wouldn't').
-      # Tenses using future (~), present (-) and past (_).
-      # Descriptive ([) and noun (]) word modifications. May need to manually edit this, then later ref to a lang dictionary.
-      # Plural forms also would be a problem.
-      # How to abrv plurals? Maybe add '2'. But easier to add 's'.
-      # So "conversation": "convo", "conversations": "convo2"?
-      # Output to file.
-      shand_dict = {}
-      return shand_dict
+def attach_punc_to_shortform(sf_dict):
+    attach_dict = sf_dict.copy()
+    # Add trailing punctuations: spaces, commas, periods, colons, semicolons.
+    for sf in sf_dict:
+        sf_cap = sf.capitalize()
+        attach_dict[sf_cap] = attach_dict[sf].capitalize()
+    # Capitalise words also as an alternate form.
+    for shortform in [sf, sf_cap]:
+    # Add preceding space.
+        space_sf = ' ' + shortform
+        for punc in punctuation_list:
+            sf_punc = space_sf + punc
+            attach_dict[sf_punc] = ' ' + attach_dict[shortform] + punc
+        # Severe need to handle plural forms as well as '-' to '-ing'.
+        # Imperfect but should cover majority of words.
+        attach_dict[shortform + 's'] = attach_dict[shortform] + 's'
+        attach_dict[shortform + '-'] = attach_dict[shortform] + 'ing'
+    return attach_dict
 
+# Rearrange short-forms from long to short to prevent the shorter sf from overwriting the longer ones.
+d = {"sci": "science", "fdbk": "feedback", "e": "every", "qk": "quick"}
+print(d)
+new_d = {}
+for k in sorted(d, key=len, reverse=True):
+    new_d[k] = d[k]
+print(new_d)
+
+test = attach_punc_to_shortform(new_d)
+print(test)
+
+# Defaults to latest entry which is the earliest date.
+def convert_raw_transcript(shand_dict, idx=-1):
+ # Use markdown files for inline text formatting. Have to avoid certain symb in shorthand.
+ path_raw = path.join(path_transcript_dir, 'transcript_raw_qmcdevmtg_' + dates[idx] + '.md')
+ # Transcript long.
+ path_tlong = path.join(path_transcript_dir, 'tlong_qmcdevmtg_' + dates[idx] + '.md')
+ with open(path_raw, encoding='utf-8') as traw:
+  lines = traw.readlines()
+  longlines = lines.copy()
+  # What is js?
+  js = longlines.split("\n")
+  # List comprehension for brevity.
+  for shand in js:
+   longlines = [line.replace(shand, js[shand])
+  for line in longlines]
+  with open(path_tlong, 'w') as f:
+   f.writelines(longlines)
+
+
+# Perhaps add an list of exceptions that won't have any trailing punc, such as contractions ('wouldn't').
+# Tenses using future (~), present (-) and past (_).
+# Descriptive ([) and noun (]) word modifications. May need to manually edit this, then later ref to a lang dictionary.
+# Plural forms also would be a problem.
+# I tried to avoid these use cases in the hardcoded shortforms.
 
 # Defaults to latest entry which is the earliest date.
 def convert_raw_transcript(shand_dict, idx=-1):
@@ -170,7 +212,8 @@ def convert_raw_transcript(shand_dict, idx=-1):
 popular_dolph = read_text_into_collection("popular_dolph", 'list')
 # 5050 words.
 top5K_wordfreqnet = read_text_into_collection("top5K_wordfreqnet", 'list')
-# create_lem_list(top5K_wordfreqnet, "deriv_top5K")
+# Should eventually be able to lemmatise only when needed.
+big_list = create_lem_list(top5K_wordfreqnet, "deriv_top5K")
 # 567 words after elimination. All these words contain lemmas.
 post_deriv_list = read_text_into_collection("post_deriv", 'list')
 # The basic list that should contain only lemmas.
@@ -197,5 +240,6 @@ collated_dict = dict((v,k) for k,v in collated_dict.items())
 write_collection_into_text("post_collated_dict", 'dict', collated_dict)
 # Short-to-Long dict that contains a few other custom short-forms. Mainly altv short-forms for existing words.
 stl_dict = read_text_into_collection("stl_dict", 'dict')
+# Feed stl_dict back into post_collated dict to accumulate more short-forms over time.
 
 # convert_raw_transcript(shand_dict, idx=-1)
