@@ -1,47 +1,5 @@
 20220212
 
-"nngdu": "Gdude",
-"nncheat": "CheaterCodes",
-"nnoro": "OroArmor",
-"nngli": "Glitch",
-"nnaurora": "LambdAurora",
-"nnearth": "EarthComputer",
-"alex": "Alex",
-"i5": "i5",
-"nnsouth": "Southpaw",
-"nnsil": "Silas",
-"nnhav": "Haven King",
-"nnem": "Emmaffle",
-"nnsup": SuperCoder",
-"ttmap": "Mappings Team",
-"ttcomy": "Community Team",
-"ttcotl": "Community Tools Team",
-"ttbuto": "Build Tools Teams",
-"ttlo": "Loader Team",
-"obsf": "obsfucate",
-"ab": "alphabet",
-"ab[": "alphabetical",
-"ab[[": "alphabetically",
-"hb": "have been",
-"ntwk-": "networking",
-"jij": "Jar-in-Jar",
-"m": "may",
-"mapg": "mappings",
-"pr": "pull request",
-"prs": "pull requests",
-"qqim": "Intermediary",
-"irm8": "intermediate",
-"irm8[": "intermediary",
-"irm8]": "intermediation",
-"mdi8": "mediate",
-"mdi8]": "mediation",
-"qqvg": "VanillaGradle",
-"qqhs": "Hashed Mojmap",
-"mrg": "merge",
-"govc": "governance",
-
-Intermediary, VanillaGradle, Hashed
-
 Gdude: Did I acdt[ click the "Ping Eone" button agn? Yeah, I thk I did, haha. C sone on the Mumble side say sth to mk sure it's work-?
 
 A: Hello
@@ -65,8 +23,6 @@ Southpaw: You mk it sound lk some kind of perfume. Perm, by Gdude.
 Gdude: Alrt, ig we c start. Y'all rdy? Alrt, let's get started. First on my list = I tend to go in alphabetical order, you m hv noticed = Build Tools. Glitch, wld you lk to hv a word?
 
 Glitch: OK, sure. As alw, thr hasn't been much in the ways of Build Tools. I ended up doing some work since last t I talked, on VanillaGradle, being able to remap the cmpl_ mod to Hashed or Intermediary or sth lk tt. But tt ended up gg on the wayside bcz I rlz_ I c mk Loader mostly work with Floom. So I ended up spending my t work- on Loader istd, bcz once Loader's work-, we tknl[ don't nd to use a cstm Build Tool. We j hv to gv up some ths, lk we can't use Hashed, and tt's pretty much it, rly.
-
-!!! New shortforms: Intermediary, VanillaGradle, Hashed, team names, has been, alphabet, - tense
 
 Gdude: Alrt. I mean, hey, prog is prog, and it sounds lk some has been hppn-, which is xcl[. Uh, next on the list is Comy Tools, me. Sprz sprz. Cozy-wise, not much. We've been look- into a new th we're test-, which Discord is, has= well, we're testbed for yet anor thing, ig. We're test- slash cmd perm which is a new th on the comy srvr. Thr's not much to do with Cozy rn, bcz it's not on both srvr, so I can't lk change ath to use it. But we've set it up, and you'll see lk, some of the slash cmd are greyed out, and evtl[ they'll be hidden, we hope. O/w, Comy Tooling hasn't been doing a ton. 
 
@@ -95,8 +51,6 @@ And the other module tt has been merged is Ntwk- API. What's wrong tt has been d
 And thr was a lil db8 we had a mth ago, tt had to be brought up into the table agn, which was more than two pt in QSL. The main issue was, we thk game entrypoints loader doesn't mk a lot of sense, bcz it doesn't mk it rly game-agnostic, or vrsn -agnostic as it nd a q lengthy injection mthd, which uses raw ASM. So tt's terb for mntn] and it means tt for new vrsn tt change the entrypoint lgc, it rqr a loader upd8. The th is, game entrypoints loader are kinda useless in some way, it's bcz normally when you use an entrypoint, it's bcz you have an API to call stuff to look into. If you don't hv an API, you are most lkly to use entr[ mixins. 
 
 So we did a lil vote and turns out a lot of ppl thk tt it's fine to mv them to QSL, so we did tt. And j to be clear, the pre-launching point still in the loader, which still can be used for loading if you have a big mod. And the module the entrypoints has been moved to is the most small module of QSL. Bsc[ it doesn't hv any deps. It only cntn the event fmwk. Lil util for multiple test- srvr and well now, the game entrypoints. So it's gnrl[ ez to jar-in-jar it if needed. Tt's all for now. Thr are still a lot of new PRs to go thru. Yeah, I thk tt's it.
-
-!!! JiJ, has, mappings, NAMES, MC, may, governance, of course
 
 Gdude: Thx for tt. Tt's crtn[ q a lot to be get- on w in one fortnight, isn't it? Xcl[, gd work. Now b4 we mv on, do any of the proj hv any o/s PRs or ath tt nd look- at by the rest of the comy?
 
@@ -133,13 +87,13 @@ Cheater: Yes, I will tk it in 2 mins.
 Gdude: Ok, tt's alrt. Let's look at the other one here. Uh, I will throw this one out. Silas is bsc[[ ask- abt the psbl] of security disclosure sys. Uh, yeah, we're gonna hv sth. We haven't rly talked abt it yet, hehe. I do blv tt Github has a sys for it. Yeah, Southpaw says, Github has a sys for it. It'll alm crtn[ j use tt. Honestly, we haven't talked abt it yet. If you have any sgst],  we'll tk them of course. But yeah, I imgn Github sys is prob the most lkly th we'll end up using for tt one. Yeah, they do, I haven't used it much, but they dfnt[ do hv one. Bcz I know= I hv some frens on the Python srvr tt hv used it. Thr's a button you c click which makes it CVE. Yeah, so thr's a whole th thr, I j haven't used it much. Are you rdy for tt qn, Cheater?
 
 Cheater: Uh, let's do it now. Alrt, so, qn by Trollzer, "Why are we switching to a less supt_ file w less fetrs?"
-Now, this is what we're talk- abt b4, tt we're csdr- dropping Tiny and j using Enigma mappings istd. So I wanna go over qk[ abt the rsn. Ig why I brought it up, rly. If you're aware of how the Qmap works, you'll know tt the Qmap repo is in an Enigma frmt. So, Enigma supt splitting the mapping files up into a diry tree of files, so each class gets its own file, which is not supt_ by Tiny. This is much more !!! convenient for Github PRs. It's more ez[ vsbl who changes what file when you mk a PR. So it makes more sense to use Enigma.
+Now, this is what we're talk- abt b4, tt we're csdr- dropping Tiny and j using Enigma mappings istd. So I wanna go over qk[ abt the rsn. Ig why I brought it up, rly. If you're aware of how the Qmap works, you'll know tt the Qmap repo is in an Enigma frmt. So, Enigma supt splitting the mapping files up into a diry tree of files, so each class gets its own file, which is not supt_ by Tiny. This is much more convenient for Github PRs. It's more ez[ vsbl who changes what file when you mk a PR. So it makes more sense to use Enigma.
 
-And if you then cmpr Enigma and Tiny, you'll notice then tt they're bsc[[ !!! exactly the same. So, thr's 3 dffr]s rly. Dffr] #1 is tt Enigma uses cplt words like 'class', 'method' and 'arg', istd of single letters lk Tiny does. The second dffr] is tt Enigma handles nested classes as nested classes. So mappings for inner classes are mmbrs of the outer class mappings, whras Tiny has changes tt amt to flat mappings. And the third dffr] which is psbl[ the most rlvt one is tt Tiny supt mtpl namespaces.
+And if you then cmpr Enigma and Tiny, you'll notice then tt they're bsc[[ exactly the same. So, thr's 3 dffr]s rly. Dffr] #1 is tt Enigma uses cplt words like 'class', 'method' and 'arg', istd of single letters lk Tiny does. The second dffr] is tt Enigma handles nested classes as nested classes. So mappings for inner classes are mmbrs of the outer class mappings, whras Tiny has changes tt amt to flat mappings. And the third dffr] which is psbl[ the most rlvt one is tt Tiny supt mtpl namespaces.
 
-So in gnrl, the frmts are q smlr. And what we've talked abt is adj- Qmap to allow for so-called mtpl MC vrsn in a single th, which wld mean we cld xtd Enigma to use specified vrsn ranges for mappings or !!! transitive mappings or sth. Anor th is tt we've csdr put- ~~Amplick~~ into the mappings frmt itself or the annotations, lk changing !! Obfuscated to over it only. Annotations also put tt into Qmap.
+So in gnrl, the frmts are q smlr. And what we've talked abt is adj- Qmap to allow for so-called mtpl MC vrsn in a single th, which wld mean we cld xtd Enigma to use specified vrsn ranges for mappings or transitive mappings or sth. Anor th is tt we've csdr put- ~~Amplick~~ into the mappings frmt itself or the annotations, lk changing Obfuscated to over it only. Annotations also put tt into Qmap.
 
-And if we did tt, we wld also hv to change Enigma mappings, bcz tt's what the repo uses, and we'd also hv to change the Tiny mappings. It also means we hv to cont mntn- the Tiny eco, which is Tiny Mappings Parser, Tiny Remap Pile, thr's lk 5 or 6 of them. Each of them has their own Tiny Mappings Parser, and readings and writing sys. They're all undocumented, not written by us, and we wld hv to mntn them for no rsn. So we csdr_ drop- this !!! in order to lessen the mntn] brdn.
+And if we did tt, we wld also hv to change Enigma mappings, bcz tt's what the repo uses, and we'd also hv to change the Tiny mappings. It also means we hv to cont mntn- the Tiny eco, which is Tiny Mappings Parser, Tiny Remap Pile, thr's lk 5 or 6 of them. Each of them has their own Tiny Mappings Parser, and readings and writing sys. They're all undocumented, not written by us, and we wld hv to mntn them for no rsn. So we csdr_ drop- this in order to lessen the mntn] brdn.
 
 What is the rsn, we asked, what is the rsn we even hv Tiny in the first place? But we couldn't rly get a conclusive ans. Thr were some who were lk, "It's better for compressibility." Which is not wrong. "It's better for parsing, it's easier." Which is not true bcz they are bsc[[ the same file frmt. So the only th is mtpl mappings, mtpl namespaces. But single files = thx Skyrising = the arg] was tt c hv a single file, but Enigma also has single file frmt. Thr's not much bnft to using Tiny, but we wld hv to mntn a lot more stuff. We don't feel lk mntn- sfwr which we hv no use for.
 
@@ -147,7 +101,7 @@ Oro: Cheater, thr's anor qn tt's fairly smlr. I thk I'll pop in here a lil bit t
 
 We've talked abt this a lil bit, Chris, yeah. Thr are a couple ths we do want to add to the frmt. Not too much, and it's sth tt cb done thru a ppty tag on sth istd of a more cplt xpnd- of the frmt. Thr's not too much we want to add, but thr's j a lil couple ths tt we dfnt[ cld add tt wld dfnt[ impv the frmt. But as it stands, I don't thk we were super into csdr- tt. I don't exactly rmb from our convo ytd, or two days ago.
 
-Cheater: Tt was two days ago. I couldn't actl[ find upstream of Enigma !! anymore. I'm not sure if it still exists. The Bitbucket link is dead, and the website links to the same Bitbucket link which is dead. So upstream Enigma doesn't rly exist, so... We're now on anw.
+Cheater: Tt was two days ago. I couldn't actl[ find upstream of Enigma anymore. I'm not sure if it still exists. The Bitbucket link is dead, and the website links to the same Bitbucket link which is dead. So upstream Enigma doesn't rly exist, so... We're now on anw.
 
 And, of course, I don't thk we cld j kp calling it Enigma. We cld j mk it Enigma v2, we hv to see how tt works out. Thr's dfnt[ gg tb an RFC, and you c cmnt on tt once we hv tt. We j wanted to gv you a quick headsup on what we're talk- abt inrl[.
 
@@ -175,7 +129,7 @@ Gdude: While we're here, Aurora, tt looks lk one for you, mb.
 Aurora: "Curr[ QSL is not up to fetr parity with FAPI. Are PRs for modules with no analogs to FAPI modules be csdr_ at the same prio lvl for futr rls a/s those other funda modules?"
 It's kinda hard to tell, bcz it rly dpd on the fetr. Thr cb some fetr tt cb csdr_ esnc[ but isn't in FAPI. I can't thk of an eg rn, but thr might be some. If you tk foreg, the Tags API, it's not a straight port. Thr's lots of new features tt do not exist totally in FAPI. And curr[ FAPI do not even have a Tag API anymore. So thr's no analog. I thk it shld still be csdr_ w a high prio bcz tags are rly impt.
 
-Mb tk foreg, thr's a PR called cmmn module "R cells and Argen types"? Tt's q a useful fetr, so I thk wtvr comes shld be csdr_ mb w the same prio lvl. I thk it rly dpd on the fetr. Some fetr fr FAPI islf, are not rly impt to port lk rn. ~~For initial readings~~, the prio is to have out sth usable. it's not to have an exact one-to-one port. So if you want new fetr, feel free to !!! PR it, or discuss it j= It rly dpd. Thr's a psbl] tt new fetr are csdr_ as equal prio to existing fetr in FAPI.
+Mb tk foreg, thr's a PR called cmmn module "R cells and Argen types"? Tt's q a useful fetr, so I thk wtvr comes shld be csdr_ mb w the same prio lvl. I thk it rly dpd on the fetr. Some fetr fr FAPI islf, are not rly impt to port lk rn. ~~For initial readings~~, the prio is to have out sth usable. it's not to have an exact one-to-one port. So if you want new fetr, feel free to PR it, or discuss it j= It rly dpd. Thr's a psbl] tt new fetr are csdr_ as equal prio to existing fetr in FAPI.
 
 Glitch: To kinda add onto tt, having= Being FAPI at init rls is not a goal for us, bcz thr's no real rsn to use QSL. We're more concerned with new fetr rn. But thr will be a t when we're try- to drop having to mntn Fabric supt, tt catching up w Fabric and grab- eth we missed will bcm a prio. Bcz we don't want to strip away FAPI and leave ppl w only half of a usable API.
 
@@ -187,6 +141,81 @@ We don't rly hv a gd ans for tt one. Mumble is work- q well. It doesn't rely on 
 Either way, we're alw gg to kp it aces[ on the #stage chnl. So, lk, you'll still be here to listen to it. But yeah, I'm rly not sure, I don't hv the crystal ball for tt x4tun[[. I ustd tt thr's dfnt[ an aces] bonus for it. We had the idea of actually screensharing the Mumble chat, but then we rlz_ tt stages don't actually have tt fetr. So yeah, mb if Discord impl it , we'll do tt. Mb we'll go back to Craig. We j don't know yet, x4tun[[. Alex, wld you lk to take on Octal's qn?
 
 Alex: Sure, so Octal asks, "Are there plans for the QSL module dl-?"
-The ans is yes.
+The ans is yes. Yes, thr is. This is part of= This is gonna hppn w Loader plugins, or j aft Loader plugins. It's not specific to QSL. As it is, curr[ the idea is you'll be able to set any libs to be auto dl_ if they're not present in the user's mod folder. Thr hasn't been any prog on this in the last 2 weeks, so I didn't metn it, but yes, thr are still plans and it will still be impl_, j not yet.
 
-34:40
+nnoro: Add- on, security and ths lk tt are a big ccrn for us. When we talk abt, for lk 30 seconds on an idea, what this is gonna look lk, it is not a full pic of all the precautions we will be taking, and ths lk tt.
+
+nngdu: Woody asks, "Will thr ever be tcrb]?"
+I'll h to chk w the coalition. Wld you lk to mk them? Hehe. Uh, it's a lot of work. Thr are no gd atm8_ soln, or at least the ones tt are gd are q expensive. So, yeah, lk, we don't rly h plans to do tt. Nbdy h the t to do it. Uh, if sbdy does it, great. We can't. nnal, I thk tt one's yours?
+
+nnal: Alrt, nnsouth asks, "If any libs cld be auto dl_, how does Loader know whr to find them?"
+How xky this will work is gg tb put into an RFC, and talked abt prpr[, sott we have a much more specific idea of how this is gg to work, and how we're gonna keep it secure. Bsc[, how we're gonna dl the corek libs and whatnot. So, it's a bit early to talk abt this spfc[, but j know tt we will be talk- abt this, or we will be dscs- this in more dtl when we get to the pt whr we c actl[ impl this.
+
+nngdu: Uh, Woody, yes, manual tcrb] are out of the qn, it's j too much work. I h a lot to do, the others h a lot to do, nnsouth does the podcast and they alr h to put in q a lot of efrt thr. Agn, if sone wants to listen to the podcast and do it, great, but we don't h t. We j don't h t. nnaurora, yeah, you c tk tt one if you lk.
+
+nnaurora: So, "What is the I/O process to go abt req- modules to QSL? ~~Issues first~~, I asked on Discord for prpr PRs, OK."
+I wld say to avd prpr PRs in some way, unless it's supt, but even then, dscs- first might be btr, bcz thr might be some= Bcz usually when you PR, it's abt code rvw and stuff, it's not abt the concept itself. It means you alr put a lot of work into it, so it's kind of a risk to tk. Bcz it means tt if it doesn't fit, or if thr are a lot of design issues, it might reqr a rewrite. I don't thk aone wants to do tt. So my ideal prcs is issue first, or ask on Discord. It's up to you. J kp in mind tt if thr are some ppl who cannot use Discord for X or Y rsn, Github Issues might be more visible. But at the same t, Quilt is rly a v Discord-centric comy. But I wld say on Discord, you might xpk much quicker resps.
+
+nngdu: Thx nnaurora. nngli, do you wanna take tt one?
+
+nngli: OK, Chris asks, "For the uninformed, can aone submit RFCs if they h a gd idea?"
+The ans is yes, you are allow_ to make any proposals you like, whether tt be, you want to write on an RFC on a new API, or you wanna chg how adminrs are elected. Aone is allowed to prps ath they want, obv[ it doesn't nd tb acpt_, but we don't h any rstk] on tt.
+
+nngdu: Obv[ any prps] tt is in faith a gd prps, we'll dfnt[ gv it a go. NoComment asked, "Will thr be a wiki smlr to the Fabric Wiki?"
+Yes? We're plan- on two wikis, actl[. We're gonna h a Devr Wiki. I thk nnoro h some work done on tt alr, right?
+
+nnoro: It's v bsc, j kinda like prototyping a prototype kinda work. Obv[ this is my vision for what I wld want the Devr Wiki to look like, and it wld have mtpl vrsn smlr to what the Forge Wiki. But what wld be nice is if it wld be built into a Gradle proj, sott it forces chgs. YK, lk chgs into Loom or sth lk tt. Force us to mk sure tt wtvr is written still works, sott thr's no tutorials tt j no longer work. Lk they don't compile, or the mapg h chg_, stuff lk tt. So e t you go and look at the wiki, tt wtvr code you see thr, does work on the vrsn you're look- at. So tt's sth tt I want to make sure tt we h. So rn, I thk we h a v bsc th whr it's a Gradle proj tt reads some MD files, parses tt, and mks some HTML files. But it's not v gd rn, and it's lk, in one file it's 300 lines long. So it works, but it's not great.
+
+nngdu: Right, so tt was rgrd- the Devr's Wiki. We were also plan- on having a sep8 one for user-facing ths. It cld be a simpler setup, since we don't nd all the devr side stuff for tt. It might be a bit more aces[ for modifying it as well. Agn, lk this is stuff tt we can kinda sorta work on ATM, but thr's other ths tt we shld also be doing at the same t. So I thk lk, we will get them done, ideally b4 rls, but we'll h to see how ths go.
+
+Arathain, you asked a qn. Was tt trgt_ at aone spfc?
+
+nngli: Uh, I'll j claim it for now, I thk. Uh, j to get a gnrl idea of the qn by Arathain: "What's curr[ the higher prio for rls: Dev- a work- base pdt and rls- it, or waiting until at least all plan_ fetr are done, then rls- it? Haven't been able to find an ans on the tlcn."
+So, I want to ans this bcz I kp pestering ppl abt Quilt Beta. Bcz, for a rls, thr's a lot of stuff tt nds tb done. Foreg, for prpr 1.0 rls tt shld be bsc[ fetr cplt, for tt we want CHASM work-, mb a Loom rplc], we want Loader with Loader plugins w dep dl-. Thr's kinda a lot of stuff we want for vrsn 1, b we also want ppl to start using it at some pt so we c get inputs. So I rly hope we c get a Beta vrsn out at some pt for tt.
+
+So ig my ans to the qn is both. But as nngdu said, if you're ask- more spfc[, foreg if you're ask- spfc[ for QSL, then it's a bit of a dffr[ qn tt shld be ans_ then.
+
+nnoro: So obv[, ETAs are nvr accu. But to kinda gv an idea of the dffr] in work nd_ for a bsc pdt, and a full rls, I can't mk any promises, but we cld prob h a base work- pdt of lk Loader and QSL in a couple of mths, asum- nth goes wrong betw here and then. But a full rls is dfnt[ v far out bcz we h lim_ ppl and a lot of stuff we wld lk to get done. And yk, we can't wait lk a year to gv aone a work- pdt, obv[.
+
+nngdu: Alrt, thx for tt folks. We're out of qn, but we do h a couple more mins. If aone h ath they wanna sneak in at the end?
+
+nnoro: Plz go and rvw QSL PRs.
+
+nngdu: Yeah, plz go and rvw QSL PRs. And also the RFC PRs, if you're itrs_ in tt sort of th.
+
+nnax: And Qmap PRs.
+
+nnaurora: And for the QSL PRs, if you're a PR contributor, mb go look if your PR is still work- on 22w06a bcz some stuff m h broken.
+
+nngdu: Alrt, I'm not seeing anym qns coming in.
+
+nngli: Look at Outreach Team RFC.
+
+nngdu: Yeah, tt wld be a gd one to look at. Get- ttout set up wld help a lot.
+
+Yeah, esp if sone wants to work on it, tt wld be highly apc8_. Bcz you don't nd tknl knlg for comy ivlv].
+
+nngdu: Yeah, it's not necs[ devr oriented, it's more website and public relations kinda stuff, social media. If aone's itrs_ in tt, thr's a draft PR open on the RFC repo. It wld help a lot, esp it wld help me bcz a lot of the ths tt I'm doing curr[ wld be btr suited to a team of ppl.
+
+nngli: It's actl[ no longer a draft. I thk it was merged lk 2 days ago or sth.
+
+nngdu: Oh, gd stuff. Whangdoodle was asking, "When the CHASM spec will be read out in ASMR frmt?"
+IDK if thr's aone tt can ans tt one. Well, Whangdoodle, the qn is, who do you want to do it?
+
+nngli: Wnvr you do it, Whangdoodle, Wnvr you do it. You j nd the spec first.
+
+nnoro: Yes, we'll play it for eone aft the mtg, how abt tt.
+
+nngli: I haven't talked abt CHASMR. J saying you c xpk a CHASM ~~length~~ RFC soon. But not yet.
+
+nngdu: Alrt, we're pretty close to the end of the mtg t. We usually don't run over, which is gd bcz we seem to j get all the qns in anw. As alw, kp an eye out for the podcast. nnsouth will h tt up wnvr they h t to do it. Yeah, the qns abt tcrb] are gd, I wld lk them. but sone h to do it, and it doesn't hv tb one of us. So if aone listen- wants to do it, go ahd, drop a DM or a Modmail, we'll tk a look. Ig we're pretty much done then. Is thr ath aone on Mumble wants to say b4 we finish? Well, no news is gd news. Alrt, thx for coming eone. We're gonna wrap it up. See you in 2 weeks' t.
+
+nnoro: We're in the #development chnl for the after-party.
+
+nngli: Yes, #devt chnl.
+
+nngdu: Yes, the voice after-party
+
+nngli: Yes, voice cha after-party.
+
+nngdu: Thx for coming, eone.
