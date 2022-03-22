@@ -56,7 +56,7 @@ path_temp = path.join(path_transcript_dir, "temp.txt")
 
 # Use open-clause to avoid leaving files open.
 def read_text_into_collection(filename, dstrc_collection):
-    input_path = path.join(path_transcript_dir, filename + ".txt")
+    input_path = path.join(path_dicts_dir, filename + ".txt")
     if dstrc_collection == "list":
         with open(input_path, encoding="utf-8") as f:
             read_str = f.read()
@@ -68,8 +68,8 @@ def read_text_into_collection(filename, dstrc_collection):
     return output_collection
 
 # Use open-clause to avoid leaving files open.
-def write_collection_into_text(filename, dstrc_collection, input_collection):
-    output_path = path.join(path_transcript_dir, filename + ".txt")
+def write_text_outfrom_collection(filename, dstrc_collection, input_collection):
+    output_path = path.join(path_dicts_dir, filename + ".txt")
     if dstrc_collection == "list":
         with open(output_path, "w") as f:
             f.writelines("\n".join(input_collection))
@@ -96,14 +96,12 @@ def find_keys_w_duped_values(dict01):
       rev_multidict = {}
       for key, value in dict01.items():
            rev_multidict.setdefault(value, set()).add(key)
-      return [key for key, values in rev_multidict.items() if len(values) > 1]
+      print([key for key, values in rev_multidict.items() if len(values) > 1])
 
 
 # Can kind of extract the lemmas from any word list.
 def create_lem_list(input_wordlist, filename_deriv):
     wn_lem = WordNetLemmatizer()
-    punctuations = "?:!.,;"
-
     # 3.3K words. Reduces words to basic word form (lemma) over different parts of speech.
     lem_list = [wn_lem.lemmatize(word, pos="n") for word in input_wordlist]
     lem_list = [wn_lem.lemmatize(word, pos="v") for word in lem_list]
@@ -127,12 +125,10 @@ def create_lem_list(input_wordlist, filename_deriv):
     deriv_list.sort()
 
     # Export to check for compound words.
-    write_collection_into_text(filename_deriv, "list", deriv_list)
+    write_text_outfrom_collection(filename_deriv, "list", deriv_list)
 
     return big_list
 
-
-punctuations = "?:!.,;"
 punctuation_list = ["?", ":", "!", " ", ",", ".", ":", ";"]
 # Takes a list of words. Eventually can feed words from the processed transcripts back into this function.
 # Perhaps add an list of exceptions that won"t have any trailing punc, such as contractions ("wouldn't").
@@ -153,64 +149,43 @@ def attach_punc_to_shortform(sf_dict):
         for punc in punctuation_list:
             sf_punc = space_sf + punc
             attach_dict[sf_punc] = " " + attach_dict[shortform] + punc
-        # Severe need to handle plural forms as well as "-" to "-ing".
-        # Imperfect but should cover majority of words.
+        # Plural: Imperfect but should cover majority of words.
         attach_dict[shortform + "s"] = attach_dict[shortform] + "s"
-        # Tenses strictly speaking aren't required here. Just directly apply them during the conversion.
-        attach_dict[shortform + "-"] = attach_dict[shortform] + "ing"
-        attach_dict[shortform + "_"] = attach_dict[shortform] + "ed"
+        # Future tense cannot be directly applied during the conversion using replace because the long-form flanks the word.
         attach_dict[shortform + "|"] = "will be" + attach_dict[shortform] + "ing"
     return attach_dict
 
-# Rearrange short-forms from long to short to prevent the shorter sf from overwriting the longer ones.
-d = {"sci": "science", "fdbk": "feedback", "e": "every", "qk": "quick"}
-print(d)
-new_d = {}
-for k in sorted(d, key=len, reverse=True):
-    new_d[k] = d[k]
-print(new_d)
-
-test = attach_punc_to_shortform(new_d)
-print(test)
-
-# Defaults to latest entry which is the earliest date.
-def convert_raw_transcript(shand_dict, idx=-1):
- # Use markdown files for inline text formatting. Have to avoid certain symb in shorthand.
- path_raw = path.join(path_transcript_dir, "transcript_raw_qmcdevmtg_" + dates[idx] + ".md")
- # Transcript long.
- path_tlong = path.join(path_transcript_dir, "tlong_qmcdevmtg_" + dates[idx] + ".md")
- with open(path_raw, encoding="utf-8") as traw:
-  lines = traw.readlines()
-  longlines = lines.copy()
-  # What is js?
-  js = longlines.split("\n")
-  # List comprehension for brevity.
-  for shand in js:
-   longlines = [line.replace(shand, js[shand])
-  for line in longlines]
-  with open(path_tlong, "w") as f:
-   f.writelines(longlines)
-
-
+# d = {"sci": "science", "fdbk": "feedback", "e": "every", "qk": "quick"}
+# test = attach_punc_to_shortform(new_d)
 
 
 # Defaults to latest entry which is the earliest date.
 def convert_raw_transcript(shand_dict, idx=-1):
-      # Use markdown files for inline text formatting. Have to avoid certain symb in shorthand.
-      path_raw = path.join(path_raws_dir, "transcript_raw_qmcdevmtg_" + dates[idx] + ".md")
-      # Transcript long.
-      path_tlong = path.join(path_transcript_dir, "tlong_qmcdevmtg_" + dates[idx] + ".md")
-      
-      with open(path_raw, encoding="utf-8") as traw:
-          lines = traw.readlines()
-      longlines = lines.copy()
+    punc_dict = attach_punc_to_shortform(shand_dict)
+    # Rearrange short-forms from long to short to prevent the shorter sf from overwriting the longer ones.
+    desc_length_dict = {}
+    for k in sorted(punc_dict, key=len, reverse=True):
+        desc_length_dict[k] = punc_dict[k]
+    # Use markdown files for inline text formatting. Have to avoid certain symb in shorthand.
+    path_raw = path.join(path_raws_dir, "transcript_raw_qmcdevmtg_" + dates[idx] + ".md")
+    # Transcript long.
+    path_tlong = path.join(path_raws_dir, "tlong_qmcdevmtg_" + dates[idx] + ".md")
 
-      # List comprehension for brevity.
-      for shand in js:
-            longlines = [line.replace(shand, js[shand]) for line in longlines]
-      
-      with open(path_tlong, "w") as f:
-          f.writelines(longlines)
+    with open(path_raw, encoding="utf-8") as traw:
+      lines = traw.readlines()
+    longlines = lines.copy()
+
+    # List comprehension for brevity.
+    for shand in desc_length_dict:
+        longlines = [line.replace(shand, desc_length_dict[shand]) for line in longlines]
+
+    # Convert past tense and present tense in an imperfect manner.
+    tense_dict = {"-": "ing", "_": "ed"}
+    for sf_tense in tense_dict:
+      longlines = [line.replace(sf_tense, tense_dict[sf_tense]) for line in longlines]
+
+    with open(path_tlong, "w") as f:
+      f.writelines(longlines)
 
 
 # Import word list. 25323 words.
@@ -228,7 +203,7 @@ abrv_dict = {word: abbreviate_word(word) for word in rootword_list}
 # Truncate if short-form is >4 letters long? But that might add to the workload instead.
 truncate_dict = {word: word[:4] for word in rootword_list if len(abrv_dict[word]) > 4}
 # Export to edit it e.g. check for compound words, use truncated form instead.
-write_collection_into_text("lem_dict", "dict", abrv_dict)
+write_text_outfrom_collection("lem_dict", "dict", abrv_dict)
 
 # Import dict of abbreviations.
 # # Currently my own written dict based on the past two QDM transcripts.
@@ -240,13 +215,20 @@ write_collection_into_text("lem_dict", "dict", abrv_dict)
 collated_dict = read_text_into_collection("collated_dict", "dict")
 # Sort keys alphabetically.
 collated_dict = {key: value for key, value in sorted(collated_dict.items())}
+# Issue: stl_dict has format sf:lf, but collated_dict has format lf:sf. Added a True-clause as a quick and dirty switch.
+# dirty_switch is True only when initialising dicts, then False when recursing dicts.
+dirty_switch = False
 # Flip keys (long-forms) and values (short-forms). This allows for a word to have multiple short-forms.
-collated_dict = dict((v,k) for k,v in collated_dict.items())
-# # Check if collated_dict has any words that share the same short-form.
-# find_keys_w_duped_values(collated_dict)
-write_collection_into_text("post_collated_dict", "dict", collated_dict)
+if dirty_switch:
+    post_collated_dict = dict((v,k) for k,v in collated_dict.items())
+if not dirty_switch:
+    post_collated_dict = collated_dict.copy()
+# Check if collated_dict has any words that share the same short-form.
+find_keys_w_duped_values(post_collated_dict)
+write_text_outfrom_collection("post_collated_dict", "dict", post_collated_dict)
 # Short-to-Long dict that contains a few other custom short-forms. Mainly altv short-forms for existing words.
 stl_dict = read_text_into_collection("stl_dict", "dict")
-# Feed stl_dict back into post_collated dict to accumulate more short-forms over time.
+# stl_dict will be a copy of post_collated_dict.
+# Feed stl_dict back into collated_dict to accumulate more short-forms over time.
 
-# convert_raw_transcript(stl_dict, idx=-1)
+convert_raw_transcript(stl_dict, idx=-1)
