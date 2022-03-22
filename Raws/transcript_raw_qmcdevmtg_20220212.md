@@ -1,5 +1,16 @@
 20220212
 
+"nngdu": "Gdude",
+"nncheat": "CheaterCodes",
+"nnoro": "OroArmor",
+"nngli": "Glitch",
+"nnaurora": "LambdAurora",
+"nnearth": "EarthComputer",
+"alex": "Alex,
+"nnsouth": "Southpaw",
+"nnsil": "Silas",
+"nnhav": "Haven King",
+
 Gdude: Did I acdt[ click the "Ping Eone" button agn? Yeah, I thk I did, haha. C sone on the Mumble side say sth to mk sure it's work-?
 
 A: Hello
