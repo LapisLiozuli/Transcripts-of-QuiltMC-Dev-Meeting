@@ -48,7 +48,9 @@ from nltk.stem import WordNetLemmatizer
 # This goes in reverse chrono order. Will have to revert back once all the existing archives are completed.
 dates = ["20220312", "20220226", "20220212"]
 path_transcript_dir = r"C:\Users\Public\Documents\LapisLiozuli\Transcripts-of-QuiltMC-Dev-Meeting"
-path_shorthand_dict = path.join(path_transcript_dir, 'shorthand_dict.txt')
+path_dicts_dir = path.join(path_transcript_dir, "Dicts and Wordlists")
+path_raws_dir = path.join(path_transcript_dir, "Raws")
+path_shorthand_dict = path.join(path_dicts_dir, 'shorthand_dict.txt')
 # This path is for quick and dirty testing.
 path_temp = path.join(path_transcript_dir, "temp.txt")
 
@@ -192,7 +194,7 @@ def convert_raw_transcript(shand_dict, idx=-1):
 # Defaults to latest entry which is the earliest date.
 def convert_raw_transcript(shand_dict, idx=-1):
       # Use markdown files for inline text formatting. Have to avoid certain symb in shorthand.
-      path_raw = path.join(path_transcript_dir, 'transcript_raw_qmcdevmtg_' + dates[idx] + '.md')
+      path_raw = path.join(path_raws_dir, 'transcript_raw_qmcdevmtg_' + dates[idx] + '.md')
       # Transcript long.
       path_tlong = path.join(path_transcript_dir, 'tlong_qmcdevmtg_' + dates[idx] + '.md')
       
@@ -242,4 +244,4 @@ write_collection_into_text("post_collated_dict", 'dict', collated_dict)
 stl_dict = read_text_into_collection("stl_dict", 'dict')
 # Feed stl_dict back into post_collated dict to accumulate more short-forms over time.
 
-# convert_raw_transcript(shand_dict, idx=-1)
+# convert_raw_transcript(stl_dict, idx=-1)

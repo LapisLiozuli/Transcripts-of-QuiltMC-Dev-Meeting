@@ -148,27 +148,3 @@ Alex: Sure, so Octal asks, "Are there plans for the QSL module dl-?"
 The ans is yes.
 
 34:40
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
