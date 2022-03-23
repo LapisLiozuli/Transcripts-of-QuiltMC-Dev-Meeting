@@ -1,4 +1,29 @@
-20220212
+[Meeting: 12th of February 2022](https://anchor.fm/quiltmc-dev-meetings/episodes/Meeting-12th-of-February-2022-e1eco6t)  
+In this episode, the team discuss the progress made on Build Tools, Loader, and QSL, as well as a new WIP website, switching to the Enigma mapping format, and a change in governance. They also answer questions about Cozy modularization, biome and Wordgen APIs, RFCs, and the Quilt wiki.  
+[https://quiltmc.org](https://quiltmc.org)  
+[Quilt Community Discord](https://discord.quiltmc.org)  
+[Quilt Toolchain Discord (where meetings are held)](https://discord.quiltmc.org/toolchain)  
+[Cozy source on GitHub](https://github.com/QuiltMC/cozy-discord)  
+[New website preview](https://quilt.gareth-coles.dev)  
+[New Website source on GitHub](https://github.com/QuiltMC/quiltmc.org/tree/redesign-2022)  
+[Quilt Loader source on GitHub](https://github.com/QuiltMC/quilt-loader)  
+[Quilt Mappings on GitHub](https://github.com/QuiltMC/quilt-mappings)  
+[Tiny Remapper on GitHub (Quilt Fork)](https://github.com/QuiltMC/tiny-remapper)  
+[Enigma Mappings on GitHub (Quilt Fork)](https://github.com/QuiltMC/enigma)  
+[Quilt Standard Libraries (QSL) on GutHub](https://github.com/QuiltMC/quilt-standard-libraries)  
+[Tooltip API Pull Request](https://github.com/QuiltMC/quilt-standard-libraries/pull/69)  
+[Networking API Pull Request](https://github.com/QuiltMC/quilt-standard-libraries/pull/34)  
+[QSL Pull Requests to review](https://github.com/QuiltMC/quilt-standard-libraries/pulls)  
+[Quilt Mappings PR 5](https://github.com/QuiltMC/quilt-mappings/pull/5)  
+[CheaterCode's Governance RFC](https://github.com/QuiltMC/rfcs/pull/47)  
+[Admin Board vote results](https://www.rcv123.org/results/8JhRX2pwdAo4b3qqQLmFr3)  
+[GitHub Security Advisories](https://docs.github.com/en/code-security/security-advisories/about-github-security-advisories)  
+[The first (and only) failed transcription, from IBM Watson](https://hackmd.io/@gdude2002/ByULs2pPK)  
+[Oro's Wiki Prototype](https://github.com/OroArmor/wiki-prototype)  
+[RFC PRs to review](https://github.com/QuiltMC/rfcs/pulls)  
+[Mapping PRs to review](https://github.com/QuiltMC/quilt-mappings/pulls)  
+[Outreach Team RFC](https://github.com/QuiltMC/rfcs/pull/48)  
+[CHASM (formally ASMR) on GitHub](https://github.com/QuiltMC/chasm)
 
 **Gdude**: Did I accidental click the "Ping Everyone" button again? Yeah, I think I did, haha. Can someone on the Mumble side say something to make sure it's working?
 
@@ -8,7 +33,7 @@
 
 ~~C~~: Hello
 
-**Gdude**: Excellent, thank you. Meeting blows up, immediately deflates. Yeah, you see, that's what happens when I accidental ping everyone. Someone's going to complain, I bet. Yes, so for those of you that aren't familiar or haven't been here for the last meeting, the bot we were using to record the meetings was thrtning to be dead. It turns out that it's not- that I'm not paying for it at the moment, so we're using Mumble so that we can record instead. Um, it does a lot of the stuff that we need for **Southpaw** to make the podcast, so, that's why we're useing it.
+**Gdude**: Excellent, thank you. Meeting blows up, immediately deflates. Yeah, you see, that's what happens when I accidental ping everyone. Someone's going to complain, I bet. Yes, so for those of you that aren't familiar or haven't been here for the last meeting, the bot we were using to record the meetings was threatening to be dead. It turns out that it's not- that I'm not paying for it at the moment, so we're using Mumble so that we can record instead. Um, it does a lot of the stuff that we need for **Southpaw** to make the podcast, so, that's why we're useing it.
 
 So everyone is there on the Mumble server, on the other side of that Mumble bot. That's basically the gist of it. Make space-laser noises because people are setting Avatar, not avatars, what's the word, bios, profile bios. You can turn that off. Anyway, I'll give it a couple more minutes and then we can get started. Same format as always, of course. I'm going to try and remind people to say who they are the first time they talk, so that everyone knows for the sake of the podcast. Hope you people don't mind, but that's alright I'm sure. And we'll try to read out the questions as well.
 
