@@ -137,24 +137,36 @@ punctuation_list = ["?", ":", "!", " ", ",", ".", ":", ";"]
 # Plural forms also would be a problem.
 # I tried to avoid these use cases in the hardcoded shortforms.
 def attach_punc_to_shortform(sf_dict):
-    attach_dict = sf_dict.copy()
+    punc_dict = sf_dict.copy()
+    sort_dict = sf_dict.copy()
     # Add trailing punctuations: spaces, commas, periods, colons, semicolons.
     for sf in sf_dict:
+        # Generate capitalised form.
         sf_cap = sf.capitalize()
-        attach_dict[sf_cap] = attach_dict[sf].capitalize()
+        if sf == sf_cap:
+            sf_cap = "caps" + sf
+            print(sf)
+            print(sf_cap)
+        punc_dict[sf_cap] = punc_dict[sf].capitalize()
         # Capitalise words also as an alternate form.
         for shortform in [sf, sf_cap]:
             # Only add preceding space for non-name short-forms.
             if sf[:2] != 'nn':
                 space_sf = " " + shortform
-            for punc in punctuation_list:
-                sf_punc = space_sf + punc
-                attach_dict[sf_punc] = " " + attach_dict[shortform] + punc
-            # Plural: Imperfect but should cover majority of words.
-            attach_dict[shortform + "s"] = attach_dict[shortform] + "s"
-            # Future tense cannot be directly applied during the conversion using replace because the long-form flanks the word.
-            attach_dict[shortform + "|"] = "will be " + attach_dict[shortform] + "ing"
-    return attach_dict
+                for punc in punctuation_list:
+                    sf_punc = space_sf + punc
+                    punc_dict[sf_punc] = " " + punc_dict[shortform] + punc
+                # Plural: Imperfect but should cover majority of words.
+                # Extra space needed to avoid unnecessary translations.
+                punc_dict[" " + shortform + "s"] = " " + punc_dict[shortform] + "s"
+                # Future tense cannot be directly applied during the conversion using replace because the long-form flanks the word.
+                # Extra space not needed, but added for standardisation.
+                punc_dict[" " + shortform + "|"] = " will be " + punc_dict[shortform] + "ing"
+                # Remove the original shortforms to prevent excessive replacements later on.
+                # In other words, all shortforms in attach_dict should have a space in front of them.
+                punc_dict.pop(shortform, "missing key")
+                sort_dict.pop(shortform, "missing key")
+    return punc_dict, sort_dict
 
 # d = {"sci": "science", "fdbk": "feedback", "e": "every", "qk": "quick"}
 # test = attach_punc_to_shortform(new_d)
@@ -162,11 +174,13 @@ def attach_punc_to_shortform(sf_dict):
 
 # Defaults to latest entry which is the earliest date.
 def convert_raw_transcript(shand_dict, idx=-1):
-    punc_dict = attach_punc_to_shortform(shand_dict)
+    punc_dict, sort_dict = attach_punc_to_shortform(shand_dict)
     # Rearrange short-forms from long to short to prevent the shorter sf from overwriting the longer ones.
     desc_length_dict = {}
     for k in sorted(punc_dict, key=len, reverse=True):
+    # for k in sorted(sort_dict, key=len, reverse=True):
         desc_length_dict[k] = punc_dict[k]
+    write_text_outfrom_collection("temp", "dict", desc_length_dict)
     # Use markdown files for inline text formatting. Have to avoid certain symb in shorthand.
     path_raw = path.join(path_raws_dir, "transcript_raw_qmcdevmtg_" + dates[idx] + ".md")
     # Transcript long.
@@ -224,12 +238,11 @@ if dirty_switch:
     post_collated_dict = dict((v,k) for k,v in collated_dict.items())
 if not dirty_switch:
     post_collated_dict = collated_dict.copy()
-# Check if collated_dict has any words that share the same short-form.
-find_keys_w_duped_values(post_collated_dict)
+# # Check if collated_dict has any words that share the same short-form.
+# find_keys_w_duped_values(post_collated_dict)
 write_text_outfrom_collection("post_collated_dict", "dict", post_collated_dict)
 # Short-to-Long dict that contains a few other custom short-forms. Mainly altv short-forms for existing words.
 stl_dict = read_text_into_collection("stl_dict", "dict")
 # stl_dict will be a copy of post_collated_dict.
 # Feed stl_dict back into collated_dict to accumulate more short-forms over time.
-
 convert_raw_transcript(stl_dict, idx=-1)

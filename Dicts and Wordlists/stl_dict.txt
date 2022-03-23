@@ -2633,7 +2633,7 @@
 "unon": "unknown",
 "up2d": "up to date",
 "upcg": "upcoming",
-"updt": "update",
+"upd8": "update",
 "upgd": "upgrade",
 "use[": "useful",
 "usg": "usage",

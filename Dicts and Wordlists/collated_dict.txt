@@ -2660,7 +2660,7 @@
 "xpced]_": "unprecedented",
 "up2d": "up to date",
 "upcg": "upcoming",
-"updt": "update",
+"upd8": "update",
 "upgd": "upgrade",
 "usg": "usage",
 "use[": "useful",
