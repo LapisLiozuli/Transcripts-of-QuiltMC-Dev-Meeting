@@ -142,17 +142,18 @@ def attach_punc_to_shortform(sf_dict):
     for sf in sf_dict:
         sf_cap = sf.capitalize()
         attach_dict[sf_cap] = attach_dict[sf].capitalize()
-    # Capitalise words also as an alternate form.
-    for shortform in [sf, sf_cap]:
-    # Add preceding space.
-        space_sf = " " + shortform
-        for punc in punctuation_list:
-            sf_punc = space_sf + punc
-            attach_dict[sf_punc] = " " + attach_dict[shortform] + punc
-        # Plural: Imperfect but should cover majority of words.
-        attach_dict[shortform + "s"] = attach_dict[shortform] + "s"
-        # Future tense cannot be directly applied during the conversion using replace because the long-form flanks the word.
-        attach_dict[shortform + "|"] = "will be" + attach_dict[shortform] + "ing"
+        # Capitalise words also as an alternate form.
+        for shortform in [sf, sf_cap]:
+            # Only add preceding space for non-name short-forms.
+            if sf[:2] != 'nn':
+                space_sf = " " + shortform
+            for punc in punctuation_list:
+                sf_punc = space_sf + punc
+                attach_dict[sf_punc] = " " + attach_dict[shortform] + punc
+            # Plural: Imperfect but should cover majority of words.
+            attach_dict[shortform + "s"] = attach_dict[shortform] + "s"
+            # Future tense cannot be directly applied during the conversion using replace because the long-form flanks the word.
+            attach_dict[shortform + "|"] = "will be " + attach_dict[shortform] + "ing"
     return attach_dict
 
 # d = {"sci": "science", "fdbk": "feedback", "e": "every", "qk": "quick"}
