@@ -129,7 +129,7 @@ def create_lem_list(input_wordlist, filename_deriv):
 
     return big_list
 
-punctuation_list = ["?", ":", "!", " ", ",", ".", ":", ";"]
+punctuation_list = ["?", ":", "!", " ", ",", ".", ":", ";", "'", '"']
 # Takes a list of words. Eventually can feed words from the processed transcripts back into this function.
 # Perhaps add an list of exceptions that won"t have any trailing punc, such as contractions ("wouldn't").
 # Tenses using future (|), present (-) and past (_).
@@ -145,20 +145,18 @@ def attach_punc_to_shortform(sf_dict):
         sf_cap = sf.capitalize()
         if sf == sf_cap:
             sf_cap = "caps" + sf
-            print(sf)
-            print(sf_cap)
         punc_dict[sf_cap] = punc_dict[sf].capitalize()
         # Capitalise words also as an alternate form.
         for shortform in [sf, sf_cap]:
-            # Only add preceding space for non-name short-forms.
+            # Exclude names from the text processing loop.
             if sf[:2] != 'nn':
                 space_sf = " " + shortform
                 for punc in punctuation_list:
                     sf_punc = space_sf + punc
                     punc_dict[sf_punc] = " " + punc_dict[shortform] + punc
                 # Plural: Imperfect but should cover majority of words.
-                # Extra space needed to avoid unnecessary translations.
-                punc_dict[" " + shortform + "s"] = " " + punc_dict[shortform] + "s"
+                # Extra space needed to avoid unnecessary translations. Both before and after.
+                punc_dict[" " + shortform + "s "] = " " + punc_dict[shortform] + "s "
                 # Future tense cannot be directly applied during the conversion using replace because the long-form flanks the word.
                 # Extra space not needed, but added for standardisation.
                 punc_dict[" " + shortform + "|"] = " will be " + punc_dict[shortform] + "ing"
@@ -168,19 +166,19 @@ def attach_punc_to_shortform(sf_dict):
                 sort_dict.pop(shortform, "missing key")
     return punc_dict, sort_dict
 
-# d = {"sci": "science", "fdbk": "feedback", "e": "every", "qk": "quick"}
-# test = attach_punc_to_shortform(new_d)
 
 
 # Defaults to latest entry which is the earliest date.
-def convert_raw_transcript(shand_dict, idx=-1):
+def convert_raw_transcript(shand_dict, idx=-1, debug=False):
     punc_dict, sort_dict = attach_punc_to_shortform(shand_dict)
     # Rearrange short-forms from long to short to prevent the shorter sf from overwriting the longer ones.
     desc_length_dict = {}
     for k in sorted(punc_dict, key=len, reverse=True):
     # for k in sorted(sort_dict, key=len, reverse=True):
         desc_length_dict[k] = punc_dict[k]
-    write_text_outfrom_collection("temp", "dict", desc_length_dict)
+    # Add a debug term to check the final desc_length_dict.
+    if debug:
+        write_text_outfrom_collection("temp", "dict", desc_length_dict)
     # Use markdown files for inline text formatting. Have to avoid certain symb in shorthand.
     path_raw = path.join(path_raws_dir, "transcript_raw_qmcdevmtg_" + dates[idx] + ".md")
     # Transcript long.

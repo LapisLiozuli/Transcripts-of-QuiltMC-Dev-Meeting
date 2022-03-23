@@ -214,8 +214,8 @@ nnoro: We're in the #development chnl for the after-party.
 
 nngli: Yes, #devt chnl.
 
-nngdu: Yes, the voice after-party
+nngdu: Yes, the voice after=party
 
-nngli: Yes, voice cha after-party.
+nngli: Yes, voice chat after=party.
 
 nngdu: Thx for coming, eone.

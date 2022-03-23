@@ -1,3 +1,31 @@
+[Meeting: 26 of Febuary 2022](https://anchor.fm/quiltmc-dev-meetings/episodes/Meeting-26-of-Febuary-2022-e1f1lu8)  
+In this episode, the team make an exciting reveal about something...important. They also discuss progress made on CHASM, Loader, QSL and other projects, and take questions from the community.  
+[CHASM on GitHub](https://github.com/QuiltMC/chasm)  
+[CHASM Gradle Plugin branch](https://github.com/QuiltMC/chasm/tree/quilt-gradle-plugin)  
+[CHASM Gradle Plugin test project](https://github.com/CheaterCodes/chasm-gradle-plugin-test)  
+[Redesigned Website preview](https://quilt.gareth-coles.dev)  
+[Website source on GitHub](https://github.com/QuiltMC/quiltmc.org)  
+[Redesign Pull Request](https://github.com/QuiltMC/quiltmc.org/pull/27)  
+[Quiltflower decompiler on GitHub](https://github.com/QuiltMC/quiltflower)  
+[Quilt Loader on GitHub](https://github.com/QuiltMC/quilt-loader)  
+[Loader Issue #38 Loading mods from subfolders](https://github.com/QuiltMC/quilt-loader/issues/38)  
+[Loader PR #50: Refactoring the ModDependency model](https://github.com/QuiltMC/quilt-loader/pull/50)  
+[QSL on GitHub](https://github.com/QuiltMC/quilt-standard-libraries)  
+[QSL PR #38: Registry Module/Events (FCP)](https://github.com/QuiltMC/quilt-standard-libraries/pull/38)  
+[QSL PR #76: Tag API for 1.18.2 (FCP)](https://github.com/QuiltMC/quilt-standard-libraries/pull/76)  
+[QSL PR #78: Migration to Quilt Loader](https://github.com/QuiltMC/quilt-standard-libraries/pull/78)  
+[QSL PR #18: Item Settings API (merged)](https://github.com/QuiltMC/quilt-standard-libraries/pull/18)  
+[Loader Issue #13: Mod subfolders](https://github.com/QuiltMC/quilt-loader/issues/15)  
+[Forge's Loadstages](https://mcforge.readthedocs.io/en/latest/conventions/loadstages/)  
+[Current team listings](https://quiltmc.org/about/teams/)  
+[QSL Contributing information](https://github.com/QuiltMC/quilt-standard-libraries/blob/1.18/CONTRIBUTING.md)  
+[Sesh Discord bot](https://sesh.fyi)  
+["The Timeline"](https://quiltmc.org/about/timeline/)  
+[Quilt's Maven](https://maven.quiltmc.org)  
+[Stats Dashboard for Quilt Discord servers](https://stats-quilt.gserv.me/public/dashboard/9b181b97-bd7f-4ab0-87ed-3239f9149932)  
+[Haven's Recommended AWS course #1](https://acloudguru.com/course/aws-certified-solutions-architect-associate-saa-c02)  
+[Haven's Recommended AWS course #2](https://acloudguru.com/course/aws-certified-solutions-architect-associate-saa-c02)
+
 **Gdude**: Hello and welcome to the QuiltMC Developers’ Meeting Podcast. The podcast that isn’t really a podcast. If you’re new here, this is just a collection of recordings of each publicly recorded Developers’ Meeting, lightly edited for comfort and uploaded as a podcast for ease of accessibility. Our meetings are held on Discord every two weeks, relayed on a Mumble server and recorded live. Hence the lower audio quality. For more information on what the Quilt Project is and what we do here, please head to QuiltMC.org.
 
 **Gdude**: Well well well, it's me. I appreciate how quickly people join when the event starts. It's just like yeah, wait that's happening now, isn't it? Hehe. Oh hey everyone, we're doing the same thing we did last week, or last fortnight. Last biweek. I will be here on Discord. Everyone else is on the other end of Mumble where **Saf** is recording everything to make sure, you know, we're able to put out the podcast later on. It's still a little early out so we're going to give it a few minutes. Can somebody on Mumble say something? Hehe.
