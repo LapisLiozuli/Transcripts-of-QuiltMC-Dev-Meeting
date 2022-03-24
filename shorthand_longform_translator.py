@@ -46,7 +46,7 @@ from nltk.stem import WordNetLemmatizer
 # nltk.download("wordnet")
 
 # This goes in reverse chrono order. Will have to revert back once all the existing archives are completed.
-dates = ["20220312", "20220226", "20220212"]
+dates = ["20220312", "20220226", "20220212", "20220129"]
 path_transcript_dir = r"C:\Users\Public\Documents\LapisLiozuli\Transcripts-of-QuiltMC-Dev-Meeting"
 path_dicts_dir = path.join(path_transcript_dir, "Dicts and Wordlists")
 path_raws_dir = path.join(path_transcript_dir, "Raws")
@@ -129,7 +129,7 @@ def create_lem_list(input_wordlist, filename_deriv):
 
     return big_list
 
-punctuation_list = ["?", ":", "!", " ", ",", ".", ":", ";", "'", '"', "="]
+punctuation_list = ["?", ":", "!", " ", ",", ".", ":", ";", "'", '"', "=", "#", "'s", "_", "-"]
 # Takes a list of words. Eventually can feed words from the processed transcripts back into this function.
 # Perhaps add an list of exceptions that won"t have any trailing punc, such as contractions ("wouldn't").
 # Tenses using future (|), present (-) and past (_).
@@ -149,6 +149,7 @@ def attach_punc_to_shortform(sf_dict):
         # Capitalise words also as an alternate form.
         for shortform in [sf, sf_cap]:
             # Exclude names from the text processing loop.
+            # But need to allow " 's " for names at some point.
             if sf[:2] != 'nn':
                 space_sf = " " + shortform
                 for punc in punctuation_list:
