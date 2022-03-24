@@ -129,7 +129,7 @@ def create_lem_list(input_wordlist, filename_deriv):
 
     return big_list
 
-punctuation_list = ["?", ":", "!", " ", ",", ".", ":", ";", "'", '"']
+punctuation_list = ["?", ":", "!", " ", ",", ".", ":", ";", "'", '"', "="]
 # Takes a list of words. Eventually can feed words from the processed transcripts back into this function.
 # Perhaps add an list of exceptions that won"t have any trailing punc, such as contractions ("wouldn't").
 # Tenses using future (|), present (-) and past (_).

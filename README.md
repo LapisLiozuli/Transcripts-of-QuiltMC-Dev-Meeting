@@ -10,7 +10,7 @@ As audio transcription softwares (both free and paid) are still struggling with 
 
 Contributors are welcome to amend or add to the transcripts, as in many areas I might lack technical expertise or exposure. Plus, due to time zones I'm usually unable to attend the meeting in real time so those who were there would likely have better clarity about what was being discussed back then.
 
-Please note that I will have the final say on how I merge PRs, especiallly if conflicts arise between them. Please be patient while I figure out exactly how best to standardise the format.
+Please note that I will have have to exercise my own judgment on how I merge PRs, especiallly if conflicts arise between them. Please be patient while I figure out exactly how best to standardise the format.
 
 # Formatting
 
