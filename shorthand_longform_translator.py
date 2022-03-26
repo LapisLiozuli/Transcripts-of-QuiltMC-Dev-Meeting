@@ -46,7 +46,7 @@ from nltk.stem import WordNetLemmatizer
 # nltk.download("wordnet")
 
 # This goes in reverse chrono order. Will have to revert back once all the existing archives are completed.
-dates = ["20220312", "20220226", "20220212", "20220129"]
+dates = ["20220326", "20220312", "20220226", "20220212", "20220129", "20211211", "20211127", "20211113"]
 path_transcript_dir = r"C:\Users\Public\Documents\LapisLiozuli\Transcripts-of-QuiltMC-Dev-Meeting"
 path_dicts_dir = path.join(path_transcript_dir, "Dicts and Wordlists")
 path_raws_dir = path.join(path_transcript_dir, "Raws")
@@ -129,7 +129,7 @@ def create_lem_list(input_wordlist, filename_deriv):
 
     return big_list
 
-punctuation_list = ["?", ":", "!", " ", ",", ".", ":", ";", "'", '"', "=", "#", "'s", "_", "-"]
+punctuation_list = ["?", ":", "!", " ", ",", ".", ":", ";", "'", '"', "=", "#", "'s", "_", "-", "~"]
 # Takes a list of words. Eventually can feed words from the processed transcripts back into this function.
 # Perhaps add an list of exceptions that won"t have any trailing punc, such as contractions ("wouldn't").
 # Tenses using future (|), present (-) and past (_).
@@ -224,14 +224,15 @@ write_text_outfrom_collection("lem_dict", "dict", abrv_dict)
 # shand_dict = read_text_into_collection("shorthand_dict", "dict")
 # shorthand_dict = compress_words_to_shorthand([])
 
+# dirty_switch is True only when initialising dicts, then False when recursing dicts.
+dirty_switch = False
+
 # Collated from the lemmas and derivative words from top5K_wordfreqnet, past QDMs and post_deriv_list.
 # This was manually hardcoded. Ideally it can be automated in future, but hopefully these few thousand words should cover most use cases.
 collated_dict = read_text_into_collection("collated_dict", "dict")
-# Sort keys alphabetically.
-collated_dict = {key: value for key, value in sorted(collated_dict.items())}
+# Sort keys alphabetically. Added a lower() as most acronyms contain capitals which is annoying to type.
+collated_dict = {key.lower(): value for key, value in sorted(collated_dict.items())}
 # Issue: stl_dict has format sf:lf, but collated_dict has format lf:sf. Added a True-clause as a quick and dirty switch.
-# dirty_switch is True only when initialising dicts, then False when recursing dicts.
-dirty_switch = False
 # Flip keys (long-forms) and values (short-forms). This allows for a word to have multiple short-forms.
 if dirty_switch:
     post_collated_dict = dict((v,k) for k,v in collated_dict.items())
@@ -244,4 +245,8 @@ write_text_outfrom_collection("post_collated_dict", "dict", post_collated_dict)
 stl_dict = read_text_into_collection("stl_dict", "dict")
 # stl_dict will be a copy of post_collated_dict.
 # Feed stl_dict back into collated_dict to accumulate more short-forms over time.
-convert_raw_transcript(stl_dict, idx=-1)
+convert_raw_transcript(stl_dict, idx=-3)
+
+# Run once with new collated_dict to sort alphabetically.
+# Copy post_collated_dict into stl_dict. Maybe set a flag to run this step automatically if no more changes are needed.
+# The third time of run- will produce the tlong file.
