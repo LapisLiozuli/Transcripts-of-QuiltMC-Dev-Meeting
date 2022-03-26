@@ -151,6 +151,7 @@ def attach_punc_to_shortform(sf_dict):
             # Exclude names from the text processing loop.
             # But need to allow " 's " for names at some point.
             if sf[:2] != 'nn':
+                # Maybe add "=" in future. "=" is the stand-in for "-" as it already represents "-ing".
                 space_sf = " " + shortform
                 for punc in punctuation_list:
                     sf_punc = space_sf + punc
@@ -166,7 +167,6 @@ def attach_punc_to_shortform(sf_dict):
                 punc_dict.pop(shortform, "missing key")
                 sort_dict.pop(shortform, "missing key")
     return punc_dict, sort_dict
-
 
 
 # Defaults to latest entry which is the earliest date.
@@ -195,58 +195,62 @@ def convert_raw_transcript(shand_dict, idx=-1, debug=False):
 
     # Convert past tense and present tense in an imperfect manner.
     tense_dict = {"-": "ing", "_": "ed"}
+    tense_errors = {"eing": "ing", "eed": "ed"}
     for sf_tense in tense_dict:
-      longlines = [line.replace(sf_tense, tense_dict[sf_tense]) for line in longlines]
+        longlines = [line.replace(sf_tense, tense_dict[sf_tense]) for line in longlines]
+    # Might want to remove common errors from the transcription like "-eing" to "-ing" or "-eed" to "-ed".
+    for error in tense_errors:
+        longlines = [line.replace(error, tense_errors[error]) for line in longlines]
 
     with open(path_tlong, "w") as f:
       f.writelines(longlines)
 
 
-# Import word list. 25323 words.
-popular_dolph = read_text_into_collection("popular_dolph", "list")
-# 5050 words.
-top5K_wordfreqnet = read_text_into_collection("top5K_wordfreqnet", "list")
-# Should eventually be able to lemmatise only when needed.
-big_list = create_lem_list(top5K_wordfreqnet, "deriv_top5K")
-# 567 words after elimination. All these words contain lemmas.
-post_deriv_list = read_text_into_collection("post_deriv", "list")
-# The basic list that should contain only lemmas.
-rootword_list = [word for word in big_list if word not in post_deriv_list]
-# The dict of each word and its short-form.
-abrv_dict = {word: abbreviate_word(word) for word in rootword_list}
-# Truncate if short-form is >4 letters long? But that might add to the workload instead.
-truncate_dict = {word: word[:4] for word in rootword_list if len(abrv_dict[word]) > 4}
-# Export to edit it e.g. check for compound words, use truncated form instead.
-write_text_outfrom_collection("lem_dict", "dict", abrv_dict)
-
-# Import dict of abbreviations.
-# # Currently my own written dict based on the past two QDM transcripts.
-# shand_dict = read_text_into_collection("shorthand_dict", "dict")
-# shorthand_dict = compress_words_to_shorthand([])
-
-# dirty_switch is True only when initialising dicts, then False when recursing dicts.
-dirty_switch = False
-
-# Collated from the lemmas and derivative words from top5K_wordfreqnet, past QDMs and post_deriv_list.
-# This was manually hardcoded. Ideally it can be automated in future, but hopefully these few thousand words should cover most use cases.
-collated_dict = read_text_into_collection("collated_dict", "dict")
-# Sort keys alphabetically. Added a lower() as most acronyms contain capitals which is annoying to type.
-collated_dict = {key.lower(): value for key, value in sorted(collated_dict.items())}
-# Issue: stl_dict has format sf:lf, but collated_dict has format lf:sf. Added a True-clause as a quick and dirty switch.
-# Flip keys (long-forms) and values (short-forms). This allows for a word to have multiple short-forms.
-if dirty_switch:
+def generate_new_dict():
+    # Import word list. 25323 words.
+    popular_dolph = read_text_into_collection("popular_dolph", "list")
+    # 5050 words.
+    top5K_wordfreqnet = read_text_into_collection("top5K_wordfreqnet", "list")
+    # Should eventually be able to lemmatise only when needed.
+    big_list = create_lem_list(top5K_wordfreqnet, "deriv_top5K")
+    # 567 words after elimination. All these words contain lemmas.
+    post_deriv_list = read_text_into_collection("post_deriv", "list")
+    # The basic list that should contain only lemmas.
+    rootword_list = [word for word in big_list if word not in post_deriv_list]
+    # The dict of each word and its short-form.
+    abrv_dict = {word: abbreviate_word(word) for word in rootword_list}
+    # Truncate if short-form is >4 letters long? But that might add to the workload instead.
+    truncate_dict = {word: word[:4] for word in rootword_list if len(abrv_dict[word]) > 4}
+    # Export to edit it e.g. check for compound words, use truncated form instead.
+    write_text_outfrom_collection("lem_dict", "dict", abrv_dict)
+    # Collated from the lemmas and derivative words from top5K_wordfreqnet, past QDMs and post_deriv_list.
+    # This was manually hardcoded. Ideally it can be automated in future, but hopefully these few thousand words should cover most use cases.
+    collated_dict = read_text_into_collection("collated_dict", "dict")
+    # Sort keys alphabetically. Added a lower() as most acronyms contain capitals which is annoying to type.
+    collated_dict = {key.lower(): value for key, value in sorted(collated_dict.items())}
+    # Flip keys (long-forms) and values (short-forms). This allows for a word to have multiple short-forms.
     post_collated_dict = dict((v,k) for k,v in collated_dict.items())
-if not dirty_switch:
-    post_collated_dict = collated_dict.copy()
-# # Check if collated_dict has any words that share the same short-form.
-# find_keys_w_duped_values(post_collated_dict)
-write_text_outfrom_collection("post_collated_dict", "dict", post_collated_dict)
-# Short-to-Long dict that contains a few other custom short-forms. Mainly altv short-forms for existing words.
-stl_dict = read_text_into_collection("stl_dict", "dict")
-# stl_dict will be a copy of post_collated_dict.
-# Feed stl_dict back into collated_dict to accumulate more short-forms over time.
-convert_raw_transcript(stl_dict, idx=-3)
+    write_text_outfrom_collection("post_collated_dict", "dict", post_collated_dict)
+    # # Check if collated_dict has any words that share the same short-form.
+    # find_keys_w_duped_values(post_collated_dict)
+    # Short-to-Long dict that contains a few other custom short-forms. Mainly altv short-forms for existing words.
+    # stl_dict will be a copy of post_collated_dict.
+    # Feed stl_dict back into collated_dict to accumulate more short-forms over time.
+    stl_dict = read_text_into_collection("stl_dict", "dict")
 
-# Run once with new collated_dict to sort alphabetically.
-# Copy post_collated_dict into stl_dict. Maybe set a flag to run this step automatically if no more changes are needed.
-# The third time of run- will produce the tlong file.
+# Generate dict of abbreviations either by import or generation
+# dirty_switch is True when building upon dicts, then False only when initialising dicts.
+dirty_switch = True
+# Run this when building on an existing dictionary of short-forms with new entries.
+if dirty_switch:
+    stl_dict = read_text_into_collection("stl_dict", "dict")
+    # Read stl_dict.
+    # Sort it alphabetically.
+    stl_dict = {key.lower(): value for key, value in sorted(stl_dict.items())}
+    # Update the text archive.
+    write_text_outfrom_collection("stl_dict", "dict", stl_dict)
+# Only run this when first initialising a dictionary of short-forms.
+else:
+    generate_new_dict()
+
+convert_raw_transcript(stl_dict, idx=-3)
