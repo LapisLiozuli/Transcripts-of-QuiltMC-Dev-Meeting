@@ -46,7 +46,7 @@ from nltk.stem import WordNetLemmatizer
 # nltk.download("wordnet")
 
 # This goes in reverse chrono order. Will have to revert back once all the existing archives are completed.
-dates = ["20220326", "20220312", "20220226", "20220212", "20220129", "20211211", "20211127", "20211113"]
+dates = ["20220409", "20220326", "20220312", "20220226", "20220212", "20220129", "20211211", "20211127", "20211113"]
 path_transcript_dir = r"C:\Users\Public\Documents\LapisLiozuli\Transcripts-of-QuiltMC-Dev-Meeting"
 path_dicts_dir = path.join(path_transcript_dir, "Dicts and Wordlists")
 path_raws_dir = path.join(path_transcript_dir, "Raws")
@@ -247,10 +247,10 @@ if dirty_switch:
     # Read stl_dict.
     # Sort it alphabetically.
     stl_dict = {key.lower(): value for key, value in sorted(stl_dict.items())}
-    # Update the text archive.
+    # Update the text archive. But might erase some entries. Still, 4 out of 2500+ is only <2%.
     write_text_outfrom_collection("stl_dict", "dict", stl_dict)
 # Only run this when first initialising a dictionary of short-forms.
 else:
     generate_new_dict()
 
-convert_raw_transcript(stl_dict, idx=-3)
+convert_raw_transcript(stl_dict, idx=1)
