@@ -1,5 +1,56 @@
 https://anchor.fm/quiltmc-dev-meetings
 
+[09/04/2022: My Welsh Isn't Great](https://anchor.fm/quiltmc-dev-meetings/episodes/09042022-My-Welsh-Isnt-Great-e1h6336)  
+In this episode, the team discuss QSL, Mappings, Build Tools CHASM, and Loader, as well as Kotlin support for Quilt, and how to write issues that attract contributors.  
+[https://quiltmc.org](https://quiltmc.org/)  
+[QuiltMC on GitHub](https://github.com/QuiltMC)  
+[Quilt Community Discord](https://discord.quiltmc.org/)  
+[Quilt Toolchain Discord](https://discord.quiltmc.org/toolchain)  
+[Quilt Openings](https://quiltmc.org/openings)  
+[Quilt Standard Libraries on GitHub](https://github.com/QuiltMC/quilt-standard-libraries)  
+[QSL PR #91: Dimension API](https://github.com/QuiltMC/quilt-standard-libraries/pull/91)  
+[QSL PR #67: Server-side Argument Types](https://github.com/QuiltMC/quilt-standard-libraries/pull/68)  
+[QSL PR #76: Migrate to Quilt Loader](https://github.com/QuiltMC/quilt-standard-libraries/pull/78)  
+[Fabric API over QSL on GitHub](https://github.com/QuiltMC/fabric-api-qsl)  
+[Quilt Mappings on GitHub](https://github.com/QuiltMC/quilt-mappings)  
+[Hashed Mojmap Mappings Hasher on GitHub](https://github.com/QuiltMC/mappings-hasher)  
+[Quilt Mappings Naming Conventions](https://github.com/QuiltMC/quilt-mappings/blob/22w15a/CONVENTIONS.md)  
+[Quilt Mappings on Loom](https://github.com/QuiltMC/quilt-mappings-on-loom)  
+[Quilt Loom on GitHub](https://github.com/QuiltMC/quilt-loom)  
+[Chasm on GitHub](https://github.com/QuiltMC/chasm)  
+[Chasm PR #42: Language Rework](https://github.com/QuiltMC/chasm/pull/42)  
+[Chasm: Good First Issues](https://github.com/QuiltMC/chasm/labels/good%20first%20issue)  
+[Chasm Issue #43: Instrinsic Functions](https://github.com/QuiltMC/chasm/issues/43)  
+[Chasm Issue #45: Better Error Messages](https://github.com/QuiltMC/chasm/issues/45)  
+[Chasm Issue #39: Language Specification](https://github.com/QuiltMC/chasm/issues/39)  
+[Quilt’s (new and improved) Maven Repository](https://maven.quiltmc.org/)  
+[Quilt Loader on GitHub](https://github.com/QuiltMC/quilt-loader)  
+[Glitch’s Loader Issue](https://github.com/QuiltMC/quilt-loader/issues/59)
+
+[26/03/2022: Why Called Quilt?](https://anchor.fm/quiltmc-dev-meetings/episodes/26032022-Why-Called-Quilt-e1gchd5)  
+In this episode, the team discuss progress made on Chasm, Loader,
+Mappings, and QSL, as well as recent developments in the Community Team.
+They also take questions from the community, and we find out how Quilt
+got its name.  
+[https://quiltmc.org](https://quiltmc.org)  
+[QuiltMC on GitHub](https://github.com/QuiltMC)  
+[Quilt Community Discord](https://discord.quiltmc.org)  
+[Quilt Toolchain Discord](https://discord.quiltmc.org/toolchain)  
+[Doors and Wheels](https://twitter.com/newyorknixon/status/1500000428985286657)  
+[Chasm on GitHub](https://github.com/quiltmc/chasm)  
+[Chasm PR #42: Language Rewrite](https://github.com/QuiltMC/chasm/pull/42)  
+[Quilt Loader on GitHub](https://github.com/quiltmc/quilt-loader)  
+[Quilt Mappings on GitHub](https://github.com/quiltmc/quilt-mappings)  
+[Quilt Mappings PRs](https://quiltmc.org/quilt-mappings/pulls/)  
+[Quilt Mappings PR #5: Start work on refactoring rendering names](https://github.com/quiltmc/quilt-mappings/pulls/5)  
+[Quilt Standard Libraries on GitHub](https://github.com/quiltmc.org/quilt-standard-libraries)  
+[QSL PR #90: Fix Command API registration method](https://github.com/QuiltMC/quilt-standard-libraries/pull/88)  
+[QSL PR #78: Migrate to Quilt Loader](https://github.com/QuiltMC/quilt-standard-libraries/pull/78)  
+[Quilt Enters Beta (Quilt Blog)](https://quiltmc.org/blog/2022/03/22/quilt-enters-beta/)  
+[Quilt Openings (Quilt Website)](https://quiltmc.org/openings)  
+[@Quilt_MC on Twitter](https://twitter.com/quilt_mc)  
+[How it all began](https://imgur.com/a/fGfr3sd)
+
 [Meeting: 12/03/2022](https://anchor.fm/quiltmc-dev-meetings/episodes/Meeting-12032022-e1fp4mo)  
 In this episode, the team discuss progress made on Build Tools. CHASM, Loader, and QSL, and their readiness for the beta. They also discuss the Community and Outreach teams, and take questions from the community.  
 [https://quiltmc.org](https://quiltmc.org)  
