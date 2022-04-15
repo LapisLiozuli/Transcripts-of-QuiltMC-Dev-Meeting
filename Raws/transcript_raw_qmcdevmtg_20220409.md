@@ -104,4 +104,120 @@ nngdu: Not tt I'm aware of, I've been q bz. But I haven't seen much going on. Th
 
 OK, Ig we'll move onto qns then, and tt one is dfnt[ yours, nncheat.
 
-26:34
+nncheat: Tt one is dfnt[ mine. So first qn is from **Byte** regard- CHASM. Actl[, since Byte is not able to listen to hte podcast=
+
+nngdu: I'll try and type it.
+
+(nngdu's real-time notes: Yes and no, as always.  
+Not directly, not first-party, don't think there's anything we really want from this, however, we would like to expand Mixin quite a bit.  
+The Mixin frontend is quite comfortable to use for most people, they're used to it and we're like to keep that - eg, we want to be able to target lambdas by callsite (rather than by name), should be easier and more intuitive\n\nIn terms of things that aren't Mixin/AQ - eg interface injection, which we get for free with CHASM - it's completely unnecessary, it's something that you might want but we already have it for free  
+Also, **Kroppeb** has been doing some black magic regarding making some method calls automatically async; no idea what it's about but it sounds fun.  
+The whole point of CHASM isn't that we provide every possible interface - it's more that anyone can add what they need to it.)
+
+nncheat: Mb you c type it, thx. So the qn is, "Are there any concepts for CHASM frontends/transformers besides reimplementing Mixins/AW on CHASM?"
+So, I thk the ans to tt is both yes and no, as alw. First off, not dir[. Lk not as officially first=party supt, I don't thk thr's ath we rly want from this. Hwvr, we wld lk to xpnd Mixin q a bit. So the Mixin frontend is q cmft[ to use for most ppl. They're used to it, and dfnt[ wld lk to kp tt. So foreg, we want tb able to target lambdas, not by name, but by callsite which would be much more stbl. And also, more intuitive.
+
+But ito ths tt are not Mixin or access widener (AQ), we cld foreg talk abt irfc injk], which is essentially abt making an irfc vsbl on source code, lk on your MC dep. This is sth we get for free w CHASM, so we don't even nd to impl this.
+
+nngdu: You cut out at irfc injk].
+
+nncheat: Right, so thr is irfc injk] foreg tt we don't nd, bcz we get it for free w CHASM. Bcz every mixin is prob gonna be source=vsbl anw. So it's cplt[ xnecs.
+
+A qk qn from **AlphaMode** j as a quick intermediate: "Isn't interface injection broken on runtime?"
+No, it's j not meant tb work- w runtime. It's xcld[[ meant for compile time. So yeah, tt is sth tt foreg is sth you only nd once, but we alr hv it for free. Then **Kroppeb** hb doing some black magic regard- making some method calls auto[[ asynchronous. I hv no idea what it's abt, but it sounds fun. The whole pt of CHASM is not tt we c prvd many, many irfcs as a frontend, but tt ppl c make their own frontends if they nd to w/o reqr- hacks into it. I thk tt anss the qn fairly xtd[[.
+
+Thx nngdu, I hope you got all of tt.
+
+nngdu: Yep, more or less, ty.
+
+nncheat: I thk in the meantime we c ans the next qn, bcz the ans is alm the same as last week. So I'm j gonna take it. **Octal** asks, "Are there any plans for Kotlin on quilt? (I already know the answer to this, but others might not)"
+It's been a dscs] since the last mtg esnc[[ agn. I thk the short ans to tt is yes, thr are plans. We j don't know xk[ how they'll look yet. We want Kotlin as first=class supt swhr in Quilt. We're j not sure whr. We're not sure if it's gonna be in qsl, or if it's gonna be a separate ~~lang ~~team, or lk a separate Kotlin team. J uncertain.
+
+nngli: It's pretty much j a matter tt nbdy has gone down and written down all of the advgs and xadvgs for both yet. Lk I thk that's pretty much whr we are. Lk sbdy j nds to write a proposal and say why.
+
+nngdu: Yeah, ig ideally tt wld be kinda RFC territory, wouldn't it?
+
+nncheat: Tt is abs[ RFC territory.
+
+nngdu: Yeah, so tt wld be a gd way to start: Drafting up an RFC and see whether we get wider comments on tt. It'll be great to hv supt. Obv[ not biased at all as a Kotlin dev.
+
+nncheat: I thk thr's no one against supt for Kotlin. It's j the qn of how and whr.
+
+nngdu: Right, move on. Rmb, get your qns in with /ask. We don't hv tt many in, so if you hv ath, feel free. We still hv lk 15 mins. Uh, my Welsh isn't great x4tun[[, so I can't pronounce this name properly, but **grifferthrydwy** asks, "Is there anywhere to sign up to attend, but not showcase anything in blanketcon?",
+The ans is no, you don't nd to. J show up and join the server, install the modpack and you'll be thr. No nd to worry abt tt at all.
+
+Alrt, tt is the bottom of my list of qns, if aone h ath to ask, feel free w /ask. W/i rsn, tt is.
+
+nncheat: Plz come help out, we c alw use more ppl. You don't nd tb super professional, or 20 years' exp junior dev, sth IDK.
+
+nngdu: Tt wld be one heck of a junior dev.
+
+nncheat: Agn, esp for CHASM foreg. We j nd ppl who write lk 10 lines of code, 20 times. J= I rly j can't be bothered bcz thr's so much other stuff to do. I alr had great help on CHASM the last time I tried to get ppl on it. But it was just= At Javadocs foreg, you don't rly nd to know ath abt Java to do tt. So yeah. 
+
+I'm sure thr's plenty of smlr cases. I know nngli did sth on qload, thk it's taken care of but... Mapg is also alw sth you c alw rvw w/o know- too much abt the context. It's a great way to get started in Quilt.
+
+nngli: Uh, this is dfnt[ more for the devs here than the comy, but if you look at tt issue tt I open_ on qload, I feel lk tt's a v gd eg on how to hand sbdy work and get them to ctrb.
+
+nngdu: Do you hv a link to tt?
+
+nngli: Yeah, I c pull tt up, give me one second: [https://github.com/QuiltMC/quilt-loader/issues/59](https://github.com/QuiltMC/quilt-loader/issues/59)
+("This is a good first issue for anyone looking to dip in to contributing to Loader. If you are interested in getting this done, feel free to ask me questions at glitch#3274 on the Toolchain Discord....")
+
+nncheat: Also as a desperate call, if aone's v cmft[ w pgbuto, let us know.
+
+nngli: The trick is bsc[ to impl the whole th in your head, and then xk[ what you nd to do. And I know for this spfc issue, it took me more t to write the issue than it wld hv for me to j impl it mslf. But we had sbdy do it, and did active ctrb- and tt's what impt rly here.
+
+nngdu: Yeah, bcz we're at the pt whr lk some of the teams are fairly stretched out. So we rly j nd more ppl doing the same stuff in a lot of cases.
+
+nngli: Yes, xk[.
+
+nncheat: Yeah, it's rly ~~about a~~ big issue thr.
+
+nngli: And if you don't lk go into tt much dtl, you dfnt[ don't hv to. But it helps to hv ths tt are tt ez j to get ppl who are nervous abt it onboard.
+
+nncheat: Mb we shld hv sth whr lk, you copy fr the #voice=chat and then xpln it to them. Bcz it's prob faster than writing it out. IDK, what if thr's some fancy comy magic we c do to get us closer to the comy.
+
+nngli: This issue and all this is actl[ inspired by sth tt Rust does. They hv mentors so they'll mk issue tt they'll assign a mentor to, then sbdy takes this, and then they have one person tt they contact. And then that hv sbdy tt guides them thru the whole prcs, helps them w respond- to rvw comments, etc etc, and gets them thru the whole way. And then, I'm pretty sure tt they're pretty successful for tt.
+
+nncheat: Yeah, tt seems smart. Ok, yes, here's a fan favourite. **Will BL** asks, "will the chasm mixin front-end include anything like mixin-extras? (<https://github.com/LlamaLad7/MixinExtras>)"
+Now, Mixin Extras is a name tt hb thrown ard a lot. I haven't looked too closely at it tbh. I'm pretty sure the ans is yes fr what I've heard abt it. Lemme check. Yeah, so mod effect expression value, sure, tt's sth you c dfnt[ hv in CHASM. I thk it's one of hte most req_ fetr is lk to modify conds in if=statements or in loops or ath. Which I thk is= For what I'm hear- in Mixin Extras, dfnt[ sth we want. ~~Breadth=width~~ conds sounds lk sth tt we talked abt. Non=conflict- overrides is what we called those, same idea. Or non=conflict- redirects even. Lk you redirect some method call only if a crtn cond happens, and you c do tt w/o having a lot of mods conflicting.
+
+So I thk the ans is yes. I'll hv to look in dtl to see if thr's ath tt's not in the CHASM mindset, or we wouldn't want to impl this way. But in principle, yes, pretty sure. Tt's sth you c xpk in the main Mixin impl] on Quilt in future.
+
+nngdu: Sound pretty fabulous to me. Any more qns to come in? We still got abt 10 mins. I hv a qn: **grifferthrydwy**, how do you pronounce your name?
+
+nncheat: Ans_ via text.
+
+(**grifferthrydwy**: "griff earth ride why")
+
+nngdu: So I'm not actl[ Welsh, it j looks Welsh. Griffer=thry=d=why? OK. Tt's not too bad. Griffer's the right way.
+(****grifferthrydwy**: "add a discord bot that adds a number equal to the number of issues you've fixed to the end of your nickname. people like it when number go up")
+The scordboard's is itrs-, but I'm not too sure abt doing tt, j bcz I know tt ppl lk to game scoreboards. But lk, if we thot it wld work, it'd be pretty doable. Imn, we hv the tech at this pt.
+
+nngli: I thk it'd be mostly hte ppl writing issues for fetrs tt we'd be miss- here. It'd be more abt lk, who gets to the "one issue you get a week first", than it is lk, yk, who's ctrb- the most.
+
+nngdu: Yeah, it cld be itrs-, it's j tt I don't want to turn it into, yk, lk an Agile burndown chart mtg.
+
+nncheat: Mb you'd open issues for ppl to open issues.
+
+nngdu: Imn, tt's a th tt cld happen.
+
+nncheat: I was honestly surprised when I ask_ for help on Javadocs and actl[ ppl were willing to do tt bcz I hate doing tt. So mb, if thr's someone who loves writing issues on Github, hit us up.
+
+nngdu: Imn, we cld alw use sone to help w tt, for sure. Tt's sth I've been look- for anw, so... Alr, I thk we're abt out of qns, so let's call it thr. Now, I know tt thr's still stuff to talk abt. Were you guys plan- on doing more voice in the other voice [chnl], or were you gonna do lk a closed mtg for the extra Beta stuff?
+
+nncheat: Well, I thk, as alw, I invite the comy to an after=party in #development=zero. Hwvr, it might be tt a few of our devs will go into dev=mtgs and talk abt stuff tt they were talk- abt b4 the mtg started.
+
+nngli: I don't thk ath we were talk- abt strictly has tb secret.
+
+nncheat: No, we c do it publicly, ~~but it's ultimately Discord. Discord has the public chats~~, so we'll see how it works out.
+
+nngli: Imn, vrsn syss are controversial, but they're not lk secret.
+
+nncheat: No no no, it's not secret, tt's for sure. Imn, we can go into #dev=zero, and if it gets too loud for other rsns,, then we c j move to #dev=one or wtvr.
+
+nngdu: Alrt, sounds good. In that case, thx for coming to the mtg eone. The next mtg is prob actl[ gonna be at BlanketCon rather than on Discord. Um, we'll mk an event and post a bit more when we know a bit more.
+
+nncheat: Tt's two mtgs. The next mtg is j aft the Beta, then the one aft is the one tt's at BlanketCon.
+
+nngdu: Oh, you're right. Yeah, tt's the one aft tt. In that case, we'll see you all back here next week, w news fr how you've been doing w the Beta ideally. Either way, thx for coming eone, and thx for eone coming on Mumble as well.
