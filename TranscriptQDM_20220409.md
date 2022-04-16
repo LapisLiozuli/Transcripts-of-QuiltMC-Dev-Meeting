@@ -135,15 +135,7 @@ OK, I guess we'll move onto questions then, and that one is definitely yours, **
 
 **Gdude**: I'll try and type it.
 
-(**Gdude**'s real-time notes: Yes and no, as always.  
-Not directly, not first-party, don't think there's anything we really want from this, however, we would like to expand Mixin quite a bit.  
-The Mixin frontend is quite comfortable to use for most people, they're used to it and we're like to keep that ing eg, we want to be able to target lambdas by callsite (rather than by name), should be easier and more intuitive
-
-In terms of things that aren't Mixin/AQ - eg interface injection, which we get for free with CHASM - it's completely unnecessary, it's something that you might want but we already have it for free  
-Also, **Kroppeb** has been doing some black magic regarding making some method calls automatically asynchronous; no idea what it's about but it sounds fun.  
-The whole point of CHASM isn't that we provide every possible interface - it's more that anyone can add what they need to it.)
-
-**CheaterCodes**: Maybe you can type it, thanks. So the question is, "Are there any concepts for CHASM frontends/transformers besides reimplementing Mixins/AW on CHASM?"
+**CheaterCodes**: Maybe you can type it, thanks. So the question from **Byte** is, "Are there any concepts for CHASM frontends/transformers besides reimplementing Mixins/AW on CHASM?"
 So, I think the answer to that is both yes and no, as always. First off, not directly. Like not as officially first-party support, I don't think there's anything we really want from this. However, we would like to expand Mixin quite a bit. So the Mixin frontend is quite comfortable to use for most people. They're used to it, and definitely would like to keep that. So for example, we want to be able to target lambdas, not by name, but by callsite which would be much more stable. And also, more intuitive.
 
 But in terms of things that are not Mixin or access widener (AQ), we could for example talk about interface injection, which is essentially about making an interface visible on source code, like on your MC dependency. This is something we get for free with CHASM, so we don't even need to implement this.
@@ -158,8 +150,15 @@ No, it's just not meant to be working with runtime. It's exclusively meant for c
 Thx **Gdude**, I hope you got all of that.
 
 **Gdude**: Yep, more or less, thank you.
+(Real-time notes by **Gdude**: Yes and no, as always.  
+Not directly, not first-party, don't think there's anything we really want from this, however, we would like to expand Mixin quite a bit.  
+The Mixin frontend is quite comfortable to use for most people, they're used to it and we're like to keep that ing eg, we want to be able to target lambdas by callsite (rather than by name), should be easier and more intuitive
 
-**CheaterCodes**: I think in the meantime we can answer the next question, because the answer is almost the same as last week. So I'm just going to take it. **Octal** asks, "Are there any plans for Kotlin on quilt? (I already know the answer to this, but others might not)"
+In terms of things that aren't Mixin/AQ - eg interface injection, which we get for free with CHASM - it's completely unnecessary, it's something that you might want but we already have it for free  
+Also, **Kroppeb** has been doing some black magic regarding making some method calls automatically asynchronous; no idea what it's about but it sounds fun.  
+The whole point of CHASM isn't that we provide every possible interface - it's more that anyone can add what they need to it.)
+
+**CheaterCodes**: I think in the meantime we can answer the next question, because the answer is almost the same as last week. So I'm just going to take it. **Octal** asks, "Are there any plans for Kotlin on Quilt? (I already know the answer to this, but others might not)"
 It's been a discussion since the last meeting essentially again. I think the short answer to that is yes, there are plans. We just don't know exactly how they'll look yet. We want Kotlin as first-class support somewhere in Quilt. We're just not sure where. We're not sure if it's going to be in QSL, or if it's going to be a separate ~~lang~~ team, or like a separate Kotlin team. Just uncertain.
 
 **Glitch**: It's pretty much just a matter that nobody has gone down and written down all of the advantages and disadvantages for both yet. Like I think that's pretty much where we are. Like somebody just needs to write a proposal and say why.
@@ -172,7 +171,7 @@ It's been a discussion since the last meeting essentially again. I think the sho
 
 **CheaterCodes**: I think there's no one against support for Kotlin. It's just the question of how and where.
 
-**Gdude**: Right, move on. Remember, get your questions in with /ask. We don't have that many in, so if you have anything, feel free. We still have like 15 minutes. Uh, my Welsh isn't great unfortunately, so I can't pronounce this name properly, but **grifferthrydwy** asks, "Is there anywhere to sign up to attend, but not showcase anything in BlanketCon?",
+**Gdude**: Right, move on. Remember, get your questions in with /ask. We don't have that many in, so if you have anything, feel free. We still have like 15 minutes. Uh, my Welsh isn't great unfortunately, so I can't pronounce this name properly, but **grifferthrydwy** asks, "Is there anywhere to sign up to attend, but not showcase anything in BlanketCon?"
 The answer is no, you don't need to. Just show up and join the server, install the modpack and you'll be there. No need to worry about that at all.
 
 Alright, that is the bottom of my list of questions, if anyone has anything to ask, feel free with /ask. Within reason, that is.
@@ -208,7 +207,7 @@ I'm sure there's plenty of similar cases. I know **Glitch** did something on Qui
 
 **Glitch**: This issue and all this is actually inspired by something that Rust does. They have mentors so they'll make issue that they'll assign a mentor to, then somebody takes this, and then they have one person that they contact. And then that have somebody that guides them through the whole process, helps them with responding to review comments, etc etc, and gets them through the whole way. And then, I'm pretty sure that they're pretty successful for that.
 
-**CheaterCodes**: Yeah, that seems smart. Ok, yes, here's a fan favourite. **Will BL** asks, "will the chasm mixin front-end include anything like mixin-extras? (<https://github.com/LlamaLad7/MixinExtras>)"
+**CheaterCodes**: Yeah, that seems smart. Ok, yes, here's a fan favourite. **Will BL** asks, "Will the CHASM Mixin front-end include anything like [mixin-extras](https://github.com/LlamaLad7/MixinExtras)?"
 Now, Mixin-Extras is a name that has been thrown around a lot. I haven't looked too closely at it to be honest. I'm pretty sure the answer is yes from what I've heard about it. Let me check. Yeah, so mod effect expression value, sure, that's something you can definitely have in CHASM. I think it's one of the most requested feature is like to modify conditions in if-statements or in loops or anything. Which I think is- For what I'm hearing in Mixin-Extras, definitely something we want. ~~Breadth-width~~ conditions sounds like something that we talked about. Non-conflicting overrides is what we called those, same idea. Or non-conflicting redirects even. Like you redirect some method call only if a certain condition happens, and you can do that without having a lot of mods conflicting.
 
 So I think the answer is yes. I'll have to look in detail to see if there's anything that's not in the CHASM mindset, or we wouldn't want to implement this way. But in principle, yes, pretty sure. That's something you can expect in the main Mixin implementation on Quilt in future.
@@ -220,7 +219,7 @@ So I think the answer is yes. I'll have to look in detail to see if there's anyt
 (**grifferthrydwy**: "griff earth ride why")
 
 **Gdude**: So I'm not actually Welsh, it just looks Welsh. Griffer-thry-d-why? OK. That's not too bad. Griffer's the right way.
-(****grifferthrydwy**: "add a discord bot that adds a number equal to the number of issues you've fixed to the end of your nickname. people like it when number go up")
+(**grifferthrydwy**: "add a discord bot that adds a number equal to the number of issues you've fixed to the end of your nickname. people like it when number go up")
 The scordboard's is interesting, but I'm not too sure about doing that, just because I know that people like to game scoreboards. But like, if we thought it would work, it'd be pretty doable. I mean, we have the technology at this point.
 
 **Glitch**: I think it'd be mostly the people writing issues for features that we'd be missing here. It'd be more about like, who gets to the "one issue you get a week first", than it is like, you know, who's contributing the most.
@@ -250,13 +249,3 @@ The scordboard's is interesting, but I'm not too sure about doing that, just bec
 **CheaterCodes**: That's two meetings. The next meeting is just after the Beta, then the one after is the one that's at BlanketCon.
 
 **Gdude**: Oh, you're right. Yeah, that's the one after that. In that case, we'll see you all back here next week, with news from how you've been doing with the Beta ideally. Either way, thanks for coming everyone, and thanks for everyone coming on Mumble as well.
-
-
-
-Byte: "Are there any concepts for CHASM frontends/transformers besides reimplementing Mixins/AW on CHASM?",
-
-Octal: "Are there any plans for Kotlin on quilt? (I already know the answer to this, but others might not)",
-
-grifferthrydwy: "is there anywhere to sign up to attend, but not showcase anything in blanketcon?",
-
-Will BL: "will the chasm mixin front-end include anything like mixin-extras? (<https://github.com/LlamaLad7/MixinExtras>)", 
