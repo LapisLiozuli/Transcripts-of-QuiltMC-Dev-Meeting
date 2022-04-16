@@ -96,7 +96,9 @@ OK, that was all the teams for the meeting updates section, and now we can move 
 
 **CheaterCodes**: Yes, press 'Stage' and then you talk about it.
 
-**EarthComputer**: So, the question is, "Could CHASM be used to determine any patches at compile time and maybe generate a GraalVM native image with all of the patches applied?"
+**EarthComputer**: So, the question by **LambdAurora **is, "Could CHASM be used to determine any patches at compile time and maybe generate a GraalVM native image with all of the patches applied?"
+So yeah, so one of the advantages of CHASM is that it can be applied at compile time and not just run time because of its pure nature. So the output is completely deted by obviously the Minecraft jar, the mod jar, then the transformers and any other settings. Possibly some other things we design in the future. So yeah, it'll be able to run at compile time. It can then be decompiled in Gradle and you'll be able to see the transformations in the source like you can with Forge patches already. And I don't see a reason why someone wouldn't be able to make a GraalVM native image. Although, I'm not particularly sure why you'd want that because it'll all be cache anyway. But I mean, if you want to, go ahead.
+
 So yeah, so one of the advantages of CHASM is that it can be applied at compile time and not just run time because of its pure nature. So the output is completely deted by obviously the Minecraft jar, the mod jar, then the transformers and any other settings. Possibly some other things we design in the future. So yeah, it'll be able to run at compile time. It can then be decompiled in Gradle and you'll be able to see the transformations in the source like you can with Forge patches already. And I don't see a reason why someone wouldn't be able to make a GraalVM native image. Although, I'm not particularly sure why you'd want that because it'll all be cache anyway. But I mean, if you want to, go ahead.
 
 **CheaterCodes**: It's a big motto of CHASM. "Yeah, you can do it, but maybe you shouldn't."
@@ -195,38 +197,32 @@ Now I'll be talking about this from a CHASM perspective since that's my thing. O
 
 
 
+**yitzy**: "What will quiltflower 1.8 bring?"
 
+**Kichura**: "What adventages does a mod developer gain when using quilt instead of forge/fabric libraries?"
 
+**Byte**: "I'm glad to see Quilt is approaching release. I was worried there would be a loss momentum after a while. How old is Quilt in it's current form, then?"
 
+**Banzobotic**: "Does chasm completely replace the asmr prototype?"
 
-nnaurora: "Could CHASM be used to determine any patches at compile time and maybe generate a GraalVM native image with all the patches applied?"
+**Byte**: "Have you thought about upstreaming Quiltflower's changes to Fernflower? I'm not sure if JetBrains even maintains Fernflower anymore though, to be honest."
 
-yitzy: "what will quiltflower 1.8 bring?"
+**Byte**: "Is applying transformations at compile time something that's only used in development, or can you ship your mods as patches?"
 
-kichura: "What adventages does a mod developer gain when using quilt instead of forge/fabric libraries?"
+**Byte**: "So Mojang has made more and more stuff data-driven, so you're focusing on APIs for those things in QSL, and especially creating resources programmatically, because JSON files are a pain sometimes, right?"
 
-Byte: "I'm glad to see Quilt is approaching release. I was worried there would be a loss momentum after a while. How old is Quilt in it's current form, then?"
+**Fish**: "Can you still go from Quilt -> Fabric fairly easily?"
 
-Banzobotic: "Does chasm completely replace the asmr prototype?"
+**Grondag**: "What is the replacement for Mixin Plugins if we need conditional mixins?"
 
-Byte: "Have you thought about upstreaming Quiltflower's changes to Fernflower? I'm not sure if JetBrains even maintains Fernflower anymore though, to be honest."
+**TheBlackSquidward**: "is there plans to have compat with forge?"
 
-Byte: "Is applying transformations at compile time something that's only used in development, or can you ship your mods as patches?"
+**Juuz**: "Will creating resources programmatically in QSL (at runtime - think dynamic mod compat or something) prefer creating actual resource data and deserialising it, or injecting it into the recipe etc. managers directly?"
 
-Byte: "So Mojang has made more and more stuff data-driven, so you're focusing on APIs for those things in QSL, and especially creating resources programmatically, because JSON files are a pain sometimes, right?"
+**Fish**: "Planned features for the future of Quilt?"
 
-Fish: "Can you still go from Quilt -> Fabric fairly easily?"
+**Fish**: "What's the biggest difference between Fabric and Quilt, in terms of the code? And what will require restructuring the most in a mod?"
 
-Grondag: "What is the replacement for Mixin Plugins if we need conditional mixins?"
+**parzivail**: "Any news regarding Cozy ban sharing or showcase sharing?"
 
-TheBlackSquidward: "is there plans to have compat with forge?"
-
-Juuz: "Will creating resources programmatically in QSL (at runtime - think dynamic mod compat or something) prefer creating actual resource data and deserialising it, or injecting it into the recipe etc. managers directly?"
-
-Fish: "Planned features for the future of Quilt?"
-
-Fish: "What's the biggest difference between Fabric and Quilt, in terms of the code? And what will require restructuring the most in a mod?"
-
-parzivail: "any news regarding Cozy ban sharing or showcase sharing?", 
-
-parzivail: "what are the biggest costs currently?",
+**parzivail**: "What are the biggest costs currently?"

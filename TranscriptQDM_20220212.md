@@ -59,7 +59,7 @@ Alrt, next on my list, is Loader. **AlexIIL**?
 
 **Gdude**: Alright, good stuff. Thanks **AlexIIL**. **OroArmor**, would you like to talk about Mappings?
 
-**OroArmor**: Yeah, just give me one sec. Alright, yeah, so Mappings obviously we had 21w05a and 22w06a. There weren't a lot of changes for 05a, but 06a obviously west all the tag changes that introed a lot of stuff that could be lost. Luckily for us, with **LambdAurora**'s amazing mapping matcher we were able to save, about, like just over a third, maybe 40% of the mappings that we could lose, so that was very good. So we have those still. We got lots of PRs that were merged in, even more from 22w06a, so that QSL work could start. It's definitely a really nice uptick in the work.
+**OroArmor**: Yeah, just give me one sec. Alright, yeah, so Mappings obviously we had 21w05a and 22w06a. There weren't a lot of changes for 05a, but 06a obviously with all the tag changes that introed a lot of stuff that could be lost. Luckily for us, with **LambdAurora**'s amazing mapping matcher we were able to save, about, like just over a third, maybe 40% of the mappings that we could lose, so that was very good. So we have those still. We got lots of PRs that were merged in, even more from 22w06a, so that QSL work could start. It's definitely a really nice uptick in the work.
 
 And then, another thing is **CheaterCodes** and I are currently in the very early stages of changing how mappings and the Quilt environment work. One thing is multi-version mappings so that the same mappings can target multiple versions, so that when changing between versions you don't have to lose mappings, or old versions still get updated. And another thing on top of that is we're also considering that moving away from Tiny as the format for mappings on the Quilt ecosystem just because it's an extra step and all the data that Enigma has, Tiny also has, essentially. So yeah, those are the gists of what Mappings has been going through.
 
@@ -71,7 +71,7 @@ Last meeting was the 29th, I think.
 
 Since then, we merged the Tooltip API, which introduced some new cool bugs like the item tooltip one, and some related to tooltip components, with convertible tooltip data in the files for tooltip data. So a lot of new utilities, some nice stuff. And either one of the differences with Fabric API and that API is, we can use some of the new features and interfaces. For a long time, it wasn't possible to injk into interfaces. So now it's possible, so it's much cleaner.
 
-And the other module that has been merged is Networking API. What's wrong that has been due to west 22w06a, which was quite painful, because Mojang moved a lot of stuff and kind of wrecked tags. But it's for the better. Now we can actually have tags for any ~~linking trees. What I found awful there, in the API~~, so that's nice. But it caused some issues with QSL porting. Basically we had to disable the Tags API for now until it gets properly rewritten.
+And the other module that has been merged is Networking API. What's wrong that has been due to with 22w06a, which was quite painful, because Mojang moved a lot of stuff and kind of wrecked tags. But it's for the better. Now we can actually have tags for any ~~linking trees. What I found awful there, in the API~~, so that's nice. But it caused some issues with QSL porting. Basically we had to disable the Tags API for now until it gets properly rewritten.
 
 And there was a little debate we had a month ago, that had to be brought up into the table again, which was more than two points in QSL. The main issue was, we think game entrypoints loader doesn't make a lot of sense, because it doesn't make it really game-agnostic, or version-agnostic as it needs a quite lengthy injection method, which uses raw ASM. So that's terrible for maintenance and it means that for new versions that change the entrypoint logic, it require a loader update. The thing is, game entrypoints loader are kind of useless in some way, it's because normally when you use an entrypoint, it's because you have an API to call stuff to look into. If you don't have an API, you are most likely to use entr[ mixins.
 
@@ -89,7 +89,7 @@ So we did a little vote and turns out a lot of people think that it's fine to mo
 
 **OroArmor**: Should I start talking about it? Or, I don't know.
 
-**Gdude**: You can talk about it, I don't mind. Basically, this is an organizational change. Everyone here knows **i509VCB**, obviously. He isn't here at the meeting today, he's actually quite busy. He is stepping down from the administrator position at Quilt, because he's moving on from MC modding in general. He's still going to be around just to answer questions, but he's not going to be active here. Now, as you may know, if you've read our RFCs, we need at least 3 admins, and we need an odd number of admins. This means, of course, that we have to hold an election. If you've seen the recent changes to the governance RFC by **CheaterCodes**  - I think the PR is still open, it hasn't been merged yet - we dcded to follow it and go west ranked choice voting. Now, turns out we only had two candidates, so it was a bit of a moot choice for us, but we decided to use it anyway and it worked out just fine.
+**Gdude**: You can talk about it, I don't mind. Basically, this is an organizational change. Everyone here knows **i509VCB**, obviously. He isn't here at the meeting today, he's actually quite busy. He is stepping down from the administrator position at Quilt, because he's moving on from MC modding in general. He's still going to be around just to answer questions, but he's not going to be active here. Now, as you may know, if you've read our RFCs, we need at least 3 admins, and we need an odd number of admins. This means, of course, that we have to hold an election. If you've seen the recent changes to the governance RFC by **CheaterCodes**  - I think the PR is still open, it hasn't been merged yet - we dcded to follow it and go with ranked choice voting. Now, turns out we only had two candidates, so it was a bit of a moot choice for us, but we decided to use it anyway and it worked out just fine.
 
 We have a whole system where we use a website which generate a unique voting link for everyone, so everyone gets their own link. And only once the thing is closed can we get at the results. So there's no, "Oh, this person's getting more votes, I'm going to stack a vote on top." You know. So nobody can see who's voted for what and nobody can see what the votes are looking like until the poll closes, include the person that started it.
 
@@ -99,7 +99,7 @@ Anw, long story short-
 
 **Gdude**: Everyone who's part of the Community Team, or the Development Teams gets to vote. So any Quilt Developer Team, anyone in the Community Team, moderators, events people and of course the administrators. I'll drag it up in a few minutes or somebody else can, if they want to check, it's pinned to the thread. Anyway, so we had two candidates and the candidate who ended up winning the vote by a margin of like 3 votes was **OroArmor**. So congrats, **OroArmor**. This is no surprise to you at all, but hey.
 
-**OroArmor**: TY TY TY.
+**OroArmor**: Thank you, thank you, thank you.
 
 **Gdude**: Indeed. So, we'll be setting **OroArmor** up soon-ish. We need **i509VCB** to transfer a few things over. But yeah, that should be nice and smooth. We don't have an ETA but it should be fairly smooth, hopefully. And yeah, we're looking forward to working with **OroArmor**, to be honest. Great choice, great choice. If anyone wants the results link, you can have it. But it's two candidates, [and] **OroArmor** won by 3 votes.
 
@@ -107,9 +107,12 @@ Alrt, so if anyone has any questions they want answered, use the /ask command. W
 
 **CheaterCodes**: Yes, I will take it in 2 minutes.
 
-**Gdude**: Ok, that's alright. Let's look at the other one here. Uh, I will throw this one out. Silas is basically asking about the possibility of security disclosure system. Uh, yeah, we're going to have something. We haven't really talked about it yet, hehe. I do believe that Github has a system for it. Yeah, **Southpaw** says, Github has a system for it. It'll almost certainty just use that. Honestly, we haven't talked about it yet. If you have any suggestion, we'll take them of course. But yeah, I imagine Github's system is probably the most likely thing we'll end up using for that one. Yeah, they do, I haven't used it much, but they definitely do have one. Because I know- I have some friends on the Python server that have used it. There's a button you can click which makes it ~~CVE~~. Yeah, so there's a whole thing there, I just haven't used it much. Are you ready for that question, **CheaterCodes**?
+**Gdude**: Ok, that's alright. Let's look at the other one here. Uh, I will throw this one out. **sciwhiz12** is basically asking about the possibility of security disclosure system. 
 
-**CheaterCodes**: Uh, let's do it now. Alright, so, question by **Trollzer**, "Why are we switching to a less supported file with less features?"
+(**sciwhiz12**: "While this may not be relevant at this moment of Quilt's development yet, I want to ask what thoughts/plans/policies the Quilt team has regarding the disclosure of potential security-related vulnerabilities for its various projects (not just the Minecraft-related projects)? For example, who shall be contacted and where?")
+Uh, yeah, we're going to have something. We haven't really talked about it yet, hehe. I do believe that Github has a system for it. Yeah, **Southpaw** says, Github has a system for it. It'll almost certainty just use that. Honestly, we haven't talked about it yet. If you have any suggestion, we'll take them of course. But yeah, I imagine Github's system is probably the most likely thing we'll end up using for that one. Yeah, they do, I haven't used it much, but they definitely do have one. Because I know- I have some friends on the Python server that have used it. There's a button you can click which makes it ~~CVE~~. Yeah, so there's a whole thing there, I just haven't used it much. Are you ready for that question, **CheaterCodes**?
+
+**CheaterCodes**: Uh, let's do it now. Alright, so, question by **ThatTrollzer**: "Why are you switching to a less supported format with less features?"
 Now, this is what we're talking about before, that we're considering dropping Tiny and just using Enigma mappings instead. So I want to go over quickly about the reason. I guess why I brought it up, really. If you're aware of how the Quilt Mappings works, you'll know that the Quilt Mappings repository is in an Enigma format. So, Enigma support splitting the mapping files up into a directory tree of files, so each class gets its own file, which is not supported by Tiny. This is much more convenient for Github PRs. It's more easily visible who changes what file when you make a PR. So it makes more sense to use Enigma.
 
 And if you then compare Enigma and Tiny, you'll notice then that they're basically exactly the same. So, there's 3 differences really. Difference #1 is that Enigma uses complete words like 'class', 'method' and 'arg', instead of single letters like Tiny does. The second difference is that Enigma handles nested classes as nested classes. So mappings for inner classes are members of the outer class mappings, whereas Tiny has changes that amount to flat mappings. And the third difference which is possibly the most relevant one is that Tiny support multiple namespaces.
@@ -120,23 +123,22 @@ And if we did that, we would also have to change Enigma mappings, because that's
 
 What is the reason, we asked, what is the reason we even have Tiny in the first place? But we couldn't really get a conclusive answer. There were some who were like, "It's better for compressibility." Which is not wrong. "It's better for parsing, it's easier." Which is not true because they are basically the same file format. So the only thing is multiple mappings, multiple namespaces. But single files - thanks **Skyrising** - the argument was that Tiny can have a single file, but Enigma also has single file format. There's not much benefit to using Tiny, but we would have to maintain a lot more stuff. We don't feel like maintaining software which we have no use for.
 
-**OroArmor**: **CheaterCodes**, there's another question that's fairly similar. I think I'll pop in here a little bit too. From **Sher15**, I always forget what we call you, "If fully switching to Enigma mappings, would new features be added to the format or would it be more of a fork in the future?"
-
-We've talked about this a little bit, **Chris**, yeah. There are a couple things we do want to add to the format. Not too much, and it's something that can be done through a property tag on something instead of a more complete expanding of the format. There's not too much we want to add, but there's just a little couple things that we definitely could add that would definitely improve the format. But as it stands, I don't think we were super into considering that. I don't exactly remember from our conversation yesterday, or two days ago.
+**OroArmor**: **CheaterCodes**, there's another question that's fairly similar. I think I'll pop in here a little bit too. From **sschr15**, I always forget what we call you, "If fully switching to Enigma mappings, would new features be added to the format or would it be more of a fork in the future?"
+We've talked about this a little bit, **sschr15**, yeah. There are a couple things we do want to add to the format. Not too much, and it's something that can be done through a property tag on something instead of a more complete expanding of the format. There's not too much we want to add, but there's just a little couple things that we definitely could add that would definitely improve the format. But as it stands, I don't think we were super into considering that. I don't exactly remember from our conversation yesterday, or two days ago.
 
 **CheaterCodes** : That was two days ago. I couldn't actually find upstream of Enigma anymore. I'm not sure if it still exists. The Bitbucket link is dead, and the website links to the same Bitbucket link which is dead. So upstream Enigma doesn't really exist, so... We're now on anyway.
 
 And, of course, I don't think we could just keep calling it Enigma. We could just make it Enigma v2, we have to see how that works out. There's definitely going to be an RFC, and you can comment on that once we have that. We just wanted to give you a quick headsup on what we're talking about internally.
 
-**Gdude**: Alright, thanks for answering those. I'll take this one. **Jello** is asking, "What is the ETA for the Cozy Discord modularisation issue? What modules are planning to be created?"
+**Gdude**: Alright, thanks for answering those. I'll take this one. **jamalam** is asking, "What's the ETA for cozy-discord#17, Modularization? And what modules are planned to be created?"
 As always, no ETA. Again, it's really just me working on these. It's going to take a while. I'm planning on factoring out pretty much everything that isn't Quiltingspecific though. So the filtering system, the user cleanup system is already done, kind of. What else is in there? The thread management system. Basically, everything that Cozy does will be modularised deliberately to make it possible for other bots to use the modules. So yeah, if you like something that Cozy does and you're not using a fork like **Chris** is, then this will be interesting for you. But it's going to be a while, because I have a lot to do. **LambdAurora**, you want to take that one?
 
-**LambdAurora**: So, "Will Quilt end up with a Biome API/~~Wanderer ~~API to make working with 1.18+ version biomes far easier?"
+**LambdAurora**: So, **woodiertexas** asks, "Will Quilt end up with a Biome API/Worldgen API to make working with 1.181+ worldgen/biomes far easier?"
 Currently, it's really hard to say when it will happen. Because there's a lot of modules to work on with QSL. The thing is, in the current ecosystem, there's not a lot of version people, so unless there's one that sits down and starts writing something, it might not happen right now. It's really hard to answer that question because we don't know when it will happen.
 
-**Gdude**: Thanks for that one **LambdAurora**. There's another one there from **Trollzer**, can anyone take that?
+**Gdude**: Thanks for that one **LambdAurora**. There's another one there from **ThatTrollzer**, can anyone take that?
 
-**Glitch**: **Trollzer** asked, "Will Loader still support the Tiny Mappings?"
+**Glitch**: **ThatTrollzer** asked, "With the switch to Enigma mappings, will Loader still support loading Tiny mappings?"
 I can't see a reason why we'd remove support for the Tiny Mappings, so yeah, I can't see why we would do that, basically.
 
 **Gdude**: There's no reason to not support that, so probably it will support them. Yeah, that makes sense.
@@ -149,54 +151,58 @@ I can't see a reason why we'd remove support for the Tiny Mappings, so yeah, I c
 
 **Gdude**: While we're here, **LambdAurora**, that looks like one for you, maybe.
 
-**LambdAurora**: "Currently QSL is not up to feature parity with Fabric API. Are PRs for modules with no analogs to Fabric API modules be considered at the same priority level for future release alongside those other fundamental modules?"
+**LambdAurora**: **Whangd00dle** asks, "Currently QSL is not up to feature parity with FAPI. Are PRs for modules with no analog to FAPI modules being considered at the same priority level for initial release alongside those other 'fundamental' modules?"
 It's kind of hard to tell, because it really depend on the feature. There can be some feature that can be considered essential but isn't in Fabric API. I can't think of an eg right now, but there might be some. If you take for example, the Tags API, it's not a straight port. There's lots of new features that do not exist totally in Fabric API. And currently Fabric API do not even have a Tags API anymore. So there's no analog. I think it should still be considered witha high priority because tags are really important.
 
-Mb take for example, there's a PR called ~~common module "R cells and Argen types"~~? That's quite a useful feature, so I think wtvr comes should be considered maybe west the same priority level. I think it really depend on the feature. Some feature from Fabric API itself, are not really important to port like right now. ~~For initial readings~~, the priority is to have out something usable. it's not to have an exact one-to-one port. So if you want new feature, feel free to PR it, or discuss it - It really depends. There's a possibility that new feature considered as equal priority to existing feature in Fabric API.
+Mb take for example, there's a PR called ~~common module "R cells and Argen types"~~? That's quite a useful feature, so I think whatever comes should be considered maybe with the same priority level. I think it really depend on the feature. Some feature from Fabric API itself, are not really important to port like right now. ~~For initial readings~~, the priority is to have out something usable. it's not to have an exact one-to-one port. So if you want new feature, feel free to PR it, or discuss it - It really depends. There's a possibility that new feature considered as equal priority to existing feature in Fabric API.
 
-**Glitch**: To kind of add onto that, having- Being Fabric API at initial release is not a goal for us, because there's no real reason to use QSL. We're more concerned with new feature right now. But there will be a time when we're trying to drop having to maintain Fabric support, that catching up west Fabric and grabing everything we missed will become a priority. Because we don't want to strip away Fabric API and leave people west only half of a usable API.
+**Glitch**: To kind of add onto that, having- Being Fabric API at initial release is not a goal for us, because there's no real reason to use QSL. We're more concerned with new feature right now. But there will be a time when we're trying to drop having to maintain Fabric support, that catching up with Fabric and grabing everything we missed will become a priority. Because we don't want to strip away Fabric API and leave people wih only half of a usable API.
 
 **LambdAurora**: I have something else to add. If you take for example, the Keybindings API PR, it both support new feature too. It ports the basics of the Fabric API Keybinds stuff, but it adds much more. Like for example, the ability to dynamically disable keybinds, or the ability to show tooltips on keybinds that conflict to show which keybinds conflict exactly. And stuff like that. So some stuff are better for mod intering compatibility. It's not just straight ports. It's really new stuff, or existing stuff that isn't present in QSL. The idea is to bring in as much features as we can in the API to ease development.
 
-**Gdude**: Thanks for that, folks. **Silas** is asking, "Will we continue to hold meetings like this, or will we go back to Discord?"
+**Gdude**: Thanks for that, folks. ****sciwhiz12** is asking, "Just to confirm, will all future meetings be held with the current configuration of using Mumble for the speakers (with **Gdude** staying on Discord)? Or shall there be a return to everyone being on Discord in the future?"
 We don't really have a good answer for that one. Mumble is working quite well. It doesn't rely on somebody else's bot. I'm actually hosting the Mumble bot and the Mumble server. Now, while it was convenient to use Carl on Discord, there still ~~left with~~ a lot of work on it. Sorry, Craig, not Carl, thanks **Southpaw**. Basically what hppned was, Craig was destined to get yeeted basically. The developer was kind of done with it. Some other people have tkn it over, but they're doing a lot of work on it at the moment, so we don't know whether it's likely that we'll go back yet. We may decide to, we may not.
 
 Either way, we're always going to keep it accessible on the #stage channel. So, like, you'll still be here to listen to it. But yeah, I'm really not sure, I don't have the crystal ball for that unfortunately. I understand that there's definitely an aces] bonus for it. We had the idea of actually screensharing the Mumble chat, but then we rlzed that stages don't actually have that feature. So yeah, maybe if Discord implement it , we'll do that. Maybe we'll go back to Craig. We just don't know yet, unfortunately. **AlexIIL**, would you like to take on **Octal**'s question?
 
-**AlexIIL**: Sure, so **Octal** asks, "Are there plans for the QSL module downloading?"
-The answer is yes. Yes, there is. This is part of- This is going to happen west Loader plugins, or just after Loader plugins. It's not specific to QSL. As it is, currently the idea is you'll be able to set any libraries to be automatic downloaded if they're not present in the user's mod folder. There hasn't been any progress on this in the last 2 weeks, so I didn't mention it, but yes, there are still plans and it will still be impled, just not yet.
+**AlexIIL**: Sure, so **Octal** asks, "Are there any plans on the automatic QSL module downloading that's mentioned on the Quilt website?"
+The answer is yes. Yes, there is. This is part of- This is going to happen with Loader plugins, or just after Loader plugins. It's not specific to QSL. As it is, currently the idea is you'll be able to set any libraries to be automatic downloaded if they're not present in the user's mod folder. There hasn't been any progress on this in the last 2 weeks, so I didn't mention it, but yes, there are still plans and it will still be impled, just not yet.
 
 **OroArmor**: Adding on, security and things like that are a big concern for us. When we talk about, for like 30 seconds on an idea, what this is going to look like, it is not a full picture of all the precautions we will be taking, and things like that.
 
-**Gdude**: **Woody** asks, "Will there ever be transcriptions?"
+**Gdude**: **woodiertexas** asks, "Will there ever be transcriptions or no?"
 I'll has to check with the coalition. Would you like to make them? Hehe. Uh, it's a lot of work. There are no good automated solutions, or at least the ones that are good are quite expensive. So, yeah, like, we don't really has plans to do that. Nobody has the time to do it. Uh, if somebody does it, great. We can't. **AlexIIL**, I think that one's yours?
 
-**AlexIIL**: Alright, **Southpaw** asks, "If any libraries could be automatic downloaded, how does Loader know where to find them?"
-How exactly this will work is going to be put into an RFC, and talked about properly, so that we have a much more specific idea of how this is going to work, and how we're going to keep it secure. Basically, how we're going to download the correct libraries and whatnot. So, it's a bit early to talk about this specifically, but just know that we will be talking about this, or we will be dscsing this in more detail when we get to the point where we can actually implement this.
+**AlexIIL**: Alright, **Southpaw** asks, "If **any** libraries can be auto-downloaded, how does the loader know where to find them?"
+How exactly this will work is going to be put into an RFC, and talked about properly, so that we have a much more specific idea of how this is going to work, and how we're going to keep it secure. Basically, how we're going to download the correct libraries and whatnot. So, it's a bit early to talk about this specifically, but just know that we will be talking about this, or we will be discussing this in more detail when we get to the point where we can actually implement this.
 
-**Gdude**: Uh, **Woody**, yes, manual transcriptions are out of the question, it's just too much work. I havea lot to do, the others havea lot to do, **Southpaw** does the podcast and they already have to put in quite a lot of effort there. Again, if someone wants to listen to the podcast and do it, great, but we don't has time. We just don't have time. **LambdAurora**, yeah, you can take that one if you like.
+(**woodiertexas**: "So manual transcriptions are out of the question as well?")
 
-**LambdAurora**: So, "What is the I/O process to go about reqing modules to QSL? ~~Issues first~~, I asked on Discord for proper PRs, OK."
-I would say to avoid proper PRs in some way, unless it's support, but even then, discussing first might be better, because there might be some- Because usually when you PR, it's about code review and stuff, it's not about the concept itself. It means you already put a lot of work into it, so it's kind of a risk to take. Because it means that if it doesn't fit, or if there are a lot of design issues, it might require a rewrite. I don't think anyone wants to do that. 
+**Gdude**: Uh, **woodiertexas**, yes, manual transcriptions are out of the question, it's just too much work. I have a lot to do, the others have a lot to do, **Southpaw** does the podcast and they already have to put in quite a lot of effort there. Again, if someone wants to listen to the podcast and do it, great, but we don't has time. We just don't have time. **LambdAurora**, yeah, you can take that one if you like.
+
+**LambdAurora**: So, **Whangd00dle** asks, "What is the ideal process to go about PRing modules to QSL? Issue first? ask on discord? Or are pop-up PRs okay"
+I would say to avoid pop-up PRs in some way, unless it's support, but even then, discussing first might be better, because there might be some- Because usually when you PR, it's about code review and stuff, it's not about the concept itself. It means you already put a lot of work into it, so it's kind of a risk to take. Because it means that if it doesn't fit, or if there are a lot of design issues, it might require a rewrite. I don't think anyone wants to do that. 
 
 So my ideal process is issue first, or ask on Discord. It's up to you. Just keep in mind that if there are some people who cannot use Discord for X or Y reason, Github Issues might be more visible. But at the same time, Quilt is really a very Discord-centric community. But I would say on Discord, you might expect much quicker responses.
 
 **Gdude**: Thanks **LambdAurora**. **Glitch**, do you want to take that one?
 
-**Glitch**: OK, **Chris** asks, "For the uninformed, can anyone submit RFCs if they has a good idea?"
+**Glitch**: OK, **sschr15** asks, "For the uninformed (which includes me), can anyone submit RFCs if they have a good idea?"
 The answer is yes, you are allowed to make any proposals you like, whether that be, you want to write on an RFC on a new API, or you want to change how admins are elected. Anyone is allowed to propose anything they want, obviously it doesn't need to be acpted, but we don't has any restriction on that.
 
 **Gdude**: Obviously any proposal that is in faith a good propose, we'll definitely give it a go. **NoComment** asked, "Will there be a wiki similar to the Fabric Wiki?"
+(**NoComment**: "Will a wiki page similar to Fabric Wiki be a thing for quilt? (except better because it was made by quilt :yeef:)")
 Yes? We're planning on two wikis, actually. We're going to has a Developer Wiki. I think **OroArmor** has some work done on that already, right?
 
 **OroArmor**: It's very basic, just kind of like prototyping a prototype kind of work. Obviously this is my vision for what I would want the Developer Wiki to look like, and it would have multiple version similar to what the Forge Wiki. But what would be nice is if it would be built into a Gradle project, so that it forces changes. You know, like changes into Loom or something like that. Force us to make sure that whatever is written still works, so that there's no tutorials that just no longer work. Like they don't compile, or the mappings has chged, stuff like that. So every time you go and look at the wiki, that wtvr code you see changed, does work on the version you're looking at. So that's something that I want to make sure that we has. So right now, I think we has a very basic thing where it's a Gradle project that reads some Markdown (MD) files, parses that, and makes some HTML files. But it's not very good right now, and it's like, in one file it's 300 lines long. So it works, but it's not great.
 
 **Gdude**: Right, so that was regarding the Developer's Wiki. We were also planning on having a separate one for user-facing things. It could be a simpler setup, since we don't need all the developer side stuff for that. It might be a bit more accessible for modifying it as well. Again, like this is stuff that we can kind of sort of work on at the moment, but there's other things that we should also be doing at the same time. So I think like, we will get them done, ideally before release, but we'll has to see how things go.
 
-**Arathain**, you asked a question. Was that targeted at anyone specific?
+**arathain**, you asked a question. Was that targeted at anyone specific?
 
 **Glitch**: Uh, I'll just claim it for now, I think. Uh, just to get a general idea of the question by **Arathain**: "What's currently the higher priority for release: Developing a working base product and rlsing it, or waiting until at least all planed features are done, then rlsing it? Haven't been able to find an answer on the toolchain."
-So, I want to answer this because I keep pestering people about Quilt Beta. Because, for a release, there's a lot of stuff that needs to be done. For example, for proper 1.0 release that should be basically feature complete, for that we want CHASM working, maybe a Loom replacement, we want Loader with Loader plugins west dependency downloading. There's kind of a lot of stuff we want for version 1, but we also want people to start using it at some point so we can get inputs. So I really hope we can get a Beta version out at some point for that.
+(**arathain**: "What's currently in higher priority for a release; developing a *working* base product and releasing it or waiting until most (if not all) planned features are done and then releasing it? (I haven't been able to find an answer by idly searching but I'm not the most perceptive person so I might've glanced over it without noticing, please do say if that's the case)")
+So, I want to answer this because I keep pestering people about Quilt Beta. Because, for a release, there's a lot of stuff that needs to be done. For example, for proper 1.0 release that should be basically feature complete, for that we want CHASM working, maybe a Loom replacement, we want Loader with Loader plugins with dependency downloading. There's kind of a lot of stuff we want for version 1, but we also want people to start using it at some point so we can get inputs. So I really hope we can get a Beta version out at some point for that.
 
 So I guess my answer to the question is both. But as **Gdude** said, if you're asking more specifically, for example if you're asking specifically for QSL, then it's a bit of a different question that should be answered then.
 
@@ -224,7 +230,7 @@ Yeah, especially if someone wants to work on it, that would be highly appreciate
 
 **Glitch**: It's actually no longer a draft. I think it was merged like 2 days ago or something.
 
-**Gdude**: Oh, good stuff. **Whangdoodle** was asking, "When the CHASM specifications will be read out in ASMR format?"
+**Gdude**: Oh, good stuff. **Whangdoodle** was asking, "When is the CHASM specification reading ASMR coming out?"
 IDK if there's anyone that can answer that one. Well, **Whangdoodle**, the question is, who do you want to do it?
 
 **Glitch**: Whenever you do it, **Whangdoodle**, Whenever you do it. You just need the specification first.
@@ -237,50 +243,10 @@ IDK if there's anyone that can answer that one. Well, **Whangdoodle**, the quest
 
 **OroArmor**: We're in the #development channel for the after-party.
 
-**Glitch**: Yes, #devt channel.
+**Glitch**: Yes, #development channel.
 
 **Gdude**: Yes, the voice after-party
 
 **Glitch**: Yes, voice chat after-party.
 
 **Gdude**: Thanks for coming, everyone.
-
-
-
-
-
-nnsci: "While this may not be relevant at this moment of Quilt's development yet, I want to ask what thoughts/plans/policies the Quilt team has regarding the disclosure of potential security-related vulnerabilities for its various projects (not just the Minecraft-related projects)? For example, who shall be contacted and where?", 
-
-ThatTrollzer: "Why are you switching to a less supported format with less features?", 
-
-sschr15: "If fully switching to Enigma mappings, would new features be added to the format or would it be more of a fork in the future?", 
-
-jamalam: "What's the ETA for cozy-discord#17, Modularization? And what modules are planned to be created?", 
-
-woodiertexas: "will quilt end up with a biome API/worldgen API to make working with 1.181+ worldgen/biomes far easier", 
-
-ThatTrollzer: "With the switch to enigma mappings will loader still support loading tiny mappings?", 
-
-Whangd00dle: "Currently QSL is not up to feature parity with FAPI. Are PRs for modules with no analog to FAPI modules being considered at the same priority level for initial release alongside those other 'fundamental' modules?", 
-
-nnsci: "Just to confirm, will all future meetings be held with the current configuration of using Mumble for the speakers (with gdude staying on Discord)? Or shall there be a return to everyone being on Discord in the future?", 
-
-Octal: "Are there any plans on the automatic QSL module downloading that's mentioned on the Quilt website?", 
-
-woodiertexas: "will there ever be transcriptions or no?", 
-
-nnsouth:  "If **any** libraries can be auto-downloaded, how does the loader know where to find them?", 
-
-nnsouth: "Also I would love to hear some nerding out on the security", 
-
-woodiertexas: "so manual transcriptions are out of the question as well?", 
-
-Whangd00dle: "What is the ideal process to go about PRing modules to QSL? Issue first? ask on discord? Or are pop-up PRs okay", 
-
-sschr15: "For the uninformed (which includes me), can anyone submit RFCs if they have a good idea?", 
-
-nnnocom: "Will a wiki page similar to Fabric Wiki be a thing for quilt? (except better because it was made by quilt :yeef:)", 
-
-arathain: "What's currently in higher priority for a release; developing a *working* base product and releasing it or waiting until most (if not all) planned features are done and then releasing it? (I haven't been able to find an answer by idly searching but I'm not the most perceptive person so I might've glanced over it without noticing, please do say if that's the case)", 
-
-Whangd00dle: "When is the CHASM specification reading ASMR coming out", 
