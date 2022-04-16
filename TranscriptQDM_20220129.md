@@ -11,7 +11,6 @@ In this episode, the team discuss the progress in the Community Tooling, Infrast
 [Quilt RFCs on GitHub](https://github.com/QuiltMC/rfcs)  
 [The Cube Rule](https://cuberule.com/)  
 
-
 **Gdude**: So, this is going to be a somewhat different meeting. We'll wait just a little bit for more people to show up, but they should get some pings. Hey **Ara**. So, the format of this meeting hasn't changed. However, you won't see the speakers on Discord. They'll be talking via the Cozy Mumble bot that we have set up. That is currently not set as a speaker so we can't hear them right now. In a couple minutes we will change that, and we'll see who shows up. 
 
 Also just to be clear, you can type in the #meeting-chat channel, right? Yep, OK, good. Hey **Olivia**, hey **Merchrome**. Welcome welcome. For the sake of not making this look so empty, I will be staying in the stage, but I'm going to be muting and deafening myself and talking via Mumble. There may be a small bit of latency but I don't imagine it'll be too bad. This is the first time we've done this. We did test it, but you know how it goes. I'm going to set that up right about now. Alright, that appear to be working. We'll just give it a couple more minutes. But yeah, hey everyone from the other side of the breach. Hey **Trollzer**, hey **Pinkosick**. Yeah, it's weird isn't it? Don't worry, it usually takes people a few minutes.
@@ -240,3 +239,39 @@ For example, don't intend on the default way of making configs being similar to 
 **Haven King**: Yeah, it's alright.
 
 **Gdude**: Exactly. Alright, well, I guess we'll wrap it up then. Thanks everyone for coming. As always, we'll be back in 2 weeks with the next meeting. And we'll get this cut down and put into a podcast. Hopefully at some point today if we have time. Hopefully we will. I think we will, but we'll see how we go. Anyway, thanks for coming.
+
+
+
+parzivail: "any news regarding Cozy ban sharing or showcase sharing?",
+
+parzivail: "what are the biggest costs currently?",
+
+OliviaTheVampire: "What does the rfc system? I don't really understand how it works and why is the pros and cons for it", 
+
+parzivail: "might have missed it -- is the donation area currently set up? if so, where can I find a link for it?", 
+
+nntroll ThatTrollzer: "Why is quilt's mixin extensions named sponge mixin extensions?", 
+
+nncheat: "Do you have an ETA for an ETA for quilt?", 
+
+parzivail: "are there any plans going forward to do \"tech talks\" where modders come in and talk about general feature design, or specific implementations of interesting/noteworthy features?", 
+
+ThatTrollzer: "Rename quilt's intermediate mappings when?", 
+
+parzivail: "any news on remote dependency and asset resolution?", 
+
+nncheat: "do we know yet exactly what the status of FREX in QSL is gonna be?",
+
+parzivail: "pointless question but, why does the MC update RSS bot sometimes take so long?",
+
+OliviaTheVampire: "How are you guys today? How is 2022 treating you guys?", 
+
+arathain: "Opinions on whether or not milk with cereal is a soup?", 
+
+FavoritoHJS: "what is currently blocking the quilt launch?", 
+
+OliviaTheVampire: "Since there is not much time left, your favorite meal? :D", 
+
+nnsouth: "Did we ever figure out whether the Quilt client was going to send a list of installed mods to the Quilt server?", 
+
+arathain: "On a scale of Cloth Config to Omega Config, how detailed & complex will the config API be?", 

@@ -192,3 +192,41 @@ Now I'll be talking about this from a CHASM perspective since that's my thing. O
 **CheaterCodes**: Alright. We've also closed the AmA so thanks everyone for participating. There's still very much progress in Quilt, and it's very exciting and I hope we can keep it up in the future. Oh, I forgot the teams of Community. But I don't think anyone knew anybody from there. I'm sure they have something to add next time. Some exciting stuff after the holidays. Yeah, thank you everyone for showing up in the meeting. I think we can basically make it a tradition now and we'll go into an after-party in the #dev-chat. So if you want to hang out and talk a bit, feel free to come. But regarding the official meeting, thank you very much and have a very nice evening, or day, or morning, depending on where you live.
 
 **EarthComputer**: See ya.
+
+
+
+
+
+
+
+nnaurora: "Could CHASM be used to determine any patches at compile time and maybe generate a GraalVM native image with all the patches applied?"
+
+yitzy: "what will quiltflower 1.8 bring?"
+
+kichura: "What adventages does a mod developer gain when using quilt instead of forge/fabric libraries?"
+
+Byte: "I'm glad to see Quilt is approaching release. I was worried there would be a loss momentum after a while. How old is Quilt in it's current form, then?"
+
+Banzobotic: "Does chasm completely replace the asmr prototype?"
+
+Byte: "Have you thought about upstreaming Quiltflower's changes to Fernflower? I'm not sure if JetBrains even maintains Fernflower anymore though, to be honest."
+
+Byte: "Is applying transformations at compile time something that's only used in development, or can you ship your mods as patches?"
+
+Byte: "So Mojang has made more and more stuff data-driven, so you're focusing on APIs for those things in QSL, and especially creating resources programmatically, because JSON files are a pain sometimes, right?"
+
+Fish: "Can you still go from Quilt -> Fabric fairly easily?"
+
+Grondag: "What is the replacement for Mixin Plugins if we need conditional mixins?"
+
+TheBlackSquidward: "is there plans to have compat with forge?"
+
+Juuz: "Will creating resources programmatically in QSL (at runtime - think dynamic mod compat or something) prefer creating actual resource data and deserialising it, or injecting it into the recipe etc. managers directly?"
+
+Fish: "Planned features for the future of Quilt?"
+
+Fish: "What's the biggest difference between Fabric and Quilt, in terms of the code? And what will require restructuring the most in a mod?"
+
+parzivail: "any news regarding Cozy ban sharing or showcase sharing?", 
+
+parzivail: "what are the biggest costs currently?",

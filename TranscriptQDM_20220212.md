@@ -244,3 +244,43 @@ IDK if there's anyone that can answer that one. Well, **Whangdoodle**, the quest
 **Glitch**: Yes, voice chat after-party.
 
 **Gdude**: Thanks for coming, everyone.
+
+
+
+
+
+nnsci: "While this may not be relevant at this moment of Quilt's development yet, I want to ask what thoughts/plans/policies the Quilt team has regarding the disclosure of potential security-related vulnerabilities for its various projects (not just the Minecraft-related projects)? For example, who shall be contacted and where?", 
+
+ThatTrollzer: "Why are you switching to a less supported format with less features?", 
+
+sschr15: "If fully switching to Enigma mappings, would new features be added to the format or would it be more of a fork in the future?", 
+
+jamalam: "What's the ETA for cozy-discord#17, Modularization? And what modules are planned to be created?", 
+
+woodiertexas: "will quilt end up with a biome API/worldgen API to make working with 1.181+ worldgen/biomes far easier", 
+
+ThatTrollzer: "With the switch to enigma mappings will loader still support loading tiny mappings?", 
+
+Whangd00dle: "Currently QSL is not up to feature parity with FAPI. Are PRs for modules with no analog to FAPI modules being considered at the same priority level for initial release alongside those other 'fundamental' modules?", 
+
+nnsci: "Just to confirm, will all future meetings be held with the current configuration of using Mumble for the speakers (with gdude staying on Discord)? Or shall there be a return to everyone being on Discord in the future?", 
+
+Octal: "Are there any plans on the automatic QSL module downloading that's mentioned on the Quilt website?", 
+
+woodiertexas: "will there ever be transcriptions or no?", 
+
+nnsouth:  "If **any** libraries can be auto-downloaded, how does the loader know where to find them?", 
+
+nnsouth: "Also I would love to hear some nerding out on the security", 
+
+woodiertexas: "so manual transcriptions are out of the question as well?", 
+
+Whangd00dle: "What is the ideal process to go about PRing modules to QSL? Issue first? ask on discord? Or are pop-up PRs okay", 
+
+sschr15: "For the uninformed (which includes me), can anyone submit RFCs if they have a good idea?", 
+
+nnnocom: "Will a wiki page similar to Fabric Wiki be a thing for quilt? (except better because it was made by quilt :yeef:)", 
+
+arathain: "What's currently in higher priority for a release; developing a *working* base product and releasing it or waiting until most (if not all) planned features are done and then releasing it? (I haven't been able to find an answer by idly searching but I'm not the most perceptive person so I might've glanced over it without noticing, please do say if that's the case)", 
+
+Whangd00dle: "When is the CHASM specification reading ASMR coming out", 

@@ -249,3 +249,21 @@ As always, or most of the time, I’m going to invite you all to a quick after-p
 **CheaterCodes**: Oh damn, why is it using the wrong microphone? There we go, now it's back to the right microphone.
 
 **OroArmor**: Sounds so much better.
+
+
+
+RTTV: "what is planned for qsl other than more callbacks?", 
+
+RTTV: "will quilt have direct installation to multimc like fabric and forge or will it have to resort to vivecraft like installation setups?", 
+
+RTTV: "will chasm recreate the feature set of Fabric-ASM and other non vanilla fabric mod (like mixin) bytecode editing tools?", 
+
+nnsouth: "What promised features will be missing from the tooling on the beta release?", 
+
+nnem: "Will we ever be able to use QM without using the ugly-looking layered mappings thing? :P", 
+
+RTTV: "anything quilt has done to make it possible for forge mods to be loaded?", 
+
+Octal: "will Quilt's mapping system allow foe layered mappings as well?", 
+
+RTTV: "what code from fabric still exists on quilt?", 

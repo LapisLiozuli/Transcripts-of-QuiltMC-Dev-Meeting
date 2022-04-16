@@ -194,3 +194,23 @@ They have a history. So, that's why. Well, I think we're going to close because 
 **CheaterCodes**: Bye.
 
 **OroArmor**: See ya.
+
+
+
+RTTV: "can we detect if *the* quilt loader entrypoint is being called on a client or server through a method param or something?", 
+
+Patbox: "Do you plan releasing beta for 1.18.2 or go straight for snapshots", 
+
+isXander: "Will other language support like Kotlin require a seperate compatibility mod like Fabric or will Quilt have this out-the-box in QSL/Loader", 
+
+RTTV: "like *the* entrypoint, are there any \"fapi features\" that will be present on quilt loader without installing qsl?", 
+
+RTTV: "why called quilt", 
+
+RTTV: "what hardware does the quilt web servers run?", 
+
+Byte: "Are there any concepts for CHASM frontends/transformers besides reimplementing Mixins/AW on CHASM?", 
+
+Octal: "Are there any plans for Kotlin on quilt? (I already know the answer to this, but others might not)", 
+
+grifferthrydwy: "is there anywhere to sign up to attend, but not showcase anything in blanketcon?", 

@@ -254,3 +254,55 @@ OK, I believe we've gone through everything. As you've just realised, I just clo
 **Haven King**: I guess I can follow up the infrastructure question real quick. If you are really interested, feel free to DM me. Or ping me in the #infra channel, either one.
 
 **Gdude**: Excellent. Alright, I think that concludes this meeting. It's been great to have everyone here. Thanks for coming, thanks for everyone on Mumble side for coming as well. As announced, we're aiming for the 20th for Beta. Not just because it's the funny number, but because it's the same date last year that Quilt become public. So we're looking forward to that, and of course well be back again in two weeks, as always. **Saf** will work on their own time and get the podcast up when they're able to. So yeah, thanks for coming and see you.
+
+
+
+nnsci: "When is the new site design by `His Eminence` gdude be made the public design of the QuiltMC site?",
+
+nnsci: "For each bimonthly meeting, is there an agenda of items to be discussed made internally? Have you considered making this public some time before the meeting time, so people can read that and potentially decide to join due to some topic they are interested in being discussed at that time?",
+
+nnsci: "When are we getting a new blog entry on the QuiltMC blog?
+
+nnem: "Would it be possible to have version-specific mod folders for loader, like forge?", 
+
+nnsci: "So, QuiltMC has an Open Collective page at <https://opencollective.com/quiltmc>. Are there plans to announce this to the community? Is Haven King the admin on this because of his position on the Admin Board, or because he is the sole member (at least, according to the prototype Quilt site by gdude) of the Infrastructure team?", 
+
+Haiku: "Are there any plans to add Forge-style initialization stages to Quilt?  It would potentially make a lot of API stuff much more optimized by allowing true dynamically-generated constants, etc.", 
+
+nnsci: "Forgive me if this question has been asked in the past, but has QuiltMC considered a system wherein a repository contains the official listing of QuiltMC staffers in human-readable and computer-readable format, which is then synced by various automated systems to whatever platforms it needs (such as the website, the GH teams, etc.), akin to <https://github.com/rust-lang/team>?", 
+
+diaxazine: "will quilt have support for older versions of Minecraft, unlike fabric?", 
+
+Haiku: "Where can I find the API submission guidelines I guess?", 
+
+sschr15: "Will hashed exist for all versions of mojmap in the future?", 
+
+nnsci: "Who is currently in control of the `@quilt_mc` Twitter account?", 
+
+FavoritoHJS: "Where is help needed at the moment?", 
+
+lenrik: "if there *is* a community initiative to create such backport would there be a chance that it is concidered official after careful analysis", 
+
+diaxazine: "Do you have an idea as to a how much work there is left to do? Or is it too far away right now.", 
+
+TheNukeLore: "likely has been asked before as well as answered in an issue but, is there a plan for any sort of mod menu in the library or quilt itself, i assume not but you never know", 
+
+nnsci: "I may be out of the loop, but where has @Unknown disappeared to?", 
+
+AManCalledSteve: "Are there any upcoming dates we should remember?", 
+
+nnsci: "Is the Moderator team sufficiently diverse enough in timezones to guarantee there is at least one Moderator online (or at least readily accessible/awake) at all times?", 
+
+TheNukeLore: "whats the plan with the whole dependency downloading, like will it be limited to qsl or all libraries and apis that have been comfirmed to not be a danger to the end user", 
+
+sschr15: "Building on the dependency question, will verified developers also be a possibility, and if so, how would it be done?", 
+
+FavoritoHJS: "What happens when/if the maven fails?", 
+
+nnsci: "As a point of curiosity, what timezone is the most active for Quilt? As in, the timezone (or range) in which the most Quilt staffers (community team, developers) are online/available/awake?", 
+
+nnsci: "What is the current bus factor of QuiltMC (such as for its infrastructure, community team and management, development team)?", 
+
+diaxazine: "Is the maven a mod downloader? I think I missed that bit, also will community mods be able to be uploaded?", 
+
+nnsci: "When will Haven take an apprentice for the Quilt Infrastructure?", 

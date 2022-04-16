@@ -250,3 +250,13 @@ The scordboard's is interesting, but I'm not too sure about doing that, just bec
 **CheaterCodes**: That's two meetings. The next meeting is just after the Beta, then the one after is the one that's at BlanketCon.
 
 **Gdude**: Oh, you're right. Yeah, that's the one after that. In that case, we'll see you all back here next week, with news from how you've been doing with the Beta ideally. Either way, thanks for coming everyone, and thanks for everyone coming on Mumble as well.
+
+
+
+Byte: "Are there any concepts for CHASM frontends/transformers besides reimplementing Mixins/AW on CHASM?",
+
+Octal: "Are there any plans for Kotlin on quilt? (I already know the answer to this, but others might not)",
+
+grifferthrydwy: "is there anywhere to sign up to attend, but not showcase anything in blanketcon?",
+
+Will BL: "will the chasm mixin front-end include anything like mixin-extras? (<https://github.com/LlamaLad7/MixinExtras>)", 
