@@ -22,11 +22,13 @@ Any parts that are uncertain will have ~~strikethroughs~~ as an indicator. The u
 
 When all transcripts are finished, run a quality check on them for standardisation.
 
-Add AnchorFM summaries to the top of each transcript.
+~~Add AnchorFM summaries to the top of each transcript.~~
 
 Bold all names mentioned. Compile a list of names per transcript?
 
 Decide on some way to share the transcripts for public reference or additional correction.
+
+~~Get the archive of #meeting-chat to better track any part of the meetings that occurred in text. Especially with regards to questions.~~
 
 # License
 
