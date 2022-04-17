@@ -255,6 +255,6 @@ if dirty_switch:
 else:
     generate_new_dict()
 
-convert_raw_transcript(stl_dict, idx=-2)
+convert_raw_transcript(stl_dict, idx=-1)
 # 'Need' is being converted to 'ned'.
 # 'Being' is converted to 'bing'.
