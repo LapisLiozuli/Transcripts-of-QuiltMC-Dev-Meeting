@@ -203,6 +203,10 @@ def convert_raw_transcript(shand_dict, idx=-1, debug=False):
     # Might want to remove common errors from the transcription like "-eing" to "-ing" or "-eed" to "-ed".
     for error in tense_errors:
         longlines = [line.replace(error, tense_errors[error]) for line in longlines]
+    # Fix these words: 'Need' is converted to 'ned'. 'Being' is converted to 'bing'.
+    longlines = [line.replace(' bing ', ' being ') for line in longlines]
+    longlines = [line.replace(' ned ', ' need ') for line in longlines]
+    longlines = [line.replace('=', '-') for line in longlines]
 
     with open(path_tlong, "w") as f:
       f.writelines(longlines)
@@ -255,6 +259,5 @@ if dirty_switch:
 else:
     generate_new_dict()
 
-convert_raw_transcript(stl_dict, idx=-1)
-# 'Need' is being converted to 'ned'.
-# 'Being' is converted to 'bing'.
+convert_raw_transcript(stl_dict, idx=-2)
+

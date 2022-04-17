@@ -26,9 +26,13 @@ In this episode, the team make an exciting reveal about something...important. T
 [Haven's Recommended AWS course #1](https://acloudguru.com/course/aws-certified-solutions-architect-associate-saa-c02)  
 [Haven's Recommended AWS course #2](https://acloudguru.com/course/aws-certified-solutions-architect-associate-saa-c02)
 
-**Gdude**: Hello and welcome to the QuiltMC Developers’ Meeting Podcast. The podcast that isn’t really a podcast. If you’re new here, this is just a collection of recordings of each publicly recorded Developers’ Meeting, lightly edited for comfort and uploaded as a podcast for ease of accessibility. Our meetings are held on Discord every two weeks, relayed on a Mumble server and recorded live. Hence the lower audio quality. For more information on what the Quilt Project is and what we do here, please head to QuiltMC.org.
+=========================
 
-**Gdude**: Well well well, it's me. I appreciate how quickly people join when the event starts. It's just like yeah, wait that's happening now, isn't it? Hehe. Oh hey everyone, we're doing the same thing we did last week, or last fortnight. Last biweek. I will be here on Discord. Everyone else is on the other end of Mumble where **Saf** is recording everything to make sure, you know, we're able to put out the podcast later on. It's still a little early out so we're going to give it a few minutes. Can somebody on Mumble say something? Hehe.
+**Gdude**: Hello and welcome to the QuiltMC Developer Meetings Podcast. The podcast that... isn’t really a podcast. If you’re new here, this is just a collection of recordings of each public Quilt Project Developer Meeting, lightly edited for comfort and uploaded as a podcast for ease of accessibility. Our meetings are held on Discord every two weeks, relayed from a Mumble server and recorded live by a fleet of Discord bots. Hence the lower audio quality. For more information on what the Quilt Project is and what we do here, please head to [https://quiltmc.org](https://quiltmc.org).
+
+=========================
+
+**Gdude**: Well well well, it's me. I appreciate how quickly people join when the event starts. It's just like yeah, wait that's happening now, isn't it? Hehe. Oh hey everyone, we're doing the same thing we did last week, or last fortnight. Last biweek. I will be here on Discord. Everyone else is on the other end of Mumble where **Southpaw** is recording everything to make sure, you know, we're able to put out the podcast later on. It's still a little early out so we're going to give it a few minutes. Can somebody on Mumble say something? Hehe.
 
 **Haven King**: Hey, hello everyone.
 
@@ -242,7 +246,9 @@ Yeah, bus factor for Infrastructure, currently one, because that's me. Community
 
 I think the weakest link is Infrastructure, which is me, which you know, it's hard to shore that one up. It's hard to find someone who knows the AWS side of things and is willing to work on it for free. But there is an initiative, or at least that is there should be, there will be at some point, an initiative to get the access keys out there, so that if something does happen, someone can keep the lights running even if they're not entirely sure what everything is doing. That is something that should be done at some point and only hasn't because of restrictions on my own time.
 
-**Gdude**: As **Saf** mentioned, now that the 1Password is setup, because there is an Infrastructure vault on there now, so if you did want to you could just put them in there, I think only the admins have access to it.
+(**Southpaw**: "1Password should definitely increase the bus factor when we finish setting everything up")
+
+**Gdude**: As **Southpaw** mentioned, now that the 1Password is setup, because there is an Infrastructure vault on there now, so if you did want to you could just put them in there, I think only the admins have access to it.
 
 **Haven King**: OK, I should do that.
 

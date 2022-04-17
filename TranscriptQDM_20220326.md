@@ -19,11 +19,19 @@ In this episode, the team discuss progress made on Chasm, Loader, Mappings, and 
 [@Quilt_MC on Twitter](https://twitter.com/quilt_mc)  
 [How it all began](https://imgur.com/a/fGfr3sd)
 
+=========================
+
+**Gdude**: Hello and welcome to the QuiltMC Developer Meetings Podcast. The podcast that... isn’t really a podcast. If you’re new here, this is just a collection of recordings of each public Quilt Project Developer Meeting, lightly edited for comfort and uploaded as a podcast for ease of accessibility. Our meetings are held on Discord every two weeks, relayed from a Mumble server and recorded live by a fleet of Discord bots. Hence the lower audio quality. For more information on what the Quilt Project is and what we do here, please head to [https://quiltmc.org](https://quiltmc.org).
+
+=========================
+
 **Gdude**: Hello, you all have just got pinged. Welcome. It's time once again for the next biweekly meeting. Let's do a quick check. Hey everyone on Mumble, how's the sound?
 
 A: Good.
 
-**Gdude**: Good. (Good.) I forgot that it does that, I'm sorry. I mean, I'm not sorry, it's not my fault but you know. Anyway, welcome everyone. We're going to just wait a few minutes for people to show up and then we'll get started, maybe about 4, 5 minutes. By the way, nobody's found all the Easter eggs on the website. People found one of them, but there's one of them they haven't found. Emails? It's not the best time for emails. See you later, **KJJP**.
+**Gdude**: Good. (Good.) I forgot that it does that, I'm sorry. I mean, I'm not sorry, it's not my fault but you know. Anyway, welcome everyone. We're going to just wait a few minutes for people to show up and then we'll get started, maybe about 4, 5 minutes. By the way, nobody's found all the Easter eggs on the website. People found one of them, but there's one of them they haven't found. Emails? It's not the best time for emails. See you later, **KJP12**.
+
+(**KJP12**: "Apparently clicking the notification auto-joins you")
 
 "Are there more doors or wheels in the world?"  
 Probably more wheels. I mean, all you need is a straight answer like that, and then it's like, "Oh, who cares."

@@ -25,7 +25,13 @@ In this episode, the team discuss the progress made on Build Tools, Loader, and 
 [Outreach Team RFC](https://github.com/QuiltMC/rfcs/pull/48)  
 [CHASM (formally ASMR) on GitHub](https://github.com/QuiltMC/chasm)
 
-**Gdude**: Did I accidental click the "Ping Everyone" button again? Yeah, I think I did, haha. Can someone on the Mumble side say something to make sure it's working?
+=========================
+
+**Gdude**: Hello and welcome to the QuiltMC Developer Meetings Podcast. The podcast that... isn’t really a podcast. If you’re new here, this is just a collection of recordings of each public Quilt Project Developer Meeting, lightly edited for comfort and uploaded as a podcast for ease of accessibility. Our meetings are held on Discord every two weeks, relayed from a Mumble server and recorded live by a fleet of Discord bots. Hence the lower audio quality. For more information on what the Quilt Project is and what we do here, please head to [https://quiltmc.org](https://quiltmc.org).
+
+=========================
+
+**Gdude**: Did I accidentally click the "Ping Everyone" button again? Yeah, I think I did, haha. Can someone on the Mumble side say something to make sure it's working?
 
 ~~A~~: Hello
 

@@ -11,9 +11,11 @@ In this episode, the team discuss the progress in the Community Tooling, Infrast
 [Quilt RFCs on GitHub](https://github.com/QuiltMC/rfcs)  
 [The Cube Rule](https://cuberule.com/)  
 
+=========================
+
 **Gdude**: So, this is going to be a somewhat different meeting. We'll wait just a little bit for more people to show up, but they should get some pings. Hey **arathain**. So, the format of this meeting hasn't changed. However, you won't see the speakers on Discord. They'll be talking via the Cozy Mumble bot that we have set up. That is currently not set as a speaker so we can't hear them right now. In a couple minutes we will change that, and we'll see who shows up. 
 
-Also just to be clear, you can type in the #meeting-chat channel, right? Yep, OK, good. Hey **OliviaTheVampire**, hey **~~Merchrome~~**. Welcome welcome. For the sake of not making this look so empty, I will be staying in the stage, but I'm going to be muting and deafening myself and talking via Mumble. There may be a small bit of latency but I don't imagine it'll be too bad. This is the first time we've done this. We did test it, but you know how it goes. I'm going to set that up right about now. Alright, that appear to be working. We'll just give it a couple more minutes. But yeah, hey everyone from the other side of the breach. Hey **ThatTrollzer**, hey **PinkGoosik**. Yeah, it's weird isn't it? Don't worry, it usually takes people a few minutes.
+Also just to be clear, you can type in the #meeting-chat channel, right? Yep, OK, good. Hey **OliviaTheVampire**, hey **~~Monochrome~~**. Welcome welcome. For the sake of not making this look so empty, I will be staying in the stage, but I'm going to be muting and deafening myself and talking via Mumble. There may be a small bit of latency but I don't imagine it'll be too bad. This is the first time we've done this. We did test it, but you know how it goes. I'm going to set that up right about now. Alright, that appear to be working. We'll just give it a couple more minutes. But yeah, hey everyone from the other side of the breach. Hey **ThatTrollzer**, hey **PinkGoosik**. Yeah, it's weird isn't it? Don't worry, it usually takes people a few minutes.
 
 **OroArmor**: Maybe we should make a meeting role, and then ping that for attenders of this meeting.
 

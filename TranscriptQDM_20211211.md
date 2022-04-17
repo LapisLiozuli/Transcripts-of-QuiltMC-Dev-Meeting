@@ -38,6 +38,12 @@ Q&A
 [AuroraDecorations QSL commit](https://github.com/LambdAurora/AurorasDecorations/commit/22cbf1290e41ddc2d310c871b45f7d7b3d4423c6)  
 Wrap-up
 
+=========================
+
+**Gdude**: Hello and welcome to the QuiltMC Developer Meetings Podcast. The podcast that... isn’t really a podcast. If you’re new here, this is just a collection of recordings of each public Quilt Project Developer Meeting, lightly edited for comfort and uploaded as a podcast for ease of accessibility. Our meetings are held on Discord every two weeks, relayed from a Mumble server and recorded live by a fleet of Discord bots. Hence the lower audio quality. For more information on what the Quilt Project is and what we do here, please head to [https://quiltmc.org](https://quiltmc.org).
+
+=========================
+
 **CheaterCodes**: Alright. I think we can start, the time is now. Hello everyone and welcome to the last QDM of 2021. I'll say that right now because the next meeting would be [in] 2 weeks, that'll be the 25th of Dec. I seriously doubt if anyone is willing to come to a developers' meeting on the 25th of Dec, so that's going to be skipped. 
 
 For this week I'm sorry that **Gdude** isn't available right now. So I have to fill in. I hope that I can do the meeting justice. So, we're just going to do the same thing we do every week. We go through each team, each team can do a little talk, a little update about what's happening. 

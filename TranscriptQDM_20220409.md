@@ -25,9 +25,15 @@ In this episode, the team discuss QSL, Mappings, Build Tools CHASM, and Loader, 
 [Quilt Loader on GitHub](https://github.com/QuiltMC/quilt-loader)  
 [Glitch’s Loader Issue](https://github.com/QuiltMC/quilt-loader/issues/59)
 
+=========================
+
+**Gdude**: Hello and welcome to the QuiltMC Developer Meetings Podcast. The podcast that... isn’t really a podcast. If you’re new here, this is just a collection of recordings of each public Quilt Project Developer Meeting, lightly edited for comfort and uploaded as a podcast for ease of accessibility. Our meetings are held on Discord every two weeks, relayed from a Mumble server and recorded live by a fleet of Discord bots. Hence the lower audio quality. For more information on what the Quilt Project is and what we do here, please head to [https://quiltmc.org](https://quiltmc.org).
+
+=========================
+
 **Gdude**: Hello everyone that's just responding to the ping in an annoyed way. How're you doing, everyone. It's that time once again, and I'm actually doing something good for a change, look at me. Obviously, if you're sitting on Mumble, you'll want to be deafened on either one of them. Looking at the list, I'm like, "Hmmm, there's a few duplicates there." 
 
-So, we're going to give like 5 minutes maybe, to let people show up. Feel free to chat away in the #meeting-chat channel just above the #stage channel. Certainty seing a few new faces this time. If you're new to the mtgs, welcome. Also, you're slightly late, but that's OK. Also, can someone confirm that I unlocked ~~Warp~~? The permissions look right, but nobody's chatting. Fabulous, thank you. What was that spooky voice I heard over the ether just there? Alright, nice, looks good to me.
+So, we're going to give like 5 minutes maybe, to let people show up. Feel free to chat away in the #meeting-chat channel just above the #stage channel. Certainly seing a few new faces this time. If you're new to the meetings, welcome. Also, you're slightly late, but that's OK. Also, can someone confirm that I unlocked ~~Warp~~? The permissions look right, but nobody's chatting. Fabulous, thank you. What was that spooky voice I heard over the ether just there? Alright, nice, looks good to me.
 
 As always, we open the AmA at the start and close it at the end. So if you want to ask any questions, you can use the /ama command on Discord, and they will queue up for us to answer later on. We also have a bit of an ordering difference later today, but I'll go into that in a little bit. Not a big deal, though. Here's the secret, **Glitch**: It's alphabetical. Well, mostly alphabetical. I mean, we do take a few liberties, but it's ok, we just re-define the alphabet instead. Hoisting, huh?
 

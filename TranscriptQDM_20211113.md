@@ -1,3 +1,13 @@
+[Meeting: 13th Nov 2021](https://anchor.fm/quiltmc-dev-meetings/episodes/Meeting-13th-Nov-2021-e1au4rn)  
+Our first public developer meeting - uploaded for your convenience! In all Quilt developer meetings, we start by asking all the development teams what they've been up to. After that, the community team talks a little about what's been going on, and then we accept questions!  
+If you'd like to listen to our meetings live, or you have questions to submit, please feel free to join us - every two weeks, [on Discord](https://discord.quiltmc.org/).
+
+=========================
+
+**Gdude**: Hello and welcome to the QuiltMC Developer Meetings Podcast. The podcast that... isn’t really a podcast. If you’re new here, this is just a collection of recordings of each public Quilt Project Developer Meeting, lightly edited for comfort and uploaded as a podcast for ease of accessibility. Our meetings are held on Discord every two weeks, relayed from a Mumble server and recorded live by a fleet of Discord bots. Hence the lower audio quality. For more information on what the Quilt Project is and what we do here, please head to [https://quiltmc.org](https://quiltmc.org).
+
+=========================
+
 **Gdude**: "**Instructions for attendees**
 If you're here to listen to the meeting, chat in here and ask questions, welcome! We're making use of an AMA system to make everyone's lives easier, so please follow these instructions.
 Firstly, wait for the meeting to start and for one of us to open the session. You'll see a message posted in this channel by @AMA when we're ready to take questions ing though do note that we'll be opening it before the developers will be answering them, to give you some time to collect your thoughts.
@@ -10,7 +20,7 @@ We're hoping for a smooth session, but bear in mind that most of us haven't run 
 
 =========================
 
-**Gdude**: Uh, let me look at my list here. Shall we start with CHASM?
+**Gdude**: Alright, we can get started. Uh, let me look at my list here. Can we start with CHASM?
 
 **CheaterCodes**: Oh!! Yes, I was going to do it a little bit quick. 
 
