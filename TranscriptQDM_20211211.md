@@ -44,6 +44,28 @@ Wrap-up
 
 =========================
 
+ATTENDEES:
+- **ADudeCalledLeo**
+- **EarthComputer**
+- **Gdude**
+- **Kitchura**
+- **Byte**
+- **AlexIIL**
+- **AppleTheGolden**
+- **CheaterCodes**
+- **TheBlackSquidward**
+- **SuperCoder79**
+- **Glitch**
+- **Juuz**
+- **Grondag**
+- **Fish**
+- **Banzobotic**
+- **i509VCB**
+- **LambdAurora**
+- **Tropheus Jay**
+
+=========================
+
 **CheaterCodes**: Alright. I think we can start, the time is now. Hello everyone and welcome to the last QDM of 2021. I'll say that right now because the next meeting would be [in] 2 weeks, that'll be the 25th of Dec. I seriously doubt if anyone is willing to come to a developers' meeting on the 25th of Dec, so that's going to be skipped. 
 
 For this week I'm sorry that **Gdude** isn't available right now. So I have to fill in. I hope that I can do the meeting justice. So, we're just going to do the same thing we do every week. We go through each team, each team can do a little talk, a little update about what's happening. 
