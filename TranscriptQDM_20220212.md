@@ -31,6 +31,31 @@ In this episode, the team discuss the progress made on Build Tools, Loader, and 
 
 =========================
 
+ATTENDEES:
+- **sschr15**
+- **Gdude**
+- **sciwhiz12**
+- **NoComment**
+- **OroArmor**
+- **Skyrising**
+- **woodiertexas**
+- **arathain**
+- **ThatTrollzer**
+- **any**
+- **jamalam**
+- **AlexIIL**
+- **CheaterCodes**
+- **Arathain**
+- **Octal**
+- **Whangdoodle**
+- **Glitch**
+- **Whangd00dle**
+- **Southpaw**
+- **i509VCB**
+- **LambdAurora**
+
+=========================
+
 **Gdude**: Did I accidentally click the "Ping Everyone" button again? Yeah, I think I did, haha. Can someone on the Mumble side say something to make sure it's working?
 
 ~~A~~: Hello
