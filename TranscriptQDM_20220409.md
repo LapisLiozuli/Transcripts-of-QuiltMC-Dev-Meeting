@@ -31,6 +31,24 @@ In this episode, the team discuss QSL, Mappings, Build Tools CHASM, and Loader, 
 
 =========================
 
+ATTENDEES:
+- **AlexIIL**
+- **CheaterCodes**
+- **Glitch**
+- **grifferthrydwy**
+- **Gdude**
+- **LemmaEOF**
+- **Kroppeb**
+- **AlphaMode**
+- **Yujin**
+- **Octal**
+- **Byte**
+- **LambdAurora**
+- **Will BL**
+- **Haven King**
+
+=========================
+
 **Gdude**: Hello everyone that's just responding to the ping in an annoyed way. How're you doing, everyone. It's that time once again, and I'm actually doing something good for a change, look at me. Obviously, if you're sitting on Mumble, you'll want to be deafened on either one of them. Looking at the list, I'm like, "Hmmm, there's a few duplicates there." 
 
 So, we're going to give like 5 minutes maybe, to let people show up. Feel free to chat away in the #meeting-chat channel just above the #stage channel. Certainly seing a few new faces this time. If you're new to the meetings, welcome. Also, you're slightly late, but that's OK. Also, can someone confirm that I unlocked ~~Warp~~? The permissions look right, but nobody's chatting. Fabulous, thank you. What was that spooky voice I heard over the ether just there? Alright, nice, looks good to me.
