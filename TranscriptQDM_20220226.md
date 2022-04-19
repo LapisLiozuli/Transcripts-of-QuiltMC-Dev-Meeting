@@ -28,7 +28,36 @@ In this episode, the team make an exciting reveal about something...important. T
 
 =========================
 
-**Gdude**: Hello and welcome to the QuiltMC Developer Meetings Podcast. The podcast that... isn’t really a podcast. If you’re new here, this is just a collection of recordings of each public Quilt Project Developer Meeting, lightly edited for comfort and uploaded as a podcast for ease of accessibility. Our meetings are held on Discord every two weeks, relayed from a Mumble server and recorded live by a fleet of Discord bots. Hence the lower audio quality. For more information on what the Quilt Project is and what we do here, please head to [https://quiltmc.org](https://quiltmc.org).
+**Gdude**: Hello and welcome to the QuiltMC Developer Meetings Podcast. The podcast that... isnâ€™t really a podcast. If youâ€™re new here, this is just a collection of recordings of each public Quilt Project Developer Meeting, lightly edited for comfort and uploaded as a podcast for ease of accessibility. Our meetings are held on Discord every two weeks, relayed from a Mumble server and recorded live by a fleet of Discord bots. Hence the lower audio quality. For more information on what the Quilt Project is and what we do here, please head to [https://quiltmc.org](https://quiltmc.org).
+
+=========================
+
+ATTENDEES
+- **Emmaffle**
+- **ToffeeMax**
+- **Gdude**
+- **sciwhiz12**
+- **isXander**
+- **Skyrising**
+- **FavoritoHJS**
+- **Haiku**
+- **AlexIIL**
+- **diaxazine**
+- **CheaterCodes**
+- **Earthcomputer**
+- **FavoritoHJS**
+- **Glitch**
+- **Slab**
+- **AManCalledSteve**
+- **Grondag**
+- **Southpaw**
+- **i509VCB**
+- **sschr15**
+- **SuperCoder79**
+- **lenrik**
+- **LambdAurora**
+- **Haven King**
+- **The Nukelore**
 
 =========================
 
@@ -52,7 +81,7 @@ In this episode, the team make an exciting reveal about something...important. T
 
 **Haven King**: That would be very difficult, but it would be pretty funny.
 
-**Gdude**: You know what, I'm not surprised somehow. Someone's going to end up doing that at some point. Let's give it a couple more minutes as we wait for people to get in here. Alright, I think we can probably get started. It's been about 5 minutes. So yeah, welcome to another public QuiltMC Developers’ Meeting. I'm going to try that again later, don't worry. And we'll just get right into it, I guess. **Earthcomputer**, I guess you're ready to talk about CHASM?
+**Gdude**: You know what, I'm not surprised somehow. Someone's going to end up doing that at some point. Let's give it a couple more minutes as we wait for people to get in here. Alright, I think we can probably get started. It's been about 5 minutes. So yeah, welcome to another public QuiltMC Developersâ€™ Meeting. I'm going to try that again later, don't worry. And we'll just get right into it, I guess. **Earthcomputer**, I guess you're ready to talk about CHASM?
 
 **Earthcomputer**: Yeah, let me just find the notes.
 
@@ -105,10 +134,10 @@ Uh, no, I'm afraid not. The way we usually do it, since people are work- like pr
 **Haven King**: Well, we were first doing the meeting internally before they went public. But if there was like a big issue, or a big convo we wanted to have, we would have it scheduled beforehand. You know, say, "We'll be talking about it at this meeting." We still can do that, but it just hasn't been something that has come up as often. There is also that pause of meeting around December because of the holidays and whatnot, so even though there were some big decisions being made then, we just weren't around to talk about them. But we could do that again, but it just hasn't come up again.
 
 **Gdude**: That's a fair point. I'm losing track of things here. Well, **sciwhiz12** is asking another question, "When are we getting a new blog entry on the QuiltMC blog?"
-Well, I think **ToffeeMax** is actually working on one. I don’t know if he's around at the moment, I think he's busy. But this kind of ties into the Outreach Team. Like we are planning on building a team. I think it's pretty much done actually, we just need to get the RFC merged, which would handle stuff like blogposts. ~~We should still put stuff there.~~ Obviously we want the site to be rebuilt by then as well, since the current site doesn't have pagination or anything just yet. But once that's over, we can decide it, then we get the Outreach Team, you should start seeing more content then.
+Well, I think **ToffeeMax** is actually working on one. I donâ€™t know if he's around at the moment, I think he's busy. But this kind of ties into the Outreach Team. Like we are planning on building a team. I think it's pretty much done actually, we just need to get the RFC merged, which would handle stuff like blogposts. ~~We should still put stuff there.~~ Obviously we want the site to be rebuilt by then as well, since the current site doesn't have pagination or anything just yet. But once that's over, we can decide it, then we get the Outreach Team, you should start seeing more content then.
 
 **AlexIIL**: **Emmaffle** asks, "Would it be possible to have version-specific mod folders for loader, like Forge?"
-So I briefly touched on this during what I was saying. So currently there's a discussion issue about this. It's Quilt Loader #50. So basically the answer is yes, it should be possible, but I don’t know if this functionality should be enabled by default. 
+So I briefly touched on this during what I was saying. So currently there's a discussion issue about this. It's Quilt Loader #50. So basically the answer is yes, it should be possible, but I donâ€™t know if this functionality should be enabled by default. 
 
 **Gdude**: I can hear **AlexIIL** typing, so I'm assuming he got cut off.
 
@@ -155,7 +184,7 @@ Well, I think right now **i509VCB** is the one with the logins as he set it up o
 **FavoritoHJS** is asking, "Where is help needed at the moment?"
 I mentioned it earlier, but again, the #opening channel on the community server lists the teams that need people. You can also have a look at the various issues on any project that you're interested in. I could also use a bit of help on the Community Toolings Team but I'm not really too worried right now. It's chugging along just fine. And yes, sign up for Build Tools of course, that's in there, it's in the list. So yeah, not much there to say for that one, I think. **Haven King**, I think that one's yours.
 
-**Haven King**: Yep, waiting for it to pop up in chat. If it's going to. Or if it's- I don’t know.
+**Haven King**: Yep, waiting for it to pop up in chat. If it's going to. Or if it's- I donâ€™t know.
 
 **Gdude**: Click the stage button. Ah, there we go. OK.
 
@@ -167,7 +196,7 @@ So that's probably the main reason I would be very hesitant to make such a backp
 **Gdude**: Thanks for that, **Haven King**. Yeah, **LambdAurora**, you could take that one if you lk.
 
 **LambdAurora**: OK, **diaxazine** asks, "Do you have an idea as to a how much work there is left to do? Or is it too far away right now."
-It really depends on the project. For QSL it's usable. We still need to test a lot to see if it's stable, but it's usable. Compared to FAPI there's not as many features, but it's usable. For Quilt Mappings, it's definitely usable, though there might be issues with the mob stuff. But that boils down to people actually mapping stuff. But it's well usable right now. Compiler is already used in a lot of projects. For Loader, I'm not entirely aware where it is, but seems to be really close to be able to test it. So that's great. Build Tools, well thats another story, because there's people working on vanilla Gradle, but I don’t know where that is currently. As spoken earlier in the meeting, CHASM has made progress, but I don’t know if it's going to be usable in like QSL and stuff really soon, so kind of no for me. So it really depends on the project for now. But we are slowly coming to something useful globally.
+It really depends on the project. For QSL it's usable. We still need to test a lot to see if it's stable, but it's usable. Compared to FAPI there's not as many features, but it's usable. For Quilt Mappings, it's definitely usable, though there might be issues with the mob stuff. But that boils down to people actually mapping stuff. But it's well usable right now. Compiler is already used in a lot of projects. For Loader, I'm not entirely aware where it is, but seems to be really close to be able to test it. So that's great. Build Tools, well thats another story, because there's people working on vanilla Gradle, but I donâ€™t know where that is currently. As spoken earlier in the meeting, CHASM has made progress, but I donâ€™t know if it's going to be usable in like QSL and stuff really soon, so kind of no for me. So it really depends on the project for now. But we are slowly coming to something useful globally.
 
 **Gdude**: Thanks **LambdAurora**. We're at the end of the queue again. Are there any more question to be asked?  **Slab** says, No. But for transparency, the developers don't actually see the questions until someone from our Community Team approves them, so they're not necessarily guaranteed to be answered. Use the /ask slash cmd if you want to ask a question.
 
