@@ -9,34 +9,34 @@ If you'd like to listen to our meetings live, or you have questions to submit, p
 =========================
 
 ATTENDEES:
-**Emmaffle**
-**ADudeCalledLeo**
-**Blodhgarm**
-**Fork**
-**LOCAL**
-**Gdude**
-**sciwhiz12**
-**OroArmor**
-**lenrik**
-**ENDERZOMBI102**
-**MVP**
-**burger**
-**Kroppeb**
-**arathain**
-**StrikerRocker**
-**jamalam**
-**AlexIIL**
-**CheaterCodes**
-**yitzy**
-**Lith/Heli**
-**Hubry**
-**IMS**
-**MartrixX**
-**Grondag**
-**Fish**
-**i509VCB**
-**LambdAurora**
-**Haven King**
+- **Emmaffle**
+- **ADudeCalledLeo**
+- **Blodhgarm**
+- **Fork**
+- **LOCAL**
+- **Gdude**
+- **sciwhiz12**
+- **OroArmor**
+- **lenrik**
+- **ENDERZOMBI102**
+- **MVP**
+- **burger**
+- **Kroppeb**
+- **arathain**
+- **StrikerRocker**
+- **jamalam**
+- **AlexIIL**
+- **CheaterCodes**
+- **yitzy**
+- **Lith/Heli**
+- **Hubry**
+- **IMS**
+- **MartrixX**
+- **Grondag**
+- **Fish**
+- **i509VCB**
+- **LambdAurora**
+- **Haven King**
 
 =========================
 
