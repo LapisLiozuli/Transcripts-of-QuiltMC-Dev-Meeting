@@ -8,6 +8,38 @@ If you'd like to listen to our meetings live, or you have questions to submit, p
 
 =========================
 
+ATTENDEES:
+**Emmaffle**
+**ADudeCalledLeo**
+**Blodhgarm**
+**Fork**
+**LOCAL**
+**Gdude**
+**sciwhiz12**
+**OroArmor**
+**lenrik**
+**ENDERZOMBI102**
+**MVP**
+**burger**
+**Kroppeb**
+**arathain**
+**StrikerRocker**
+**jamalam**
+**AlexIIL**
+**CheaterCodes**
+**yitzy**
+**Lith/Heli**
+**Hubry**
+**IMS**
+**MartrixX**
+**Grondag**
+**Fish**
+**i509VCB**
+**LambdAurora**
+**Haven King**
+
+=========================
+
 **Gdude**: "**Instructions for attendees**
 If you're here to listen to the meeting, chat in here and ask questions, welcome! We're making use of an AMA system to make everyone's lives easier, so please follow these instructions.
 Firstly, wait for the meeting to start and for one of us to open the session. You'll see a message posted in this channel by @AMA when we're ready to take questions ing though do note that we'll be opening it before the developers will be answering them, to give you some time to collect your thoughts.
