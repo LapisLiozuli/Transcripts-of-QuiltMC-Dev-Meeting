@@ -22,7 +22,7 @@ import json
 
 dates = ["20220409", "20220326", "20220312", "20220226", "20220212", "20220129", "20211211", "20211127", "20211113"]
 # dates = ["20220409"]
-path_transcript_dir = r"C:\Users\Public\Documents\LapisLiozuli\Transcripts-of-QuiltMC-Dev-Meeting"
+path_suppl_dir = r"C:\Users\Public\Documents\LapisLiozuli\Transcripts-of-QuiltMC-Dev-Meeting\Supplements"
 
 punctuation_list = ["?", ":", "!", " ", ",", ".", ":", ";", "'", '"', "=", "#", "'s", "_", "-", "~", "(", ")"]
 # punctuation_list = ["?", ":", "!", ",", ".", ":", ";", "'", '"', "=", "#", "'s", "_", "-", "~"]
@@ -38,7 +38,7 @@ def flatten_sublists_scalars(nested_list):
 attd_dict = {}
 for date in dates:
       # utc-8 doesn't work.
-      with open(path.join(path_transcript_dir, "TranscriptQDM_" + date + ".md"), encoding="latin1") as transcript:
+      with open(path.join(path_suppl_dir, "TranscriptQDM_" + date + ".md"), encoding="latin1") as transcript:
             lines = transcript.readlines()
       longlines = lines.copy()
       # Join into a giant string.
@@ -67,11 +67,11 @@ for date in dates:
 # Dump to text.
 switch = False
 if switch:
-      with open(path.join(path_transcript_dir, "attd_dict.txt"), "w") as f:
+      with open(path.join(path_suppl_dir, "attd_dict.txt"), "w") as f:
             f.write(json.dumps(attd_dict).replace(", ", ",\n"))
 
 # Load from text
 if not switch:
-      with open(path.join(path_transcript_dir, "attendance_dict.txt"), encoding="latin1") as f:
+      with open(path.join(path_suppl_dir, "attendance_dict.txt"), encoding="latin1") as f:
           read_str = f.read()
       output_collection = json.loads(read_str)
