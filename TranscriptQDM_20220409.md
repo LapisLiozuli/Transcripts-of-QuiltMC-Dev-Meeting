@@ -32,6 +32,7 @@ In this episode, the team discuss QSL, Mappings, Build Tools CHASM, and Loader, 
 =========================
 
 ATTENDEES:
+
 - **AlexIIL**
 - **CheaterCodes**
 - **Glitch**
@@ -51,9 +52,9 @@ ATTENDEES:
 
 **Gdude**: Hello everyone that's just responding to the ping in an annoyed way. How're you doing, everyone. It's that time once again, and I'm actually doing something good for a change, look at me. Obviously, if you're sitting on Mumble, you'll want to be deafened on either one of them. Looking at the list, I'm like, "Hmmm, there's a few duplicates there." 
 
-So, we're going to give like 5 minutes maybe, to let people show up. Feel free to chat away in the #meeting-chat channel just above the #stage channel. Certainly seing a few new faces this time. If you're new to the meetings, welcome. Also, you're slightly late, but that's OK. Also, can someone confirm that I unlocked ~~Warp~~? The permissions look right, but nobody's chatting. Fabulous, thank you. What was that spooky voice I heard over the ether just there? Alright, nice, looks good to me.
+So, we're going to give like 5 minutes maybe, to let people show up. Feel free to chat away in the `#meeting-chat` channel just above the `#stage` channel. Certainly seing a few new faces this time. If you're new to the meetings, welcome. Also, you're slightly late, but that's OK. Also, can someone confirm that I unlocked ~~Warp~~? The permissions look right, but nobody's chatting. Fabulous, thank you. What was that spooky voice I heard over the ether just there? Alright, nice, looks good to me.
 
-As always, we open the AmA at the start and close it at the end. So if you want to ask any questions, you can use the /ama command on Discord, and they will queue up for us to answer later on. We also have a bit of an ordering difference later today, but I'll go into that in a little bit. Not a big deal, though. Here's the secret, **Glitch**: It's alphabetical. Well, mostly alphabetical. I mean, we do take a few liberties, but it's ok, we just re-define the alphabet instead. Hoisting, huh?
+As always, we open the AmA at the start and close it at the end. So if you want to ask any questions, you can use the `/ama` command on Discord, and they will queue up for us to answer later on. We also have a bit of an ordering difference later today, but I'll go into that in a little bit. Not a big deal, though. Here's the secret, **Glitch**: It's alphabetical. Well, mostly alphabetical. I mean, we do take a few liberties, but it's ok, we just re-define the alphabet instead. Hoisting, huh?
 
 **CheaterCodes**: Oh yeah, "hoisting" is a great name. Exclamation mark CHASM is great. I guess triple or quadruple exclamation marks, just to be sure.
 
@@ -69,11 +70,11 @@ As always, we open the AmA at the start and close it at the end. So if you want 
 
 Alrt, I think we can get started. It's about five past, six past even. The order's a little bit different, we're going to be going through QSL and mappings first because **LambdAurora**'s got to leave later, but I'm sure y'all won't mind that. So let's get started, I guess. **LambdAurora**, would you like to get started with QSL?
 
-**LambdAurora**: Yeah. So this is the last meeting before Beta, which means we won't talk on the same things because we have more of a focus on the Beta part. So for QSL, we are a bit concerned because we have to specify a versioning scheme for QSL. Before anyone says, "Yes, but there's Semver," it's not entirely about Semver. It's mostly about how we version the QSL as a rule of which version, or which module extra. How we version everything depending on the MC version, and a lot more.
+**LambdAurora**: Yeah. So this is the last meeting before Beta, which means we won't talk on the same things because we have more of a focus on the Beta part. So for QSL, we are a bit concerned because we have to specify a versioning scheme for QSL. Before anyone says, "Yes, but there's semver (T/N: semantic versioning)," it's not entirely about semver. It's mostly about how we version the QSL as a rule of which version, or which module extra. How we version everything depending on the MC version, and a lot more.
 
-So that's a lot of stuff that for example Semver doesn't really answer by itself. So we have to sit down and think about it. It's taking a long while, which is a bit concerning. Since while Beta isn't really that far away, but we do hope that we figure out something that is solid enough for Beta. Because the idea is that it's all set up so that we don't have to touch it too much, and so we don't have a big disaster. Because while we can break APIs in Beta, breaking the version scheme is much, much more dangerous and not really worth it. So yeah, that's something we need to get right.
+So that's a lot of stuff that for example semver doesn't really answer by itself. So we have to sit down and think about it. It's taking a long while, which is a bit concerning. Since while Beta isn't really that far away, but we do hope that we figure out something that is solid enough for Beta. Because the idea is that it's all set up so that we don't have to touch it too much, and so we don't have a big disaster. Because while we can break APIs in Beta, breaking the version scheme is much, much more dangerous and not really worth it. So yeah, that's something we need to get right.
 
-Inrl[ there's been some discussion about Semver, because Semver was ~~fought~~ for libraries, mainly, and it's a bit different from mods. Mods are quite a weird case. There's also the case of content stuff which is another can of worms. So there's been talks about breaking Semver in Quilt Loader. No one's sure yet, so don't make assumption right now. But yeah, that's what all the versioning stuff was about.
+Inrl[ there's been some discussion about semver, because semver was ~~fought~~ for libraries, mainly, and it's a bit different from mods. Mods are quite a weird case. There's also the case of content stuff which is another can of worms. So there's been talks about breaking Semver in Quilt Loader. No one's sure yet, so don't make assumption right now. But yeah, that's what all the versioning stuff was about.
 
 Otherwise, for QSL, feature-wise, we had some PRs that had been merged. I think last time, If i remember correctly, we got a port of Fabric's Dimension API, which is mostly a helper to teleport entities between dimensions. Because apparently that's not easy without APIs. 
 
@@ -83,7 +84,7 @@ There was a much smaller PR that ~~quit registry~~. But to be honest, I personal
 
 The thing is, that map, when it's created, it's not filled automatically. So basically in vanilla, the only moment when it's actually filled is when the Item's class - Which is a class for when every Item in the game is initialised, which is not great for modding. So what Quilt Registry does is it registers something totally after that is initialised. Some modded stuff just works. And just for like- Just to know what make it different from Fabric API is that we register that listener a bit earlier. So we catch more stuff. 
 
-O/w, other stuff is we caught some issues in the Registry Monitor, which is an API to monitor registries, which is really, really cool. So you can do stuff on already existing entries in the registry, but also what is registered after. It's really useful, and there's a new bug that got in, in 1.18.2. Because now we cannot register stuff while iterating over the entries, so we had to modify that. It led to also new method in the context of trying to register something safely. 
+Otherwise, other stuff is we caught some issues in the Registry Monitor, which is an API to monitor registries, which is really, really cool. So you can do stuff on already existing entries in the registry, but also what is registered after. It's really useful, and there's a new bug that got in, in 1.18.2. Because now we cannot register stuff while iterating over the entries, so we had to modify that. It led to also new method in the context of trying to register something safely. 
 
 Otherwise, feature-wise, I think that's all. QSL is- at least, it's ready feature-wise, there's not a lot of stuff to figure out. And we're well aware that we do not cover like every case that Fabric API covers, which is fine because well, it's still very early. So it's OK because people can still use Fabric API for stuff that we don't cover. So on that part, we're ready.
 
@@ -93,7 +94,7 @@ Otherwise, feature-wise, I think that's all. QSL is- at least, it's ready featur
 
 Also, **Glitch**, just to make sure, there's a little bit more stuff that wasn't covered in that PR. It's the fact that there's the ModContainer class that is used in the API so far. And the issue is that it's using the Fabric Loader one, and what's intended is for the Quilt Loader one to be used. So it also means that once we go on Quilt there will be an API breakage. So every mod that is currently using QSL, if you touch the register, like the resource pack, or resource loader, if you use the Quilt entrypoints, it'll break. Because there's a famous ModContainer class there. If anyone wasn't aware, now you're aware, but yeah.
 
-The last thing is, QSL and Fabric API. ~~High priority~~ that gives Fabric API API ~~surface~~, while ensuring that it works with QSL. Because of some mods that have been production-testing with that. There was an incompatibility that was discovered with Continuity. It was fixed, so that's really good. There's some bug reports that are a bit obscure. So currently we don't know if it's really because of QSL stuff, or if it's because of jar-in-jar issues. So some stuff we'll have to be ~~contacted~~ with the QSL-FAPI ~~future currently~~ in the mods folder. But hopefully that'll help us to fix some maybe unseen bugs before Beta, so that'll be really, really nice. But at the same time, Beta is a time where there still can be bugs. But it's still better if there's not many bugs. 
+The last thing is, QSL and Fabric API. ~~High priority~~ that gives Fabric API API ~~surface~~, while ensuring that it works with QSL. Because of some mods that have been production-testing with that. There was an incompatibility that was discovered with Continuity. It was fixed, so that's really good. There's some bug reports that are a bit obscure. So currently we don't know if it's really because of QSL stuff, or if it's because of Jar-in-Jar issues. So some stuff we'll have to be ~~contacted~~ with the QSL-FAPI ~~future currently~~ in the mods folder. But hopefully that'll help us to fix some maybe unseen bugs before Beta, so that'll be really, really nice. But at the same time, Beta is a time where there still can be bugs. But it's still better if there's not many bugs. 
 
 O/w, I think that's all, aside from the usual reminder that we're still looking for people. Especially for Fabric API-QSL, because currently I'm the only one maintaining it. Which is a bit, how to say, exhausting. So if people are interested in maintaining that library, that would be really, really cool. Someone showed up, which is really nice, but otherwise if we can get more people to make sure that it's maintained and doesn't get left behind from upstream that'll be really, really cool. Otherwise I think I said all the things that needed to be said. Think we can go over to the next project.
 
@@ -105,7 +106,9 @@ The thing that ~~doesn't mesh~~ is that Hashed Mojmap is much, much faster to ge
 
 So for anyone contributing, be mindful of that. Double-check when you use a Mojmap name that it doesn't break a convention. So like, if you try to path serialise to JSON, in that case there's a convention in Quilt Mappings about serialisation methods that says ~~you don't have to be specific. Like it's serialised, it just to JSON~~. Any of those occurrences will be fixed, eventually. But for anyone that is willing, or is currently contributing to Quilt Mappings, it's just a reminder. 
 
-O/w, about the Beta, Quilt Mappings has been in co-production already for a month. But there is some important stuff to consider. For example, and for Quilt Beta it'll be really relevant, we're currently using Quilt Mappings on Loom, because we do not have Build Tools yet. There are some issues with it. For example, there are really, really random methods that refuse to get mapped. I know there was talks about fixing it. I'm not really much informed about it. It's one thing to consider, and the other thing to consider is between ~~Mojmap names and constructors~~. Not entirely sure why, but for now it doesn't. So that's also one consideration. But otherwise, aside from those issues, it's definitely usable, at least and especially for Quilt Beta. Thanks to everyone that has used Quilt Mappings already because either it helps us to figure out bugs. It helps sometimes for the names. It shows that we're not doing that project for nothing. So, thank you at least. Otherwise, as long as QSL is updated, there's not really much more to say about all of this.
+O/w, about the Beta, Quilt Mappings has been in co-production already for a month. But there is some important stuff to consider. For example, and for Quilt Beta it'll be really relevant, we're currently using Quilt Mappings on Loom, because we do not have Build Tools yet. There are some issues with it. For example, there are really, really random methods that refuse to get mapped. I know there was talks about fixing it. I'm not really much informed about it. It's one thing to consider, and the other thing to consider is between ~~Mojmap names and constructors~~. Not entirely sure why, but for now it doesn't. So that's also one consideration. 
+
+But otherwise, aside from those issues, it's definitely usable, at least and especially for Quilt Beta. Thanks to everyone that has used Quilt Mappings already because either it helps us to figure out bugs. It helps sometimes for the names. It shows that we're not doing that project for nothing. So, thank you at least. Otherwise, as long as QSL is updated, there's not really much more to say about all of this.
 
 **Gdude**: Alright, thanks for that **LambdAurora**. You had a bit of a marathon there, good job. Alright, we will move straight on since we're already halfway through. **Glitch**, can you talk about Build Tools?
 
@@ -115,9 +118,9 @@ O/w, about the Beta, Quilt Mappings has been in co-production already for a mont
 
 **CheaterCodes**: I would love to talk with CHASM. CHASM has had some busy 2 weeks. Or to be precise, some busy 4 days at the start of 2 weeks. Basically I've been re-writing the entirety of CHASM Line simply because I wasn't happy with the implementation. It was a bit messy in spots, it was basically my first attempt. I wasn't entirely sure what I was doing. So I basically scrapped it all, did it again, took what I learned and now it's better. 
 
-It is again, 90% the same, so I guess it wasn't that bad in the first place. But the worst parts that I didn't like about the implementation are much cleaner now, so that's mostly related to expression-caching, function call-caching and dealing with occurrences and such. It also changed a bit in terms of of syntax. Small changes that people wanted, like bing able to omit the dollar sign for specifying a rule if it's ~~simply~~ for the terms, method, or whatever. And easier indexing, and very important, also now has the capability of providing intrinsic fns. So very simple operations like geting the length of an array, relevant for geting the number of instructions in a method, or specifically targeting the last instruction needed to know the length of an instruction array. So that works now. 
+It is again, 90% the same, so I guess it wasn't that bad in the first place. But the worst parts that I didn't like about the implementation are much cleaner now, so that's mostly related to expression-caching, function call-caching and dealing with occurrences and such. It also changed a bit in terms of of syntax. Small changes that people wanted, like being able to omit the dollar sign for specifying a rule if it's ~~simply~~ for the terms, method, or whatever. And easier indexing, and very important, also now has the capability of providing intrinsic functions. So very simple operations like geting the length of an array, relevant for geting the number of instructions in a method, or specifically targeting the last instruction needed to know the length of an instruction array. So that works now. 
 
-Hwvr, there's still a lot of stuff to do. The base functionality is pretty decent. I'm happy with where it is right now. There's some details we have to figure out regarding representation of function descriptors and parameters and ~~method types~~, because that's redundant if we represent them all, but it's annoying if we don't have them all. 
+However, there's still a lot of stuff to do. The base functionality is pretty decent. I'm happy with where it is right now. There's some details we have to figure out regarding representation of function descriptors and parameters and ~~method types~~, because that's redundant if we represent them all, but it's annoying if we don't have them all. 
 
 But actually, if anyone is interested in helping out with CHASM, there's a few very great simple issues open at the CHASM repository. If anyone feels like helping, the intrinsic functions one is really simple and probably like 10 lines of code for most of the functions on there. Error messages is a bit more of a language-parsing one if anyone is interested in helping with that. I had someone who was interested in writing up the language specifications, they started but never finished. That would also be highly appreciated because right now I'm mostly working alone in this, which is quick, because most of the groundwork has already been laid so it's not that bad. But I'd also appreciate more help.
 
@@ -135,7 +138,7 @@ And then, I think the only things that are left are I need to rebuild or rewrite
 
 **Gdude**: Yes, it's true. Is that it for Infrastructure? Fabulous, thanks for that. **Glitch**, I think I have you down for Quilt Loader.
 
-**Glitch**: Yeah, that's correct. So Quilt Loader is kind of the same deal. We're really working hard on making sure that everything is going to be as smooth an experience as possible. So as we're coming up with bugs, we're trying to squash them. We do have some new features coming down the pipeline. Work on loader plugins is I believe slowly coming in from **AlexIIL**. So it's a ways away, but it's coming down the line. We're geting ready for being able to support Hashed Mojmap properly. We're adding some extensions to the quilt.mod.json so we can figure out what Intermediary mappings a mod is using so that we can remap them. And since I don't believe I have another good chance to speak today, I'll just throw in that we will be having a proper Quilt example mod coming up within the next few days, hopefully. So keep an eye out for that.
+**Glitch**: Yeah, that's correct. So Quilt Loader is kind of the same deal. We're really working hard on making sure that everything is going to be as smooth an experience as possible. So as we're coming up with bugs, we're trying to squash them. We do have some new features coming down the pipeline. Work on loader plugins is I believe slowly coming in from **AlexIIL**. So it's a ways away, but it's coming down the line. We're geting ready for being able to support Hashed Mojmap properly. We're adding some extensions to the `quilt.mod.json` so we can figure out what Intermediary mappings a mod is using so that we can remap them. And since I don't believe I have another good chance to speak today, I'll just throw in that we will be having a proper Quilt example mod coming up within the next few days, hopefully. So keep an eye out for that.
 
 **Gdude**: That's exciting stuff. That is prety exciting, I have to say, I'm looking forward to that as well. OK, I think that concludes all the big teams. Specific stuff, as always, hit up that /ask if you have some questions. We got a couple in already. There's a couple other things to cover before we move onto those though. 
 
@@ -160,29 +163,32 @@ OK, I guess we'll move onto questions then, and that one is definitely yours, **
 **Gdude**: I'll try and type it.
 
 **CheaterCodes**: Maybe you can type it, thanks. So the question from **Byte** is, "Are there any concepts for CHASM frontends/transformers besides reimplementing Mixins/AW on CHASM?"
+
 So, I think the answer to that is both yes and no, as always. First off, not directly. Like not as officially first-party support, I don't think there's anything we really want from this. However, we would like to expand Mixin quite a bit. So the Mixin frontend is quite comfortable to use for most people. They're used to it, and definitely would like to keep that. So for example, we want to be able to target lambdas, not by name, but by callsite which would be much more stable. And also, more intuitive.
 
-But in terms of things that are not Mixin or access widener (AQ), we could for example talk about interface injection, which is essentially about making an interface visible on source code, like on your MC dependency. This is something we get for free with CHASM, so we don't even need to implement this.
+But in terms of things that are not Mixin or access widener (AQ), we could for example talk about interface injection, which is essentially about making an interface visible on source code, like on your Minecraft dependency. This is something we get for free with CHASM, so we don't even need to implement this.
 
 **Gdude**: You cut out at "interface injection".
 
 **CheaterCodes**: Right, so there is interface injection for example that we don't need, because we get it for free with CHASM. Because every mixin is probably going to be source-visible anyway. So it's completely unnecessary.
 
 A quick question from **AlphaMode** just as a quick intermediate: "Isn't interface injection broken on runtime?"
+
 No, it's just not meant to be working with runtime. It's exclusively meant for compile time. So yeah, that is something that for example is something you only need once, but we already have it for free. Then **Kroppeb** has been doing some black magic regarding making some method calls automatically asynchronous. I have no idea what it's about, but it sounds fun. The whole point of CHASM is not that we can provide many, many interfaces as a frontend, but that people can make their own frontends if the needd to without requiring hacks into it. I think that answers the question fairly extensive.
 
 Thx **Gdude**, I hope you got all of that.
 
 **Gdude**: Yep, more or less, thank you.
+
 (Real-time notes by **Gdude**: Yes and no, as always.  
 Not directly, not first-party, don't think there's anything we really want from this, however, we would like to expand Mixin quite a bit.  
-The Mixin frontend is quite comfortable to use for most people, they're used to it and we're like to keep that ing eg, we want to be able to target lambdas by callsite (rather than by name), should be easier and more intuitive
-
+The Mixin frontend is quite comfortable to use for most people, they're used to it and we're like to keep that ing eg, we want to be able to target lambdas by callsite (rather than by name), should be easier and more intuitive  
 In terms of things that aren't Mixin/AQ - eg interface injection, which we get for free with CHASM - it's completely unnecessary, it's something that you might want but we already have it for free  
 Also, **Kroppeb** has been doing some black magic regarding making some method calls automatically asynchronous; no idea what it's about but it sounds fun.  
 The whole point of CHASM isn't that we provide every possible interface - it's more that anyone can add what they need to it.)
 
 **CheaterCodes**: I think in the meantime we can answer the next question, because the answer is almost the same as last week. So I'm just going to take it. **Octal** asks, "Are there any plans for Kotlin on Quilt? (I already know the answer to this, but others might not)"
+
 It's been a discussion since the last meeting essentially again. I think the short answer to that is yes, there are plans. We just don't know exactly how they'll look yet. We want Kotlin as first-class support somewhere in Quilt. We're just not sure where. We're not sure if it's going to be in QSL, or if it's going to be a separate ~~lang~~ team, or like a separate Kotlin team. Just uncertain.
 
 **Glitch**: It's pretty much just a matter that nobody has gone down and written down all of the advantages and disadvantages for both yet. Like I think that's pretty much where we are. Like somebody just needs to write a proposal and say why.
@@ -196,11 +202,12 @@ It's been a discussion since the last meeting essentially again. I think the sho
 **CheaterCodes**: I think there's no one against support for Kotlin. It's just the question of how and where.
 
 **Gdude**: Right, move on. Remember, get your questions in with /ask. We don't have that many in, so if you have anything, feel free. We still have like 15 minutes. Uh, my Welsh isn't great unfortunately, so I can't pronounce this name properly, but **grifferthrydwy** asks, "Is there anywhere to sign up to attend, but not showcase anything in BlanketCon?"
+
 The answer is no, you don't need to. Just show up and join the server, install the modpack and you'll be there. No need to worry about that at all.
 
-Alright, that is the bottom of my list of questions, if anyone has anything to ask, feel free with /ask. Within reason, that is.
+Alright, that is the bottom of my list of questions, if anyone has anything to ask, feel free with `/ask`. Within reason, that is.
 
-**CheaterCodes**: Please come help out, we can always use more people. You don't need to be super professional, or 20 years' experience junior developer, something IDK.
+**CheaterCodes**: Please come help out, we can always use more people. You don't need to be super professional, or 20 years' experience junior developer, something I don't know.
 
 **Gdude**: That would be one heck of a junior developer.
 
@@ -208,11 +215,11 @@ Alright, that is the bottom of my list of questions, if anyone has anything to a
 
 I'm sure there's plenty of similar cases. I know **Glitch** did something on Quilt Loader, think it's taken care of but... Mappings is also always something you can always review without knowing too much about the context. It's a great way to get started in Quilt.
 
-**Glitch**: Uh, this is definitely more for the develops here than the community, but if you look at that issue that I opened on Quilt Loader, I feel like that's a very good eg on how to hand somebody work and get them to contribute.
+**Glitch**: Uh, this is definitely more for the develops here than the community, but if you look at that issue that I opened on Quilt Loader, I feel like that's a very good example on how to hand somebody work and get them to contribute.
 
 **Gdude**: Do you have a link to that?
 
-**Glitch**: Yeah, I can pull that up, give me one second: [https://github.com/QuiltMC/quiltingloader/issues/59](https://github.com/QuiltMC/quiltingloader/issues/59)
+**Glitch**: Yeah, I can pull that up, give me one second: [https://github.com/QuiltMC/quiltingloader/issues/59](https://github.com/QuiltMC/quiltingloader/issues/59)  
 ("This is a good first issue for anyone looking to dip in to contributing to Loader. If you are interested in getting this done, feel free to ask me questions at glitch#3274 on the Toolchain Discord....")
 
 **CheaterCodes**: Also as a desperate call, if anyone's very comfortable with Build Tools, let us know.
@@ -227,11 +234,12 @@ I'm sure there's plenty of similar cases. I know **Glitch** did something on Qui
 
 **Glitch**: And if you don't like go into that much detail, you definitely don't have to. But it helps to have things that are that easy just to get people who are nervous about it onboard.
 
-**CheaterCodes**: Maybe we should have something where like, you copy from the #voice-chat and then explain it to them. Because it's probably faster than writing it out. I don't know, what if there's some fancy community magic we can do to get us closer to the community.
+**CheaterCodes**: Maybe we should have something where like, you copy from the `#voice-chat` and then explain it to them. Because it's probably faster than writing it out. I don't know, what if there's some fancy community magic we can do to get us closer to the community.
 
 **Glitch**: This issue and all this is actually inspired by something that Rust does. They have mentors so they'll make issue that they'll assign a mentor to, then somebody takes this, and then they have one person that they contact. And then that have somebody that guides them through the whole process, helps them with responding to review comments, etc etc, and gets them through the whole way. And then, I'm pretty sure that they're pretty successful for that.
 
 **CheaterCodes**: Yeah, that seems smart. Ok, yes, here's a fan favourite. **Will BL** asks, "Will the CHASM Mixin front-end include anything like [mixin-extras](https://github.com/LlamaLad7/MixinExtras)?"
+
 Now, Mixin-Extras is a name that has been thrown around a lot. I haven't looked too closely at it to be honest. I'm pretty sure the answer is yes from what I've heard about it. Let me check. Yeah, so mod effect expression value, sure, that's something you can definitely have in CHASM. I think it's one of the most requested feature is like to modify conditions in if-statements or in loops or anything. Which I think is- For what I'm hearing in Mixin-Extras, definitely something we want. ~~Breadth-width~~ conditions sounds like something that we talked about. Non-conflicting overrides is what we called those, same idea. Or non-conflicting redirects even. Like you redirect some method call only if a certain condition happens, and you can do that without having a lot of mods conflicting.
 
 So I think the answer is yes. I'll have to look in detail to see if there's anything that's not in the CHASM mindset, or we wouldn't want to implement this way. But in principle, yes, pretty sure. That's something you can expect in the main Mixin implementation on Quilt in future.
@@ -243,7 +251,9 @@ So I think the answer is yes. I'll have to look in detail to see if there's anyt
 (**grifferthrydwy**: "griff earth ride why")
 
 **Gdude**: So I'm not actually Welsh, it just looks Welsh. Griffer-thry-d-why? OK. That's not too bad. Griffer's the right way.
+
 (**grifferthrydwy**: "add a discord bot that adds a number equal to the number of issues you've fixed to the end of your nickname. people like it when number go up")
+
 The scordboard's is interesting, but I'm not too sure about doing that, just because I know that people like to game scoreboards. But like, if we thought it would work, it'd be pretty doable. I mean, we have the technology at this point.
 
 **Glitch**: I think it'd be mostly the people writing issues for features that we'd be missing here. It'd be more about like, who gets to the "one issue you get a week first", than it is like, you know, who's contributing the most.
@@ -258,7 +268,7 @@ The scordboard's is interesting, but I'm not too sure about doing that, just bec
 
 **Gdude**: I mean, we could always use someone to help with that, for sure. That's something I've been looking for anyway, so... Already, I think we're about out of questions, so let's call it there. Now, I know that there's still stuff to talk about. Were you guys planning on doing more voice in the other voice [channel], or were you going to do like a closed meeting for the extra Beta stuff?
 
-**CheaterCodes**: Well, I think, as always, I invite the community to an after-party in #development-zero. However, it might be that a few of our develops will go into develop-mtgs and talk about stuff that they were talking about before the meeting started.
+**CheaterCodes**: Well, I think, as always, I invite the community to an after-party in `Development 0`. However, it might be that a few of our developers will go into dev-meetings and talk about stuff that they were talking about before the meeting started.
 
 **Glitch**: I don't think anything we were talking about strictly has to be secret.
 

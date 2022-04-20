@@ -26,6 +26,7 @@ In this episode, the team discuss progress made on Chasm, Loader, Mappings, and 
 =========================
 
 ATTENDEES:
+
 - **AlexIIL**
 - **KJP12**
 - **CheaterCodes**
@@ -53,8 +54,7 @@ A: Good.
 
 (**KJP12**: "Apparently clicking the notification auto-joins you")
 
-"Are there more doors or wheels in the world?"  
-Probably more wheels. I mean, all you need is a straight answer like that, and then it's like, "Oh, who cares."
+"Are there more doors or wheels in the world?" Probably more wheels. I mean, all you need is a straight answer like that, and then it's like, "Oh, who cares." 
 
 "I don't count your face as doors either." I see a few well-known faces in the stage here. Welcome back.
 
@@ -81,6 +81,7 @@ Currently trying to fix Gradle again because for some reason the tests are faili
 **Gdude**: Hehe, ok, fair. While we're on this subject, are you able to address the question that's just in the channel?
 
 **AlexIIL**: "To the QSL Team, what entrypoints will be available at launch?"
+
 If they're not in Quilt Loader, I'm not the right person.
 
 **Gdude**: That's a fair point. I forgot about that.
@@ -89,7 +90,7 @@ If they're not in Quilt Loader, I'm not the right person.
 
 **Gdude**: Alright, thanks for that. For the Mappings Team, we have a new voice on the meeting landscape, I suppose. **NoComment**, would you like to talk about mappings?
 
-**NoComment**: Yes, hello. So mappings, basically we're looking for reviews on most PRs. But specifically #5, the rendering PR that **OroArmor** made. And other things, looking to rewrite ~~Mapture~~ and possibly integrate it into the mappings build scripts, though IDK exactly what's going on there. As for snapshots leading up to 1.19, updating them is going quite well. Builds are coming out in relatively good time. I think the one we did for 20w12a was like 20 minutes, I think. Let me- Uh, I don't know when it was released, but it was reasonably quick. But yeah, other than that, that's all I got.
+**NoComment**: Yes, hello. So mappings, basically we're looking for reviews on most PRs. But specifically #5, the rendering PR that **OroArmor** made. And other things, looking to rewrite ~~Mapture~~ and possibly integrate it into the mappings build scripts, though I don't know exactly what's going on there. As for snapshots leading up to 1.19, updating them is going quite well. Builds are coming out in relatively good time. I think the one we did for 20w12a was like 20 minutes, I think. Let me- Uh, I don't know when it was released, but it was reasonably quick. But yeah, other than that, that's all I got.
 
 **Gdude**: Alright, thanks for that. **LambdAurora**, would you like to talk about QSL some more?
 
@@ -105,30 +106,33 @@ Aside from registry stuff, we also had to to change the API for command in 1.19,
 
 **Gdude**: Right, that's great. Thanks **LambdAurora**. That was quite a lot, don't worry. In that case, I will cover the Community Team stuff. Outreach Team has been fairly busy. **Southpaw** wrote up a nice new blog post on the upcoming beta, which is a thing everyone should read if they want to learn a little bit more about it. We also moved the #openings channel which was on the community server to the website. So if anyone is wondering what teams need help, or you know, just have openings, you can check that out here. I'm sure there'll be a link in the podcast notes as well.
 
-And we also set up a channel in the community server called #social-feed. **Southpaw** is starting to make use of Twitter. If you're not following us there and you're a Twitter person, please do go ahead and do so. But that channel will also show anything we tweet, so you can keep an eye on it from Discord as well.
+And we also set up a channel in the community server called `#social-feed`. **Southpaw** is starting to make use of Twitter. If you're not following us there and you're a Twitter person, please do go ahead and do so. But that channel will also show anything we tweet, so you can keep an eye on it from Discord as well.
 
 Other than that, non-Outreach Team stuff, not a whole pile. I did make a small change to the community server's gallery threads. They'll try and figure out a default name based on the text that you put into your gallery post at the start. Otherwise, not too busy here at the moment.
 
 Alrighty, that about covers all the teams for today. Did anyone on Mumble have anything they wanted to talk about today? Alright, I'll say that's a no. No problem at all. Alright, in that case, we'll get to the questions. **AlexIIL**, you claimed a question. Would you like to go ahead and take that?
 
 **AlexIIL**: Sure, the question by **RTTV**: "can we detect if *the* Quilt Loader entrypoint is being called on a client or server through a method param or something?"
-The answer is, not through a method parameter. There's a class MinecraftQuiltLoader, it's got getEnvironmentType(), which will give you the current environment. So yeah, you can use that instead of anything else.
+The answer is, not through a method parameter. There's a class `MinecraftQuiltLoader`, it's got `getEnvironmentType()`, which will give you the current environment. So yeah, you can use that instead of anything else.
 
 **Gdude**: That certainty looks like it'll make life a lot easier. Alright, **LambdAurora**, yeah, you can take that one.
 
 **LambdAurora**: **Patbox** asks, "Do you plan [on] releasing Beta for 1.18.2 or [going] straight for snapshots?"
+
 Basically it'll be kind of both, because we have to maintain for the snapshots, that's for sure. Because as we fall behind, that'll be hell to update. But I think going for 1.18.2 is really important too, because it's kind of a stable release. So currently all the PRs target that version. And once they're merged, they'll update to 1.19. I think we will keep Beta for 1.18.2. But if it becomes too difficult, it'll be a bit scary, but I think it'll be fine. 
 
 And it will be kind of important, because it'll prove that we're capable of maintaining it on a stable release. And also make sure that we do update to newer versions. After when we release, we will have to support a stable release, and we will have to update to snapshots to make sure that they'll be available during the launch of the next new release. So I think we will just do it directly directly for Beta too. It might be simpler also for PR, because if a PR gets a stable release, it's much easier to review and integrate than having two updates a week because of snapshots. So, yeah, ~~different people~~.
 
-**Gdude**: Thank you, **LambdAurora**. We've got two unclaimed questions in the backlog here. While they're sorting that out, feel free to use /ask to ask any more questions you might have.
+**Gdude**: Thank you, **LambdAurora**. We've got two unclaimed questions in the backlog here. While they're sorting that out, feel free to use `/ask` to ask any more questions you might have.
 
 **CheaterCodes**: I think since no one really knows the answer, might as well just take it. **isXander**: "Will other language support like Kotlin require a seperate (sic) compatibility mod like Fabric or will Quilt have this out-the-box in QSL/Loader?"
+
 I'm actually not entirely sure about the complete history here, but it is a topic that was at some point hotly debated. So, the answer is unfortunately not a simple Yes or No here. However, even if we don't end up puting it into QSL, there's a good chance that if there's a decent attempt at implementation, it'll fall under dependency auto-downloading. Which means that people will at least not have to manually include it. But yeah, it's not quite clear-cut yet. There's opinions for either side, so we'll have to see what turns up.
 
 **Gdude**: Thanks for that, **CheaterCodes**. **AlexIIL**, you can take that if you like.
 
 **AlexIIL**: So **RTTV** asks, "Like *the* entrypoint, are there any \"FAPI features\" that will be present on Quilt Loader without installing QSL?
+
 So technically Fabric loader contains all of Fabric's entrypoints. There basically aren't any other FAPI feature in Quilt Loader because Quilt Loader is just from Fabric Loader, not the entirety of FAPI. So not really.
 
 **Gdude**: If I remember correctly, the point was more to provide the framework to add features rather than just having them directly in Loader, right?
@@ -170,6 +174,7 @@ So technically Fabric loader contains all of Fabric's entrypoints. There basical
 **CheaterCodes**: At this point, let's just put it on stage.
 
 **Gdude**: So, **RTTV** asks, "Why called Quilt?"
+
 It was just kind of a spur of the moment thing in the initative server, I believe. I wasn't there, **Haven King** came up with it and it just kind of stuck. And that was like, very early on, like the start of Feb. Yes, 2nd of Feb last year. But I don't think there was any deep meaning behind it, other than Fabric-ecosystem stuff using fabric-related terms. 
 
 Yeah, I like that take. **rypofalem** said, "I like the name. Quilts are made of patches of Fabric and it's kind of a community quilt where everyone gives a piece."
@@ -187,6 +192,7 @@ Someone in the chat (**isXander**) said, "Hope Quilt is the Forge-killer." Defin
 **CheaterCodes**: We actually do have quite decent connections with Forge, which is kind of nice.
 
 **Gdude**: Yeah, we do. I can take this one. **RTTV**: "What hardware does the Quilt web servers run?"
+
 I think that would be a better question for Github. We're using Github pages at the moment. If you're asking about the maven, **Haven King** I believe has that running on AWS. So it's kind of difficult to say what the specific hardware is, when we're not directly running on hardware. Although, this is kind of fishing at this point, isn't it **RTTV**? 
 
 **CheaterCodes**: Just trying to help us out.
@@ -194,6 +200,7 @@ I think that would be a better question for Github. We're using Github pages at 
 **Gdude**: I mean, all our stuff is open-source, so if you're curious, you can always have a look at Github.
 
 **LambdAurora**: **Tropheus Jay** asked, "Quilt getting more collaborate (sic) with Forge before release than Fabric ever did is impressive (edited)"
+
 It's not that surprising. Because- I can't really go too much into detail. ~~But actually~~ Forge doesn't really like, and that's kind of why there was not cooperation between them. I won't go into more detail, because that's not hte point.
 
 They have a history. So, that's why. Well, I think we're going to close because we're just not geting questions. 
@@ -212,7 +219,7 @@ They have a history. So, that's why. Well, I think we're going to close because 
 
 **LambdAurora**: I just hope that I don't bore someone.
 
-**Gdude**: It was fine. Don't worry about it. Oh well, thanks for coming everyone. We're going to wrap it up for now. See you in 2 weeks' time. As usual, there'll be an after-party in the #voice-chat channel. That just tends to happen at this point. Maybe there won't be, but who knows. Either way, thanks for coming everyone, we'll catch up next time.
+**Gdude**: It was fine. Don't worry about it. Oh well, thanks for coming everyone. We're going to wrap it up for now. See you in 2 weeks' time. As usual, there'll be an after-party in the `#voice` channel. That just tends to happen at this point. Maybe there won't be, but who knows. Either way, thanks for coming everyone, we'll catch up next time.
 
 **LambdAurora**: Bye bye~
 

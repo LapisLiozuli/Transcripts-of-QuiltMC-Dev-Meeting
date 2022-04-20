@@ -45,6 +45,7 @@ Wrap-up
 =========================
 
 ATTENDEES:
+
 - **ADudeCalledLeo**
 - **EarthComputer**
 - **Gdude**

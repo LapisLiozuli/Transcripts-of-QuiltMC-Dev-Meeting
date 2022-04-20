@@ -14,6 +14,7 @@ In this episode, the team discuss the progress in the Community Tooling, Infrast
 =========================
 
 ATTENDEES:
+
 - **sschr15**
 - **EarthComputer**
 - **Gdude**
@@ -42,7 +43,7 @@ ATTENDEES:
 
 **Gdude**: So, this is going to be a somewhat different meeting. We'll wait just a little bit for more people to show up, but they should get some pings. Hey **arathain**. So, the format of this meeting hasn't changed. However, you won't see the speakers on Discord. They'll be talking via the Cozy Mumble bot that we have set up. That is currently not set as a speaker so we can't hear them right now. In a couple minutes we will change that, and we'll see who shows up. 
 
-Also just to be clear, you can type in the #meeting-chat channel, right? Yep, OK, good. Hey **OliviaTheVampire**, hey **~~Monochrome~~**. Welcome welcome. For the sake of not making this look so empty, I will be staying in the stage, but I'm going to be muting and deafening myself and talking via Mumble. There may be a small bit of latency but I don't imagine it'll be too bad. This is the first time we've done this. We did test it, but you know how it goes. I'm going to set that up right about now. Alright, that appear to be working. We'll just give it a couple more minutes. But yeah, hey everyone from the other side of the breach. Hey **ThatTrollzer**, hey **PinkGoosik**. Yeah, it's weird isn't it? Don't worry, it usually takes people a few minutes.
+Also just to be clear, you can type in the `#meeting-chat` channel, right? Yep, OK, good. Hey **OliviaTheVampire**, hey **~~Monochrome~~**. Welcome welcome. For the sake of not making this look so empty, I will be staying in the stage, but I'm going to be muting and deafening myself and talking via Mumble. There may be a small bit of latency but I don't imagine it'll be too bad. This is the first time we've done this. We did test it, but you know how it goes. I'm going to set that up right about now. Alright, that appear to be working. We'll just give it a couple more minutes. But yeah, hey everyone from the other side of the breach. Hey **ThatTrollzer**, hey **PinkGoosik**. Yeah, it's weird isn't it? Don't worry, it usually takes people a few minutes.
 
 **OroArmor**: Maybe we should make a meeting role, and then ping that for attenders of this meeting.
 
@@ -78,15 +79,17 @@ Obviously there is a lot of Cozy stuff to do. I am working on modules at the mom
 
 **LambdAurora**: Yeah, so, I just need to move up... So currently we are- I think since last time we launched ~~3~~ modules. Also, we have now the command modules. We have a new feature for baked events. Now they can be used as entrypoints, and there's ~~curr[ a fly method to un-register~~ a bunch of listeners for a bunch of errors. We also have the Item Group API which is now merged. And currently we have two PRs in ~~final com period~~ which is the Tooltip API and the Networking API. Otherwise we have a lot of PRs waiting for reviews. I think that's kind of it.
 
-**Gdude**: Good stuff, sounds like certainly a fair bit of progress. Good work geting that stuff merged as well, nice work. I guess I can talk about Community a little bit. For those of you that haven't been following the announcements, we dcded to finally replace the #showcase-discussion channel. So the #gallery channel will automatically have threads set up. You guys have used threads at this point, we use them everywhere on Community. The mappings have been updated again, they now support Quilt Mappings now thanks to updates to LInkie by **Shedaniel**, and also a ton of work by **Chris**, who is actually named **sschr**, but hey we'll just use that name, he doesn't mind. 
+**Gdude**: Good stuff, sounds like certainly a fair bit of progress. Good work geting that stuff merged as well, nice work. I guess I can talk about Community a little bit. For those of you that haven't been following the announcements, we dcded to finally replace the `#showcase-discussion` channel. So the `#gallery` channel will automatically have threads set up. You guys have used threads at this point, we use them everywhere on Community. The mappings have been updated again, they now support Quilt Mappings now thanks to updates to LInkie by **Shedaniel**, and also a ton of work by **Chris**, who is actually named **sschr**, but hey we'll just use that name, he doesn't mind. 
 
-Thr's also been some work on governance, there is a governance PR at the moment. I'm not sure if we merged that. No, I don't believe we have. That's RFC #47. If anyone is interested how Quilt is run, then definitely go check that PR out. 100%, it's an important one. There is another one as well, the Outreach Team which is currently in drafts. Outreach Team is, well, it's basically designed to be a team that takes care of things like social media accounts, the website, that sort of thing. That will still need interfaces. But if anyone's interested in that, go take a look. Obviously we'll need people on that team later as well. I think that more or less covers it. It hasn't been super busy since Christmas since everyone's been geting back into the swing of things. If anyone has any questions, go ahead and hit up that /ask command, I see there's a couple in there. Does anyone else have anything to bring up before we move into that? Alright, I guess not. 
+Thr's also been some work on governance, there is a governance PR at the moment. I'm not sure if we merged that. No, I don't believe we have. That's RFC #47. If anyone is interested how Quilt is run, then definitely go check that PR out. 100%, it's an important one. There is another one as well, the Outreach Team which is currently in drafts. Outreach Team is, well, it's basically designed to be a team that takes care of things like social media accounts, the website, that sort of thing. That will still need interfaces. But if anyone's interested in that, go take a look. Obviously we'll need people on that team later as well. I think that more or less covers it. It hasn't been super busy since Christmas since everyone's been geting back into the swing of things. If anyone has any questions, go ahead and hit up that `/ask` command, I see there's a couple in there. Does anyone else have anything to bring up before we move into that? Alright, I guess not. 
 
 OK, **parzivail** is asking, "Any news regarding Cozy ban sharing or showcase sharing?"
 Not yet. Regarding ban-sharing, there was something we were planning to do, sort of internally, and then bring out into the wider community. But when I got to chating with the Geezer people about it, they were at a project that they'd started for it. So the plan was to use their project, basically. Now the person who was maintaining that has ended up quiting for their own personal reasons, just in general from programming. So at the moment nothing is happening on there, because I don't have enough time to do that and everything else. As for showcase sharing, nothing yet. I don't consider it a high priority since we haven't got Quilt set up yet. But we'll get there. There's just more important things to do at the moment.
 
 **Haven King**, do you want to take that one? 
+
 (**parzivail**: "What are the biggest costs currently?")
+
 **Haven King**: Yeah, do I click the stage button? Or you click the stage button? Cool. So Maven's costs currently are the Maven server, which is a little bit oversized, probably a little bit bigger than it needs to be for the sake of safety. That being said, I'm doing work to replace the Maven server eventually. But work on that is slow-going because I'm doing a lot of things at once, juggling a lot of balls there. So short answer, mostly the Maven server, but there's other small things that add up as well. Right now it's about 70 dollars per month, **parzivail**.
 
 **Gdude**: About 70? Yeah. I think part of that was email, wasn't it, because we needed that for the-
@@ -101,6 +104,7 @@ Well, RFC is short for 'Request for Comment', and the idea behind RFC is that ma
 **Gdude**: That's right, I remember most of that actually. As for the pros and cons, well, obvious cons is that it takes a while to get things pushed through. But I think there are a lot of advantages to it as well, especially having those discussions available in the public eye, where everyone can see and contribute to them. I think that's really important, especially given where we came from. Transparency's been something we've really been thinking about, pretty much since the start of the project, and I think this helps a lot with it, honestly. I think this one's for you, **Haven King**.
 
 (**parzivail**: "Might have missed it -- is the donation area currently set up? if so, where can I find a link for it?")
+
 **Haven King**: Yeah, in theory it's set up. I don't think I'm going to share it for a bit. Again, I could, but again, I don't feel like we should ask for money until we have something to show for our efforts. If people insist, I guess I can share that but I want to do a little bit more work internally before doing so.
 
 **Gdude**: That's fair, that's fair. I wonder, do you know if they have an API? Did you notice anything like that?
@@ -114,6 +118,7 @@ Well, RFC is short for 'Request for Comment', and the idea behind RFC is that ma
 **Gdude**: Does anyone want to take the next incoming question?
 
 (**ThatTrollzer**: "Why is Quilt's Mixin extensions named Sponge Mixin extensions?")
+
 **Haven King**: Basically, because that's what Fabric's was. I don't think we did anything more than that, we basically just cloned their repository.
 
 **Gdude**: That makes sense.
@@ -127,6 +132,7 @@ I like this question. **parzivail** asks, "Are there any plans going forward to 
 In short, yes. We have things planed with the Events Team. We actually just started planning something recently, but it's going to be a while before we get to the point where we can actually talk about it. But yeah, events, they're certainty a thing we want to be doing. Talks were definitely something I had in mind when we were forming the Events Team at least. I don't know if any of them are listening at the moment. But yeah, we're going to figure out a few things like that planned. No doubt about that. I think this one is for **OroArmor**.
 
 (**ThatTrollzer**: "Rename Quilt's intermediate mappings when?")
+
 **OroArmor**: What do you mean by "Renamed Quilt's Intermediary Mappings when?" What do you mean, like renaming Hashed Mojmap? Or Hashed Mojmap is a good name?
 
 **Gdude**: Hashed Mojmap is a good name. It's not a fun name, but it's kind of the point, isn't it.
@@ -140,6 +146,7 @@ In short, yes. We have things planed with the Events Team. We actually just star
 **Gdude**: Does anyone want to take this one? Don't think we have anything on Blurry. Or do we have anyone from Blurry here?
 
 (**parzivail**: "Any news on remote dependency and asset resolution?")
+
 **Haven King**: There isn't really any update in that area. It's the basic TLDR.
 
 **Gdude**: We have talked a little bit about it internally, but then again it's still early. There is some things to think about that as well, regarding platforms like CurseForge. We're not really sure where that's going to go yet. They have reqed a specification document from us, but we're just not at the point where we're ready to provide that yet. So, we'll see. We're not sure yet. We're still thinking it's going to happen though. So it's a case of geting to that point.
@@ -147,6 +154,7 @@ In short, yes. We have things planed with the Events Team. We actually just star
 "~~No forgiveness~~ for Build Tools." I mean, something to think about more than anything, when you think about something like CHASM which used to be called ASMR- I'm not sure where the CHASM name came from aside from a convenient acronym. But it sure beats what Forge has been doing with their project names. Um, can any of us answer that one?
 
 (**CheaterCodes**: "Do we know yet exactly what the status of FREX in QSL is gonna be?")
+
 **Haven King**: Basically, the plan is for it to be a 'privileged' library. There's not a name, or a formal structure for that or anything. But it's going to have a lot of the same benefits that QSL does in that it can be automatically-resolved, or automatically-downloaded. So the basic idea is that it'll be automatically-resolved or automatically-downloaded like QSL Module is, so it can be used in development environments for mods by default without hving to set dependencies, or use `includes` or anything right off the bat. But also-
 
 **Gdude**: Uh, I think **Haven King**'s just crashed. He suddenly left the Mumble server. RIP. 
@@ -156,6 +164,7 @@ In short, yes. We have things planed with the Events Team. We actually just star
 **Gdude**: I'm afraid not. Oh no! Windows Updates! Oh, OK. Sad, sad. OK, well.
 
 **parzivail** asks, "Pointless question, but why does the MC Update RSS bot sometimes take so long?"
+
 The dirty secret is, because it's not an RSS bot. It's actually polling the launcher patch notes. So there's two reasons that it's slow. The first reason is that Mojang just doesn't publish them sometimes, or they take ages to publish them. Like it took them a week to publish the second-to-most-recent snapshot. The second thing is, Mojang - and Microsoft in general - have a ~~fren cache~~ set up. And it doesn't expire for, I think they have it set to an hour or something. So depending on how their servers are feeling, it can take up to an hour after they publish it for the bot to pick up on it. And even then you'll find that if you're around when the bot picks up on it and posts the embed, if you click towards the patch notes on the side, you may still not see them because their cache hasn't updated in your region yet. It's a pain in the ass, honestly. 
 
 I've been thinking of a way to make it more reliable, but ultimately we want the patch notes on Discord, and there isn't really a better way of geting them. So, I'm not really sure. But hey, if you have any ideas, I'll hear them. Yeah, that's what I used to do. I used to write them manually, **arathain**. But it's been a while since I've had the time. Automating what I can is certainly where we want to be with that. **parzivail** says, "Pay lobbyists to stand outside their windows and take pictures of their editors." Yeah, maybe. **Skyrising**, doing some cache-busting. I'm also doing some cache-busting. It doesn't help.
@@ -173,6 +182,7 @@ Uh, that's what cache-busting usually involves, **kb1000**. Usually you just add
 **EarthComputer**: Hello. Well, I could make some of the mtgs.
 
 **Gdude**: Congrats, you did it. Eh, why not? We might as well. "How are you guys today? How's 2022 treating you guys?" From **OliviaTheVampire**.
+
 Uh, personally or project-wise? Personally, it's fine. It's another year, you know. Hopefully less Covid, probably not. How about the others in here? Anyone want to check in?
 
 **OroArmor**: Pretty good, yeah. Went to some family event.
@@ -186,6 +196,7 @@ I see **LeoCTH** saying on Mumble, "NFTs haven't died yet, so this year still su
 **Gdude**: Not necessarily? It's peggy, which is ~~out~~ for a long time.
 
 "Is cereal soup?" says **arathain**.
+
 (**arathain**: "Opinions on whether or not milk with cereal is a soup?")
 
 **OroArmor**: Yes.
@@ -200,25 +211,25 @@ I see **LeoCTH** saying on Mumble, "NFTs haven't died yet, so this year still su
 
 **parzivail**: salads in a bread bowl are a quiche. think of the ~~children~~ starch!)
 
-~~(One half of a conversation happening here)~~
-
 **Gdude**: No, I think it's more of a salad, and milk is the dressing. "Salad is just unmixed soup." I mean, I guess. Oh, the ~~culebroom~~. I had heard of that, I just never saw it. "Salads in a breadbowl are quiche." You know what, we can't be friends, I'm sorry. Think goodness for starch. Yeah, it's great, isn't it?
 
 Uh, OK. Are there any more questions? Any more on-topic questions, hopefully? Anything you want to yell at me about on the Community Team? I see **FavoritoHJS** just got here. Hi Favri- Yeah, I'm going to try that again. 
 
 Hi **FavoritoHJS**: "What is currently blocking the quilt launch?"
+
 Built Tools. Build Tools, Build Tools, Build Tools. Um, we say that a lot because we need Gradle people. If we had Gradle people, we'd be a lot further ahead, I think. Um, it's just how it is. At this point, maybe we should just cobble something together and get something functional, without the bells and whistles, but-
 
 **EarthComputer**: Yeah, at least I have the feeling that if we get at least something functional, then new people can progress with the other projects and help to attract more contributors, because we have actually stuff to do- more stuff to do on the other projects. Then we can see it used in practice. Then maybe any of about 1 in 500 of those people might want to work on something with Gradle.
 
 **Gdude**: Yeah, precisely. "I wish I could offer my skills, but my Gradle skills are pretty bad."
+
 Yeah, Gradle's the only realistic tool, I think. It's the one most people are used to. Mostly the other alternatives are... strange. Or just too domain-specifc, really.
 
 **OroArmor**: Or extremely proprietary.
 
 **Gdude**: Or extremely proprietary, yeah. Or just really old. Really, it [Gradle] just ends up being the best option. A lot of people have suggested Braquira, but it's way too domain-specific, and kind of niche. I think, anyway. Like, sure, OK, you build mods with Braquira, but think about how that limits you when it comes to general development. (Transcriptor's Note: I couldn't find anything about this Braquira program but it was auto-suggested to me by Google?) ~~Bundle something else~~. Like if you have an executable mod for example, you know OK, they could add it, but what else is going to be missing, you know? It doesn't support Kotlin or other languages yet either. Maybe it'll be something to look at, but we're just going to have to stick with Gradle for the time being. Sorry, that's my dog.
 
-**EarthComputer**: There's also a MC-specific build system that's being built by someone, I can't remember what it's called. Apologies, but again, that's a little bit too- most of us think that's a little bit too new to jump onboard with.
+**EarthComputer**: There's also a Minecraft-specific build system that's being built by someone, I can't remember what it's called. Apologies, but again, that's a little bit too- most of us think that's a little bit too new to jump onboard with.
 
 **Gdude**: Are you thinking of Braquira?
 
@@ -232,7 +243,7 @@ Yeah, Gradle's the only realistic tool, I think. It's the one most people are us
 
 **LambdAurora**: And for stuff, like in the case of dependencies, at least, by default it doesn't support Maven and stuff. So it's really manual, it's not practical.
 
-**Gdude**: And there goes **kb1000**, our Basil evangelist, saying it's probably not a good choice. I've a Gravel understanding from a user perspective. I've tried to write plugins and failed miserably, so that tells you about all you need to know about that. You are the ~~one percent~~, **Parzi**. Just waiting for someone to suggest makefiles. Because you know it's going to happen.
+**Gdude**: And there goes **kb1000**, our Basil evangelist, saying it's probably not a good choice. I've a Gravel understanding from a user perspective. I've tried to write plugins and failed miserably, so that tells you about all you need to know about that. You are the ~~one percent~~, **parzivail**. Just waiting for someone to suggest makefiles. Because you know it's going to happen.
 
 **OroArmor**: For those in the podcast, who can't see the chat, the chat just exploded with 'NO's in respond to **Gdude**'s suggestion. There's at least one, "I'd quit modding." Yep. Alright, well, we're scheduled for about 10 more minutes if anyone has any more questions.
 
@@ -247,6 +258,7 @@ Yeah, Gradle's the only realistic tool, I think. It's the one most people are us
 **Gdude**: I'm not going to click it because we need **Haven King** to answer that really. So we got your question, **parzivail**. We can't answer it right now. Yeah, we can save it for next week. We'll just leave it in there, we can go back to it. Yeah, but it's a difficult one. A difficult one. Technically it's up to **Haven King** or well, the Admin Team, but we'll need to see what happens with Open Collective first, I think. Yeah, I like Ko-Fi, but I don't know, Open Collective will definitely suit us better if we end up using it. But, uh congratulations **Parzi**, you've spawned a whole internal conversation, without even realising it. Congrats. 
 
 (**OliviaTheVampire**: "Since there is not much time left, your favorite meal? :D")
+
 I appreciate the off-topic questions, **OliviaTheVampire**, but if we have on-topic ones, I want to do those first because we don't have much time left. OK, I guess we will then. Well, **Alizée** likes sushi, apparently. I'm a burger kind of person myself. I used to like pizza, but I don't eat it anymore because I'm lactose-intolerant now. **Haven King** says, "Limiting me to one favourite meal is simply impossible." That's what **OliviaTheVampire** asked, I forgot to say. It's not so bad. I mean, you get used to it when you have no choice. Lactose intolerance is just one of those things, you know. And there's a lot of good vegan alternatives and those are all lactose-free because obviously.
 
 **OroArmor**: Yeah, being lactose-intolerant isn't going to be like the worst, since there's a lot of options. I'm gluten-free so I know what it's like to not be able to have a lot of stuff. But I feel like being both lactose-intolerant and gluten-free would be absolutely horrible.
@@ -256,13 +268,14 @@ I appreciate the off-topic questions, **OliviaTheVampire**, but if we have on-to
 **EarthComputer**: Soy as well. There's other soy things as well. Soy lechitin, soy proteins. It's just everywhere.
 
 **Gdude**: Oh, here's a question. I think I can answer this one. **Southpaw** asks, "Did we ever figure out whether the Quilt Client was ever going to send a list of installed mods to the Quilt server?"
+
 I don't think we finalised it entirely. But the plan was basically that we were going to use plugin chnls. If you have QSL installed, or a mod using QSL - therefore we install QSL for you - when you connect to a server that also has QSL installed, then the client would tell the server what mods it has installed. Just the mod IDs. Now, this is an interesting medium in my opinion, because you end up with a situation where this only happens when the client and the server have QSL installed. So if the server doesn't have QSL - unless it's Hypixel - it's probably not listening for the mods in the first place. So we just never send them. That's about the long and short of it. QSL isn't going action the list. It's just going to receive it, and other mods will be able to get at it if they want to.
 
 **LambdAurora**: Well, if the channel is registered, anyone, any server ~~could register, there's no reason for it~~. So it could get the modlist. Even Spigot could get the modlist.
 
 **Gdude**: Yeah, of course the server could register the channel. But the point was more that if the channel's not registered, we don't even try and send it. So it's really up to the server.
 
-**LambdAurora**: I mean, that's literally default MC behaviour.
+**LambdAurora**: I mean, that's literally default Minecraft behaviour.
 
 **Gdude**: Yeah, of course. Ah, hello **Haven King**.
 
@@ -275,6 +288,7 @@ I don't think we finalised it entirely. But the plan was basically that we were 
 **Gdude**: Yeah, more or less. More or less. There's one more question we can do, if no one wants to take that.
 
 **Haven King**: Oh, the Config API one? Sure, I can talk about that a little bit. I guess I'll reiterate. Hi, this is **Haven King**. I have returned from my Windows Update kerfuffle. The question by **arathain** is, "On a scale of Cloth Config to Omega Config, how detailed and complex will the Config API be?"
+
 That's a question that has a couple different answers, partially because there's no real consensus yet, and partially because of my plans that I have - that basically exist in only my head and that I haven't formalised anywhere - for it to be more of an open backend with a fairly reasonable default frontend for people like developers to use. But like with a lot of expansions
 
 For example, don't intend on the default way of making configs being similar to Cloth Config / AutoConfig. I don't want it to be annotation-based. I don't like annotation-based things, so if I make a default frontend it won't be annotation-based. That being said, the backend should be open enough that someone could come in and write a frontend for developing configs that could be annotation-based and still make use of all of the features such as: Like I was saying, I plan on having config-syncing, and config screens that can be built automatically. Integration with whatever ModMenu-type thing we end up hving. So I can't exactly say on a scale of Cloth Config to Omega Config, how detailed it'll be, but those are my general plans right now. If that helps answer that question.

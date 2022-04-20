@@ -36,11 +36,12 @@ In this episode, the team discuss progress made on Build Tools. CHASM, Loader, a
 =========================
 
 ATTENDEES
+
 - **Emmaffle**
 - **Gdude**
 - **OroArmor**
 - **Kroppeb**
-- **Leo**
+- **ADudeCalledLeo**
 - **CheaterCodes**
 - **Haven**
 - **Octal**
@@ -106,7 +107,7 @@ Those are the things that are happening right now, it’s moving. Now, to lead m
 
 Something else that just came up just yesterday was that **MartrixX** updated Enigma so that synthetic classes and methods and fields and stuff like that weren’t included in the percentages that Enigma reports for how much of the mappings you’ve completed. So we have better representation of how close we are to completing all the mappings, which is very nice. Other than that, I don’t think there’s really much else to say about where Quilt Mappings is right now.
 
-**Emmaffle**: I’d like to add something. We have a lot more triage members now, but we are still looking for more. So if you want to be a Mappings Triage member, then go ahead to the #mappings-general channel.
+**Emmaffle**: I’d like to add something. We have a lot more triage members now, but we are still looking for more. So if you want to be a Mappings Triage member, then go ahead to the `#mappings-general` channel.
 
 **OroArmor**: If you want to be in Mappings Triage, feel free to ping me as many time as you want. I will see that and help you, hehe.
 
@@ -128,11 +129,11 @@ Otherwise, we do need review on QSL PRs so that we know we don’t make a big mi
 
 **CheaterCodes**: Thank you **LambdAurora**. You already mentioned Quilt Beta here, but maybe I can just ask again for a very quick recap of what’s missing?
 
-**LambdAurora**: What’s missing right now, is QSL link to Quilt Loader. That will happen very soon. Currently there’s some stuff to deal with, but that should be dealt with rather quickly. It’s not a specific requirement but Registry Sync would be really nice. But until that is done, we can just use the Fabric one. That’s the two big things that would be needed for Quilt Beta. One of which doesn’t have a hard requirement. Basically, QSL is very close to being ready for Beta.
+**LambdAurora**: What’s missing right now, is [the] QSL link to Quilt Loader. That will happen very soon. Currently there’s some stuff to deal with, but that should be dealt with rather quickly. It’s not a specific requirement but Registry Sync would be really nice. But until that is done, we can just use the Fabric one. That’s the two big things that would be needed for Quilt Beta. One of which doesn’t have a hard requirement. Basically, QSL is very close to being ready for Beta.
 
-**CheaterCodes**: Great to hear. I think we have a little more than a month of time, a month and a week or something. I think we can make it, of course I'm not promising it. So that was all the dev teams. Right, **Leo** wanted something.
+**CheaterCodes**: Great to hear. I think we have a little more than a month of time, a month and a week or something. I think we can make it, of course I'm not promising it. So that was all the dev teams. Right, **ADudeCalledLeo** wanted something.
 
-**LambdAurora**: I totally didn’t see the poll. Which point **Leo**? So in #meeting-chat, there is a link to a poll for the names for one of the modules, so you can look into it and vote.
+**LambdAurora**: I totally didn’t see the poll. Which point **ADudeCalledLeo**? So in `#meeting-chat`, there is a link to a poll for the names for one of the modules, so you can look into it and vote.
 
 **CheaterCodes**: It’s about naming, yes? OK, If you’re interested in that, check out the poll. I see there’s already quite a few people voting. And it seems like it might be an easy win for one of the options, but we’ll see how it turns out. OK, thank you. So that's it with the dev teams which leaves us with two more teams. That is, the Community Teams and the Outreach Team and **Emmaffle** volunteered to do both of them, more or less together. So please.
 
@@ -142,9 +143,9 @@ We’re also looking for someone who can help manage the GitHub development boar
 
 **CheaterCodes**: Well, thank you to the Community Team. Yes, as Community mentioned, Outreach is a sub-team of Community now, which is different to what it was originally. I also got that a little bit wrong. Yeah, Community Team is always doing great work, being very active. And yeah, they need more people. Please help our Community to be better than ever before, even though it’s already been great.
 
-**Emmaffle** Yes, and send message to Modmail please, if you’re interested in helping.
+**Emmaffle** Yes, and send message to **Modmail** please, if you’re interested in helping.
 
-**CheaterCodes**: Alright, that brings us to the end of the general dev meeting. So for the rest of our time, we’re going to do the AmA, which has already started. So feel free to use the /ask command in the meeting chat. That will put the questions in a queue, where we will look at them one-by-one, and your question will be seen, first it will be approved by moderators and then answered by devs. And we usually don’t skip question, so you will be heard, and you will be answered. So, who goes first?
+**CheaterCodes**: Alright, that brings us to the end of the general dev meeting. So for the rest of our time, we’re going to do the AmA, which has already started. So feel free to use the `/ask` command in the `#meeting-chat`. That will put the questions in a queue, where we will look at them one-by-one, and your question will be seen, first it will be approved by moderators and then answered by devs. And we usually don’t skip question, so you will be heard, and you will be answered. So, who goes first?
 
 **Oro**: I say we start from the top. The new questions.
 
@@ -167,26 +168,26 @@ We’re also looking for someone who can help manage the GitHub development boar
 **Glitch**: Yes please, haha.
 
 **LambdAurora**: **RTTV** asks, "What is planned for QSL other than more callbacks?"
+
 First of all, QSL is not just callbacks. For example, the QSL Base module includes entrypoints, which is a bit more. But it also contain the event infrastructure, and a launch argument which can be used for auto-testing a server. What is does, is when a server is launched, it would only be working for a set number of ticks. Then it will audit all Mixins loaded and then it will shut down. So that’s an example.
 
 There's other stuff like Registry Sync. It’s not really callbacks, but what it does is it will synchronize the registries of the client and the server during shutdown. For example, if the client has more mods, or if the mods are not loaded in the same order, it won't have the same registry with the same raw identifiers. And the raw identifier is not a string identifier, it’s a number. If that doesn’t match, it will witness a lot of corruption on the client, because the client won’t recognise the proper items and blocks.
 
-Other stuff like BlockExtension, it’s not just callbacks. It takes BlockSettings, which is a class used to set some basic settings and properties on a block. What it does, it extend that to be able to do more. Or you have the Quilt ItemGroups, which is kind of a port of the Fabric ones. That is a bit different. What it does is, if a mod registers a new ItemGroup, it will be added properly, there will be a pagination system. If you take for example, the case of Quilt Tags, you can have Tags that are loaded entirely for the client. Or Tags that use the client resources as a fallback if the server doesn’t have the Tag. So there’s a whole lot more than just callbacks.
+Other stuff like `BlockExtension`, it’s not just callbacks. It takes `BlockSettings`, which is a class used to set some basic settings and properties on a block. What it does, it extend that to be able to do more. Or you have the Quilt `ItemGroups`, which is kind of a port of the Fabric ones. That is a bit different. What it does is, if a mod registers a new ItemGroup, it will be added properly, there will be a pagination system. If you take for example, the case of Quilt Tags, you can have Tags that are loaded entirely for the client. Or Tags that use the client resources as a fallback if the server doesn’t have the Tag. So there’s a whole lot more than just callbacks.
 
 There will be something, I’m not entirely sure when it will be made, but was talk about having FREX being included in QSL in some way, which is kind of an equivalent/replacement to the Fabric Renderer API. And that thing is not just callbacks too. FREX comes with a lot more features than Fabric Renderer API. But to list out every new feature, that would be a bit hard, because we don’t know every new feature yet. But we will try to add stuff as needed, so if someone has a really big use case for something, we can look into it. And if it can really benefit the community, it might be added. That’s it for now.
 
 **CheaterCodes**: Thank you. I think that was an very extensive answer probably answered all questions that were still lingering about the topic. Of course, plans can change. Next question, I’ll just go and read it out so that the speakers don’t forget. Question by **RTTV**: "Will Quilt have direct installation into MultiMC like Fabric and Forge, or would it have to resort to ViveCraft-like installation steps?" **Glitch**?
 
-**Glitch**: Alright, so, I’m not really sure if MultiMC has expressed interest. I will say that any launcher that is interested in supporting Quilt Loader, we will help them with anything they need to support it. I know we have heard from, I believe, CurseForge, ATLauncher and PolyMC that they’re interested, but I haven’t heard anything MultiMC-wise yet, so I hope that answer the question.
+**Glitch**: Alright, so, I’m not really sure if MultiMC has expressed interest. I will say that any launcher that is interested in supporting Quilt Loader, we will help them with anything they need to support it. I know we have heard from, I believe, CurseForge, ATLauncher and PolyMC (T/N: A recent MultiMC fork) that they’re interested, but I haven’t heard anything MultiMC-wise yet, so I hope that answer the question.
 
 (**kb1000**: Sounds easy to adjust then, MultiMC's component-based architecture would make it possible to reuse the Fabric intermediary component.)
 
 **Emmaffle**: **kb1000** said that he’s going to implement it in the meeting chat.
 
 **CheaterCodes**: The next question is, again from **RTTV**: "Will CHASM recreate the feature set of Fabric-ASM and other non-vanilla Fabric mod (like Mixin) bytecode editing tools?"
-Well first off, I’m curious, what are vanilla Fabric mods? Like what’s, I don’t know, vanilla tools?
 
-In general, there’s a bit of a misconception around what CHASM is. Many people view CHASM as like a Mixin replacement, but that is absolutely not what CHASM is. CHASM is an abstract layer on top of ASM, like [Object Web ASM](https://asm.ow2.io/). It’s just an abstraction to allow multiple people to use ASM at the same time without conflicting. That means that CHASM itself is not going to support Mixin or anything like that, but they’re all going to use CHASM to implement something.
+Well first off, I’m curious, what are vanilla Fabric mods? Like what’s, I don’t know, vanilla tools? In general, there’s a bit of a misconception around what CHASM is. Many people view CHASM as like a Mixin replacement, but that is absolutely not what CHASM is. CHASM is an abstract layer on top of ASM, like [Object Web ASM](https://asm.ow2.io/). It’s just an abstraction to allow multiple people to use ASM at the same time without conflicting. That means that CHASM itself is not going to support Mixin or anything like that, but they’re all going to use CHASM to implement something.
 
 So the answer to that question is, CHASM won’t do anything like that, but there will be first and third-party CHASM frontends that enable that sort of stuff. For example, Access Widener is likely gonna be maintained by Quilt, Mixin is likely gonna be maintained by Quilt. Interface injections are probably not gonna exist, because Mixin with CHASM works a little differently than on Fabric. But if there’s anything else, it’s fairly easy for a third-party to provide the tools without requiring changes or dirty hacks into the toolchain, which is one of the big reasons why doing anything on Loom is really hard. Because you need to hardcode every single stage and transformation inside of Loom. Whereas with CHASM, you just state it. It’s like adding a datapack, you can just add a new frontend. Something like that.
 
@@ -198,13 +199,13 @@ Alright, I think the next question is a bit of a general one. It doesn’t just 
 
 **Glitch**: Yes, build tools, we will be using a completely different project for our build tooling between beta release and full release, hopefully. We’re using Fabric Loom right now, but we would like to use VanillaGradle eventually.
 
-**CheaterCodes**: It also means the default, we’re not sure whether the default decompiler will be set to QuiltFlower, Hashed(-Mojmap) probably won’t make it into Beta.
+**CheaterCodes**: It also means the default, we’re not sure whether the default decompiler will be set to QuiltFlower, Hashed Mojmap probably won’t make it into Beta.
 
 **Glitch**: Almost definitely not.
 
 **CheaterCodes**: Yes, unless we find a really easy way to integrate it. Mappings, might still require the Quilt Mappings on Loom rather than being first-party direct support. All those sort of small things are going to be missing. But I think in terms of content as well, mappings, since some of the mappings are still in tooling. Unpick, also probably not going to make it into Beta. Probably want to have version-indepedent mappings, also not going to make it into Beta. So there’s a lot of- All those small things.
 
-**Glitch**: To add on for Loader, the Loader is promising loader plugins which are essentially ways to add more functionality to the loader. For example being able to load Forge mods, Sponge plugins, etc. That probably will not be in in a month from now, Alex isn’t here to confirm that, but I’m pretty sure. And on the same token, we’ve talked about auto dependency downloading, which would essentially mean for certain dependencies, like QSL, instead of jar-in-jarring them, Loader would automatically find the dependency you need and download it from a Maven. That is definiely not there yet, because Loader plugins have to exist for that to happen.
+**Glitch**: To add on for Loader, the Loader is promising loader plugins which are essentially ways to add more functionality to the loader. For example being able to load Forge mods, Sponge plugins, etc. That probably will not be in in a month from now, Alex isn’t here to confirm that, but I’m pretty sure. And on the same token, we’ve talked about auto dependency downloading, which would essentially mean for certain dependencies, like QSL, instead of Jar-in-Jarring them, Loader would automatically find the dependency you need and download it from a Maven. That is definiely not there yet, because Loader plugins have to exist for that to happen.
 
 **CheaterCodes**: Anything else? I think on QSL there's nothing in particular waiting for full release, just general libraries that might be added later.
 
@@ -225,7 +226,8 @@ In Loom, I’m going to say no. Technically there’s a small chance you could d
 
 **CheaterCodes**: Go ahead.
 
-**Glitch**: RTT~~T~~V (**RTTV**) asks: "Anything Quilt has done to make it possible for Forge mods to be loaded?"
+**Glitch**: RTTTV (**RTTV**) asks: "Anything Quilt has done to make it possible for Forge mods to be loaded?"
+
 The answer is, you’re asking the wrong project. (Did I add an extra T? Oh well.) I also worked in the past on Patchwork, which was making Forge mods load on Fabric. That will be running on Quilt, but that will not be something first-party with Quilt. We won’t ever support loading other modloaders besides Fabric/Quilt officially.
 
 **CheaterCodes**: Yes, I'll add here, compatibility with Fabric is just something that gonna exist as long as we kind of benefit from it. Because it would be quite hard eventually to support it. Most likely it would be an incredible burden to support Forge. But for a start, it's definitely something we want. But for Forge it’s just not feasible. The design is too different for us to have first-party support.
@@ -237,6 +239,7 @@ Alright, any more questions? Keep 'em coming. We’re running dry here. Otherwis
 **CheaterCodes**: Alright, well, I think there’s no new questions, and I think there’s also no remaining answers that we have. Yep. So I guess it’s time to end this. Ah, last minute, last second question! I think this one is for **Glitch** again.
 
 **Glitch**: OK, **Octal** asks, "Will Quilt's mapping system allow for layered mappings as well?"
+
 Uh, yes, VanillaGradle will support layered mappings. I spent a lot of work trying to figure out the best way to support that, so it is definitely a priority to me for that to be working well.
 
 **CheaterCodes**: Thank you. Yes, something I think that’s kind of working already.
@@ -245,14 +248,9 @@ Uh, yes, VanillaGradle will support layered mappings. I spent a lot of work tryi
 
 **CheaterCodes**: Yes, there’s a lot of stuff about VanillaGradle that’s also not ideal for CHASM specifically and for remapping input mods, there’s just not a system there. So the future of VanillaGradle is still a little bit uncertain right now. It’s a lot of work to do a big project like that, that's also somewhat intended to be used by other projects. But we’ll have to see how it goes.
 
-OK, so **RTT~~TTTT~~V** (**RTTV**) with another last-minute question, asking: "What code from Fabric still exists on Quilt?"
+OK, so RTTTTTTV (**RTTV**) with another last-minute question, asking: "What code from Fabric still exists on Quilt?"
+
 I think that again is still a bit of a multi-project question. Looking at it real quick, right now it’s Loom that’s probably going to change, hopefully going to change with the full release.
-
-**CheaterCodes**: On mappings, it’s mostly Tiny stuff which we talked about last meeting, which we’re planning to hopefully yeet at some point, and I think that's all the Fabric code that I can see. Alright so, I’m going to end this here now, so any last-minute questions coming in now will not be looked at any more. Uh, thank you all for joining and listening in and for the devs to talk and for the Community Team to be around and manage stuff for us.
-
-As always, or most of the time, I’m going to invite you all to a quick after-party on the Development channel on the toolchain Discord, where we can just hang out a bit and chat a bit more, about possibly unrelated stuff as well. And I hope the new time is also something that's good for everyone. But yeah, we're going to meet each-other again in two weeks, same day, same time. Thank you very much.
-
-**Emmaffle**: Bye everyone.
 
 **Glitch**: Quilt Loader is a fork of Fabric Loader.
 
@@ -266,7 +264,7 @@ As always, or most of the time, I’m going to invite you all to a quick after-p
 
 **CheaterCodes**: On mappings, it’s mostly Tiny stuff which we talked about last meeting, which we’re planning to hopefully yeet at some point, and I think that's all the Fabric code that I can see. Alright so, I’m going to end this here now, so any last-minute questions coming in now will not be looked at any more. Uh, thank you all for joining and listening in and for the devs to talk and for the Community Team to be around and manage stuff for us.
 
-As always, or most of the time, I’m going to invite you all to a quick after-party on the Development channel on the toolchain Discord, where we can just hang out a bit and chat a bit more, about possibly unrelated stuff as well. And I hope the new time is also something that's good for everyone. But yeah, we're going to meet each-other again in two weeks, same day, same time. Thank you very much.
+As always, or most of the time, I’m going to invite you all to a quick after-party on the `Development` channel on the Toolchain Discord, where we can just hang out a bit and chat a bit more, about possibly unrelated stuff as well. And I hope the new time is also something that's good for everyone. But yeah, we're going to meet each-other again in two weeks, same day, same time. Thank you very much.
 
 **Emmaffle**: Bye everyone.
 

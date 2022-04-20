@@ -9,6 +9,7 @@ If you'd like to listen to our meetings live, or you have questions to submit, p
 =========================
 
 ATTENDEES
+
 - **Emmaffle**
 - **EarthComputer**
 - **Fork**
