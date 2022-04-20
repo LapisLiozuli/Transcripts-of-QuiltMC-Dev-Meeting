@@ -9,7 +9,10 @@ If you'd like to listen to our meetings live, or you have questions to submit, p
 =========================
 
 ATTENDEES:
+<<<<<<< HEAD
 
+=======
+>>>>>>> c4ec2460a190145883867aa3e49ded7b9c17bd29
 - **Emmaffle**
 - **ADudeCalledLeo**
 - **Blodhgarm**
@@ -41,11 +44,22 @@ ATTENDEES:
 
 =========================
 
+<<<<<<< HEAD
 **Gdude**: "**Instructions for attendees** If you're here to listen to the meeting, chat in here and ask questions, welcome! We're making use of an AMA system to make everyone's lives easier, so please follow these instructions. Firstly, wait for the meeting to start and for one of us to open the session. You'll see a message posted in this channel by @AMA when we're ready to take questions ing though do note that we'll be opening it before the developers will be answering them, to give you some time to collect your thoughts.  
 **If you have a question:** Once the session has been opened, use `/ask` to submit a question. It'll be reviewed by the moderation team and, if approved, forwarded to the developers, who will be able to decide if and how they wish to answer it.  
 **When the question is answered,** the @AMA bot will post an embed in here. If the question will be answered on the stage, the bot will say so as well. **If you're asking a question, make sure you're on the stage channel so you can get your answer!**. 
 We currently have **no plans** to allow users to raise their hand to ask a question via voice. This may change in future, but we're keeping it simple for now. **Do not ping meeting participants with your questions,** they'll be ignored but do be specific about who your question is for when you submit it!  
 Additionally, **don't spam the developers with questions** and, as always, **keep your questions appropriate and follow our rules and Code of Conduct.** We will take actions against users that send rule-breaking questions!  
+=======
+**Gdude**: "**Instructions for attendees**
+If you're here to listen to the meeting, chat in here and ask questions, welcome! We're making use of an AMA system to make everyone's lives easier, so please follow these instructions.
+Firstly, wait for the meeting to start and for one of us to open the session. You'll see a message posted in this channel by @AMA when we're ready to take questions ing though do note that we'll be opening it before the developers will be answering them, to give you some time to collect your thoughts.
+**If you have a question:** Once the session has been opened, use `/ask` to submit a question. It'll be reviewed by the moderation team and, if approved, forwarded to the developers, who will be able to decide if and how they wish to answer it. 
+**When the question is answered,** the @AMA bot will post an embed in here. If the question will be answered on the stage, the bot will say so as well. **If you're asking a question, make sure you're on the stage channel so you can get your answer!**
+We currently have **no plans** to allow users to raise their hand to ask a question via voice. This may change in future, but we're keeping it simple for now.
+**Do not ping meeting participants with your questions,** they'll be ignored but do be specific about who your question is for when you submit it!
+Additionally, **don't spam the developers with questions** and, as always, **keep your questions appropriate and follow our rules and Code of Conduct.** We will take actions against users that send rule-breaking questions!
+>>>>>>> c4ec2460a190145883867aa3e49ded7b9c17bd29
 We're hoping for a smooth session, but bear in mind that most of us haven't run a stage like this before. Especially for the first couple of session, we'll still be getting used to the system- so be nice!"
 
 =========================

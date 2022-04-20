@@ -25,6 +25,26 @@ In this episode, the team discuss progress made on Chasm, Loader, Mappings, and 
 
 =========================
 
+ATTENDEES:
+- **AlexIIL**
+- **KJP12**
+- **CheaterCodes**
+- **Potatoboy**
+- **RTTV**
+- **Gdude**
+- **rypofalem**
+- **isXander**
+- **NoComment**
+- **Grappek**
+- **Southpaw**
+- **Patbox**
+- **OroArmor**
+- **LambdAurora**
+- **Haven King**
+- **Tropheus Jay**
+
+=========================
+
 **Gdude**: Hello, you all have just got pinged. Welcome. It's time once again for the next biweekly meeting. Let's do a quick check. Hey everyone on Mumble, how's the sound?
 
 A: Good.

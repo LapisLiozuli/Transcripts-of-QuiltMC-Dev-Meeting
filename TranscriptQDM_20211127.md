@@ -8,6 +8,33 @@ If you'd like to listen to our meetings live, or you have questions to submit, p
 
 =========================
 
+ATTENDEES
+- **Emmaffle**
+- **EarthComputer**
+- **Fork**
+- **Gdude**
+- **OroArmor**
+- **asie**
+- **burger**
+- **Kroppeb**
+- **AlexIIL**
+- **CheaterCodes**
+- **Shedaniel**
+- **Aliz\u00e9e**
+- **SuperCoder79**
+- **Lith/Helium**
+- **Glitch**
+- **haykam**
+- **Akarys**
+- **LemmaEOF**
+- **kb1000**
+- **Southpaw**
+- **sschr15**
+- **LambdAurora**
+- **!alpha**
+
+=========================
+
 **Gdude**: Alright, let's get started, shall we? Uh, it's good to have everyone here again. I didn't ping everyone this time, which I'm sure people will be appreciative of, somewhat. Let's get started with... **CheaterCodes**, do you want to talk about CHASM a bit? What's going on?
 
 **CheaterCodes**: Yes, I would like to talk about CHASM a little bit. Lots has been happening on CHASM during the last 2 weeks. Last time I talked a little bit about how I slowly kept working away on the new version of CHASM that's hopefully no longer ~~poor tide~~, and there's really a lot of progress. As people may or may not have seen, we successfully had our first actual ~~Bedrock~~ transformations on the new version, and it works very well. After fixing some initial performance bottlenecks, we're now easily doing millions of transformations per second, so performance shouldn't be a problem. Which was a little bit of a concern in the past because we had no information on that.

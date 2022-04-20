@@ -35,6 +35,25 @@ In this episode, the team discuss progress made on Build Tools. CHASM, Loader, a
 
 =========================
 
+ATTENDEES
+- **Emmaffle**
+- **Gdude**
+- **OroArmor**
+- **Kroppeb**
+- **Leo**
+- **CheaterCodes**
+- **Haven**
+- **Octal**
+- **Glitch**
+- **MartrixX**
+- **kb1000**
+- **Southpaw**
+- **i509VCB**
+- **LambdAurora**
+- **RTTV**
+
+=========================
+
 **Emmaffle**: Hey, it works.
 
 **CheaterCodes**: Finally. That only took a few minutes, but at least it gave everybody enough time to join. OK, well, welcome to our fortnightly Developer Meeting as **Gdude** likes to call it. Please a round of applause for **Gdude** in chat, who’s not here but still fixed our issues. Thank you.
