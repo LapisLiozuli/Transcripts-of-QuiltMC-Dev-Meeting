@@ -1,0 +1,151 @@
+QuiltMC Teams Listings/
+├─ Admin Board/
+│  ├─ Haven King
+│  ├─ MrMangoHands
+│  ├─ OroArmor
+├─ Community Teams/
+│  ├─ Keyholder/
+│  │  ├─ Kashike
+│  ├─ Community Managers/
+│  │  ├─ AppleTheGolden
+│  │  ├─ gdude
+│  │  ├─ MrMangoHands
+│  ├─ Moderators/
+│  │  ├─ Akarys
+│  │  ├─ Alizée
+│  │  ├─ Emmaffle
+│  │  ├─ Forkk
+│  │  ├─ Larry
+│  │  ├─ Lauren
+│  │  ├─ NiAndromedae ($*)
+│  │  ├─ Southpaw1496
+│  │  ├─ ToffeeMax
+│  │  ├─ Valentin Ricard
+│  │  ├─ Xavier
+│  ├─ Events Team/
+│  │  ├─ Fusion Flux
+│  │  ├─ LemmaEOF
+│  │  ├─ Octal
+│  ├─ Outreach Team/
+│  │  ├─ Akarys
+│  │  ├─ Alizée
+│  │  ├─ Emmaffle
+│  │  ├─ gdude
+│  │  ├─ Lauren
+│  │  ├─ Southpaw1496
+│  │  ├─ ToffeeMax
+│  │  ├─ Xavier
+├─ Development Teams/
+│  ├─ Build Tools/
+│  │  ├─ CheaterCodes
+│  │  ├─ Cypher
+│  │  ├─ Glitch
+│  │  ├─ projects/
+│  │  │  ├─ dev-launcher-injector
+│  │  │  ├─ gradle-convention-plugins
+│  │  │  ├─ quilt-loom
+│  │  │  ├─ sponge-mixin-compile-extensions
+│  ├─ CHASM/
+│  │  ├─ CheaterCodes
+│  │  ├─ EarthComputer
+│  │  ├─ Kroppeb
+│  │  ├─ Pyrofab
+│  │  ├─ projects/
+│  │  │  ├─ asmr-processor-prototype
+│  │  │  ├─ chasm
+│  ├─ Community Tooling/
+│  │  ├─ Akarys
+│  │  ├─ Alizée
+│  │  ├─ AppleTheGolden
+│  │  ├─ gdude
+│  │  ├─ Glitch
+│  │  ├─ Lauren
+│  │  ├─ sschr15
+│  │  ├─ Xavier
+│  │  ├─ projects/
+│  │  │  ├─ cozy-discord
+│  ├─ Decompilers/
+│  │  ├─ Geolykt
+│  │  ├─ Supercoder79
+│  │  ├─ Kroppeb
+│  │  ├─ MartrixX
+│  │  ├─ skyrising
+│  │  ├─ projects/
+│  │  │  ├─ cfr
+│  │  │  ├─ procyon
+│  │  │  ├─ quiltflower
+│  ├─ Infrastructure/
+│  │  ├─ Haven King
+│  │  ├─ projects/
+│  │  │  ├─ quilt-meta
+│  ├─ Loader/
+│  │  ├─ AlexIIL
+│  │  ├─ EarthComputer
+│  │  ├─ Glitch
+│  │  ├─ Haven King
+│  │  ├─ projects/
+│  │  │  ├─ access-widener
+│  │  │  ├─ Mixin
+│  │  │  ├─ quilt-installer
+│  │  │  ├─ quilt-json5
+│  │  │  ├─ quilt-loader
+│  │  │  ├─ quilt-loader-sat4j
+│  ├─ Mappings/
+│  │  ├─ 2xSaiko
+│  │  ├─ CheaterCodes
+│  │  ├─ LambdAurora
+│  │  ├─ MartrixX
+│  │  ├─ NoComment
+│  │  ├─ OroArmor
+│  │  ├─ projects/
+│  │  │  ├─ enigma
+│  │  │  ├─ javadoc-draughtsman
+│  │  │  ├─ lorenz-tiny
+│  │  │  ├─ mapping-poet
+│  │  │  ├─ mappings-hasher
+│  │  │  ├─ quilt-mappings
+│  │  │  ├─ stitch
+│  │  │  ├─ tiny-mappings-parser
+│  │  │  ├─ tiny-remapper
+│  │  │  ├─ unpick
+│  ├─ Quilt Standard Libraries/
+│  │  ├─ projects/
+│  │  │  ├─ fabric-api-qsl
+│  │  │  ├─ quilt-standard-libraries
+│  │  ├─ Core (Team Leaders)/
+│  │  │  ├─ Glitch
+│  │  │  ├─ LambdAurora
+│  │  │  ├─ OroArmor
+│  │  ├─ Sub-Team: Block/
+│  │  ├─ Sub-Team: Command/
+│  │  │  ├─ Will BL
+│  │  ├─ Sub-Team: Data/
+│  │  │  ├─ ADudeCalledLeo
+│  │  │  ├─ LambdAurora
+│  │  ├─ Sub-Team: Entity/
+│  │  │  ├─ Bubblie
+│  │  │  ├─ Will BL
+│  │  ├─ Sub-Team: GUI/
+│  │  │  ├─ Boxed
+│  │  ├─ Sub-Team: Item/
+│  │  │  ├─ OroArmor
+│  │  ├─ Sub-Team: Rendering/
+│  │  │  ├─ PepperCode1
+│  │  ├─ Sub-Team: Transfer/
+│  │  ├─ Sub-Team: Worldgen/
+│  │  │  ├─ Noah van der Aa
+│  │  │  ├─ OliviaTheVampire
+│  │  │  ├─ snoozestudios
+│  ├─ Triage Teams/
+│  │  ├─ Mappings/
+│  │  │  ├─ Bubblie
+│  │  │  ├─ Emmaffle
+│  │  │  ├─ Jamalam
+│  │  │  ├─ Noah van der Aa
+│  │  │  ├─ RTTV
+│  │  │  ├─ supersaiyansubtlety
+│  │  │  ├─ Sylv
+│  │  │  ├─ Zoe
+│  │  │  ├─ projects/
+│  │  │  │  ├─ enigma
+│  │  │  │  ├─ quilt-mappings
