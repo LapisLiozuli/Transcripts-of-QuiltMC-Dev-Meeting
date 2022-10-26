@@ -98,7 +98,7 @@ nncheat: I thk I wanna ans the first qn right away. Firstly, I'll ask ppl: Does 
 
 nngdu: Yeah, the th w Quilt is tt we have so much work tt we nd aone who's OK w Java. I thk we cld do a bit btr w Github lk having better issues set up. But if you wanna help out, j let us know. Tell us what you're gd at and we'll find a place for you. Thx for tt, nncheat. I thk I c ans a couple of these.
 
-Zaeroses #6355 (806065199609937980)
+Zaeroses 🌷#6355 (806065199609937980)
 
 how has the reception of quilt been in the community so far (before and after the beta)? we aren't part of the community outside of the toolchain server, so we don't really have any picture of the popularity or opinions of mod devs or players
 
@@ -239,7 +239,7 @@ nnoro: Uhhh, I thk I c.
 
 nngdu: Sure, go ahead. You click it.
 
-Zaeroses #6355 (806065199609937980)
+Zaeroses 🌷#6355 (806065199609937980)
 does quilt have a more general goal as far as the player experience as a whole goes? like, a general goal linking together how players would interact with various areas of quilt in practice?
 
 nnoro: Oh yeah, you nd to click it, hehe. Idth necs[ irxt w the dffr[ areas of Quilt, but we wanna prvd a more unified way for ppl to j play. So, one of the main ths w tt, our Loader plugins, so tt you c load Fabric mods. Whr the player exp isn't so much formed ard us irxt- w pull=up?, but we prvd fetrs to players tt allow them to play w mods in their own dffr[ ways. If tt makes sense, I can't thk of tt others since I'm more of a devr, but Ik tt Loader plugins will be sth unq tt Quilt brings to the player exp.

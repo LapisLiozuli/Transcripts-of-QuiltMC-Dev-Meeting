@@ -48,8 +48,9 @@ from nltk.stem import WordNetLemmatizer
 # This goes in reverse chrono order. Will have to revert back once all the existing archives are completed.
 # Also might store this in a separate text file as it gets longer.
 # Or generate dates automatically and exclude missed dates?
-dates = ["20220420_betasurprise", "20220409", "20220326", "20220312", "20220226", "20220212", "20220129", "20211211", "20211127", "20211113"]
-path_transcript_dir = r"C:\Users\Public\Documents\LapisLiozuli\Transcripts-of-QuiltMC-Dev-Meeting"
+dates = ["20220508", "20220423", "20220420_betasurprise", "20220409", "20220326", "20220312", "20220226", "20220212", "20220129", "20211211", "20211127", "20211113"]
+# path_transcript_dir = r"C:\Users\Public\Documents\LapisLiozuli\Transcripts-of-QuiltMC-Dev-Meeting"
+path_transcript_dir = r"C:\Users\LapisLiozuli\Documents\LapisLiozuli\Transcripts-of-QuiltMC-Dev-Meeting"
 path_dicts_dir = path.join(path_transcript_dir, "Dicts and Wordlists")
 path_raws_dir = path.join(path_transcript_dir, "Raws")
 path_shorthand_dict = path.join(path_dicts_dir, "shorthand_dict.txt")
@@ -171,7 +172,7 @@ def attach_punc_to_shortform(sf_dict):
     return punc_dict, sort_dict
 
 
-# Defaults to latest entry which is the earliest date.
+# Defaults to latest entry which is the earliest date in the list at the top.
 def convert_raw_transcript(shand_dict, idx=-1, debug=False):
     punc_dict, sort_dict = attach_punc_to_shortform(shand_dict)
     # Rearrange short-forms from long to short to prevent the shorter sf from overwriting the longer ones.
@@ -259,5 +260,5 @@ if dirty_switch:
 else:
     generate_new_dict()
 
-convert_raw_transcript(stl_dict, idx=0)
+convert_raw_transcript(stl_dict, idx=1)
 
