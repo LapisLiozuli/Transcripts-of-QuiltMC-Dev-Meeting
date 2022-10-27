@@ -8,31 +8,38 @@ If you'd like to listen to our meetings live, or you have questions to submit, p
 
 =========================
 
-ATTENDEES
+SPEAKERS:
 
-- **Emmaffle**
-- **EarthComputer**
-- **Fork**
-- **Gdude**
-- **OroArmor**
-- **asie**
-- **burger**
-- **Kroppeb**
 - **AlexIIL**
 - **CheaterCodes**
-- **Shedaniel**
-- **Aliz\u00e9e**
-- **SuperCoder79**
-- **Lith/Helium**
-- **Glitch**
-- **haykam**
-- **Akarys**
-- **LemmaEOF**
-- **kb1000**
-- **Southpaw**
-- **sschr15**
+- **Emmaffle**
+- **EarthComputer**
+- **Gdude**
+- **glitch**
 - **LambdAurora**
+- **OroArmor**
+- **SuperCoder79**
+
+ATTENDEES:
+
 - **!alpha**
+- **asie**
+- **burger**
+- **kb1000**
+- **LemmaEOF**
+- **Lith/Helium**
+- **Madilene**
+- **Southpaw**
+
+MENTIONS:
+
+- **Akarys**
+- **Alizée**
+- **Fork**
+- **Kroppeb**
+- **haykam**
+- **Shedaniel**
+- **sschr15**
 
 =========================
 
@@ -106,7 +113,13 @@ And another thing we could do is make a common repository of test structures to 
 
 **Gdude**: That is a fantastic amount of stuff, I can't lie. You've been super busy, clearly. If anyone missed it, **LambdAurora** did post a nice big list of PRs that need attention. I've pinned it in the `#meeting-chat` channel. So if you're a developer, you're interested in QSL, please go have a look. Go help those PRs get some reviews, get some feedback. Always appreciated.
 
-(**LambdAurora**: "List of interesting QSL PRs requesting attention: [Add event phases. by LambdAurora · Pull Request #53 · QuiltMC/quilt-standard-libraries · GitHub](https://github.com/QuiltMC/quilt-standard-libraries/pull/53) - Event phases [Urgent][Item Group API by OroArmor · Pull Request #40 · QuiltMC/quilt-standard-libraries · GitHub](https://github.com/QuiltMC/quilt-standard-libraries/pull/40) - Item Group API [Command module by williambl · Pull Request #33 · QuiltMC/quilt-standard-libraries · GitHub](https://github.com/QuiltMC/quilt-standard-libraries/pull/33) - Command API [Block Extensions API by Leo40Git · Pull Request #41 · QuiltMC/quilt-standard-libraries · GitHub](https://github.com/QuiltMC/quilt-standard-libraries/pull/41) - Block Extensions API [Loot Table API by ByMartrixx · Pull Request #54 · QuiltMC/quilt-standard-libraries · GitHub](https://github.com/QuiltMC/quilt-standard-libraries/pull/54) - Loot Table API [port] [Entity Events module by williambl · Pull Request #42 · QuiltMC/quilt-standard-libraries · GitHub](https://github.com/QuiltMC/quilt-standard-libraries/pull/42) - Entity Events [WIP]")
+(**LambdAurora**: "List of interesting QSL PRs requesting attention: 
+[Add event phases. by LambdAurora · Pull Request #53 · QuiltMC/quilt-standard-libraries · GitHub](https://github.com/QuiltMC/quilt-standard-libraries/pull/53) - Event phases [Urgent]  
+[Item Group API by OroArmor · Pull Request #40 · QuiltMC/quilt-standard-libraries · GitHub](https://github.com/QuiltMC/quilt-standard-libraries/pull/40) - Item Group API  
+[Command module by williambl · Pull Request #33 · QuiltMC/quilt-standard-libraries · GitHub](https://github.com/QuiltMC/quilt-standard-libraries/pull/33) - Command API  
+[Block Extensions API by Leo40Git · Pull Request #41 · QuiltMC/quilt-standard-libraries · GitHub](https://github.com/QuiltMC/quilt-standard-libraries/pull/41) - Block Extensions API  
+[Loot Table API by ByMartrixx · Pull Request #54 · QuiltMC/quilt-standard-libraries · GitHub](https://github.com/QuiltMC/quilt-standard-libraries/pull/54) - Loot Table API [port]  
+[Entity Events module by williambl · Pull Request #42 · QuiltMC/quilt-standard-libraries · GitHub](https://github.com/QuiltMC/quilt-standard-libraries/pull/42) - Entity Events [WIP]")
 
 **Gdude**: Alright, I guess I'm next. As for the Community Team, not a whole ton of things have been happening. I'd say the big one that anyone would have noticed is the change to the mappings commands. Now there is still issues with these commands mostly because Hashed Mojmap isn't quite stable yet. Which means Linkie-Core is- Well, it's not entirely working with it. As Hashed Mojmap progresses, hopefully we'll work with **Shedaniel** to fix that. But in the meantime, we've update them to slash commands and a whole bunch of fixes have been put in mostly by **sschr15**, or who we often wrongfully refer to as Chris.
 
@@ -250,8 +263,10 @@ It's kind of tricky to get too specific in other communities. There are a lot of
 
 **Gdude**: My microphone should be fine, **Southpaw**, please, please. What, is it too loud?
 
-(!alpha: "yea its peaking a lot"
-LudoCrypt: "its popping" **Glitch**: "it's popping a lot" **EarthComputer**: "it's not awful")
+(**!alpha**: "yea its peaking a lot"
+**LudoCrypt**: "its popping" 
+**Glitch**: "it's popping a lot" 
+**EarthComputer**: "it's not awful")
 
 **CheaterCodes**: Kind of. Just keep going for now, it's not that bad.
 

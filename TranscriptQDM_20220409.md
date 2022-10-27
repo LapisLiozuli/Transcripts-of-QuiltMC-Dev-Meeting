@@ -31,22 +31,28 @@ In this episode, the team discuss QSL, Mappings, Build Tools CHASM, and Loader, 
 
 =========================
 
+SPEAKERS:
+
+- **CheaterCodes**
+- **Gdude**
+- **Glitch**
+- **Haven King**
+- **LambdAurora**
+
 ATTENDEES:
 
-- **AlexIIL**
-- **CheaterCodes**
-- **Glitch**
-- **grifferthrydwy**
-- **Gdude**
-- **LemmaEOF**
-- **Kroppeb**
 - **AlphaMode**
-- **Yujin**
-- **Octal**
 - **Byte**
-- **LambdAurora**
+- **grifferthrydwy**
+- **Octal**
 - **Will BL**
-- **Haven King**
+- **Yujin**
+
+MENTIONS:
+
+- **AlexIIL**
+- **Kroppeb**
+- **LemmaEOF**
 
 =========================
 
@@ -219,8 +225,8 @@ I'm sure there's plenty of similar cases. I know **Glitch** did something on Qui
 
 **Gdude**: Do you have a link to that?
 
-**Glitch**: Yeah, I can pull that up, give me one second: [https://github.com/QuiltMC/quiltingloader/issues/59](https://github.com/QuiltMC/quiltingloader/issues/59)  
-("This is a good first issue for anyone looking to dip in to contributing to Loader. If you are interested in getting this done, feel free to ask me questions at glitch#3274 on the Toolchain Discord....")
+**Glitch**: Yeah, I can pull that up, give me one second: [https://github.com/QuiltMC/quilt-loader/issues/59](https://github.com/QuiltMC/quilt-loader/issues/59)  
+("This is a good first issue for anyone looking to dip in to contributing to Loader. If you are interested in getting this done, feel free to ask me questions at **glitch#3274** on the Toolchain Discord....")
 
 **CheaterCodes**: Also as a desperate call, if anyone's very comfortable with Build Tools, let us know.
 

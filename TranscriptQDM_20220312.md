@@ -35,23 +35,28 @@ In this episode, the team discuss progress made on Build Tools. CHASM, Loader, a
 
 =========================
 
-ATTENDEES
+SPEAKERS:
 
-- **Emmaffle**
-- **Gdude**
-- **OroArmor**
-- **Kroppeb**
-- **ADudeCalledLeo**
 - **CheaterCodes**
-- **Haven**
-- **Octal**
-- **Glitch**
-- **MartrixX**
-- **kb1000**
-- **Southpaw**
-- **i509VCB**
+- **Emmaffle**
+- **glitch**
 - **LambdAurora**
+- **OroArmor**
+
+ATTENDEES:
+
+- **ADudeCalledLeo**
+- **kb1000**
+- **Octal**
 - **RTTV**
+- **Southpaw**
+
+MENTIONS:
+
+- **Haven King**
+- **i509VCB**
+- **Kroppeb**
+- **MartrixX**
 
 =========================
 
@@ -65,7 +70,7 @@ ATTENDEES
 
 **Glitch**: Alright, for Build Tools, we’re working on fandangling Loom into understanding that JAR files with quilt.mod.json files are actually mods and understanding how to read those. And once we have that done, either by getting that in upstream, or just forking Fabric Loom, we’ll be able to use Quilt Loader to make mods, essentially.
 
-It’s not ideal, we’d rather not rely on Fabric Loom, because it’s big and complex and hard to change. We’d rather be using VanillaGradle, but it’s just not there for the timeline we want to be able to make mods with Quilt Loader as soon as possible. Yes, and as **Leo** said, Loom is kind of a mess because it’s many years old and very, very big.
+It’s not ideal, we’d rather not rely on Fabric Loom, because it’s big and complex and hard to change. We’d rather be using VanillaGradle, but it’s just not there for the timeline we want to be able to make mods with Quilt Loader as soon as possible. Yes, and as **ADudeCalledLeo** said, Loom is kind of a mess because it’s many years old and very, very big.
 
 **CheaterCodes**: Alright, thank you for that. I'm going to introduce a new section this meeting. I'm gonna ask Build Tools: How ready are we for Quilt Beta?
 
@@ -83,7 +88,7 @@ Those are the things that are happening right now, it’s moving. Now, to lead m
 
 **Emmaffle**: Ain’t got nothin'.
 
-**CheaterCodes**: Ain’t got nothing today. Uh, it’s fine. It’s not really something that has anything that needs to be done for Quilt Beta. Decompilers is on holiday, also well deserved, just [at] a very quick glance, there's no hard deadline on what it needs for Quilt Beta, it’s working great already. Same goes with Infrastructure, which we can skip today, **Haven** isn’t here. It’s working just fine right now. So finally, I’ll let somebody else talk. **Glitch**, can you give an update on the Loader?
+**CheaterCodes**: Ain’t got nothing today. Uh, it’s fine. It’s not really something that has anything that needs to be done for Quilt Beta. Decompilers is on holiday, also well deserved, just [at] a very quick glance, there's no hard deadline on what it needs for Quilt Beta, it’s working great already. Same goes with Infrastructure, which we can skip today, **Haven King** isn’t here. It’s working just fine right now. So finally, I’ll let somebody else talk. **Glitch**, can you give an update on the Loader?
 
 **Glitch**: OK, hello again. So not much has happened in Loader for the last two weeks. The big thing that is something that I'm actually working on today. I want to get our installer for Quilt Loader running, which would mean that you'd actually be able to use Quilt Loader through the Minecraft launcher. Um, we had something written by i5 months ago, for which I’m going to have to learn the code structure.
 

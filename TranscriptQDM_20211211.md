@@ -44,26 +44,32 @@ Wrap-up
 
 =========================
 
+SPEAKERS:
+
+- **AlexIIL**
+- **CheaterCodes**
+- **EarthComputer**
+- **glitch**
+- **i509VCB**
+- **LambdAurora**
+- **SuperCoder79**
+
 ATTENDEES:
 
 - **ADudeCalledLeo**
-- **EarthComputer**
-- **Gdude**
-- **Kitchura**
-- **Byte**
-- **AlexIIL**
-- **AppleTheGolden**
-- **CheaterCodes**
-- **TheBlackSquidward**
-- **SuperCoder79**
-- **Glitch**
-- **Juuz**
-- **Grondag**
-- **Fish**
 - **Banzobotic**
-- **i509VCB**
-- **LambdAurora**
+- **Byte**
+- **Fish**
+- **Grondag**
+- **Juuz**
+- **Kitchura**
+- **TheBlackSquidward**
 - **Tropheus Jay**
+
+MENTIONS:
+
+- **AppleTheGolden**
+- **Gdude**
 
 =========================
 

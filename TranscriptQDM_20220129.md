@@ -13,31 +13,37 @@ In this episode, the team discuss the progress in the Community Tooling, Infrast
 
 =========================
 
-ATTENDEES:
+SPEAKERS:
 
-- **sschr15**
+- **CheaterCodes**
 - **EarthComputer**
 - **Gdude**
-- **Aliz\u00c3\u00a9e**
-- **OroArmor**
-- **TheSheikh**
-- **OliviaTheVampire**
-- **Skyrising**
-- **parzivail**
-- **FavoritoHJS**
-- **Kroppeb**
-- **arathain**
-- **LeoCTH**
-- **ThatTrollzer**
-- **CheaterCodes**
-- **Shedaniel**
-- **Parzi**
-- **PinkGoosik**
-- **Glitch**
-- **kb1000**
-- **Southpaw**
-- **LambdAurora**
+- **glitch**
 - **Haven King**
+- **LambdAurora**
+- **OroArmor**
+
+ATTENDEES:
+
+- **Alizée**
+- **arathain**
+- **FavoritoHJS**
+- **kb1000**
+- **Kroppeb**
+- **LeoCTH**
+- **~~Monochrome~~**
+- **OliviaTheVampire**
+- **parzivail**
+- **PinkGoosik**
+- **Southpaw**
+- **ThatTrollzer**
+
+MENTIONS:
+
+- **Shedaniel**
+- **Skyrising**
+- **sschr15**
+- **TheSheikh**
 
 =========================
 
@@ -53,7 +59,7 @@ Also just to be clear, you can type in the `#meeting-chat` channel, right? Yep, 
 
 ~~B~~: I'm muted.
 
-**Gdude**: I'm disappointed in the number of groans I got about that. We usually do it for about an hour, **Parzi**. I haven't seen it run over quite a long time, so we should be fine. Although we'll see. Hey **Kroppeb**.
+**Gdude**: I'm disappointed in the number of groans I got about that. We usually do it for about an hour, **Parzivail**. I haven't seen it run over quite a long time, so we should be fine. Although we'll see. Hey **Kroppeb**.
 
 ~~C~~: Nobody's talking?
 
@@ -79,7 +85,7 @@ Obviously there is a lot of Cozy stuff to do. I am working on modules at the mom
 
 **LambdAurora**: Yeah, so, I just need to move up... So currently we are- I think since last time we launched ~~3~~ modules. Also, we have now the command modules. We have a new feature for baked events. Now they can be used as entrypoints, and there's ~~curr[ a fly method to un-register~~ a bunch of listeners for a bunch of errors. We also have the Item Group API which is now merged. And currently we have two PRs in ~~final com period~~ which is the Tooltip API and the Networking API. Otherwise we have a lot of PRs waiting for reviews. I think that's kind of it.
 
-**Gdude**: Good stuff, sounds like certainly a fair bit of progress. Good work geting that stuff merged as well, nice work. I guess I can talk about Community a little bit. For those of you that haven't been following the announcements, we dcded to finally replace the `#showcase-discussion` channel. So the `#gallery` channel will automatically have threads set up. You guys have used threads at this point, we use them everywhere on Community. The mappings have been updated again, they now support Quilt Mappings now thanks to updates to LInkie by **Shedaniel**, and also a ton of work by **Chris**, who is actually named **sschr**, but hey we'll just use that name, he doesn't mind. 
+**Gdude**: Good stuff, sounds like certainly a fair bit of progress. Good work geting that stuff merged as well, nice work. I guess I can talk about Community a little bit. For those of you that haven't been following the announcements, we dcded to finally replace the `#showcase-discussion` channel. So the `#gallery` channel will automatically have threads set up. You guys have used threads at this point, we use them everywhere on Community. The mappings have been updated again, they now support Quilt Mappings now thanks to updates to LInkie by **Shedaniel**, and also a ton of work by Chris, who is actually named **sschr15**, but hey we'll just use that name, he doesn't mind. 
 
 Thr's also been some work on governance, there is a governance PR at the moment. I'm not sure if we merged that. No, I don't believe we have. That's RFC #47. If anyone is interested how Quilt is run, then definitely go check that PR out. 100%, it's an important one. There is another one as well, the Outreach Team which is currently in drafts. Outreach Team is, well, it's basically designed to be a team that takes care of things like social media accounts, the website, that sort of thing. That will still need interfaces. But if anyone's interested in that, go take a look. Obviously we'll need people on that team later as well. I think that more or less covers it. It hasn't been super busy since Christmas since everyone's been geting back into the swing of things. If anyone has any questions, go ahead and hit up that `/ask` command, I see there's a couple in there. Does anyone else have anything to bring up before we move into that? Alright, I guess not. 
 
@@ -255,7 +261,7 @@ Yeah, Gradle's the only realistic tool, I think. It's the one most people are us
 
 **EarthComputer**: Yeah, we mentioned literally that internally. Oh, hang on, is that- We haven't even-
 
-**Gdude**: I'm not going to click it because we need **Haven King** to answer that really. So we got your question, **parzivail**. We can't answer it right now. Yeah, we can save it for next week. We'll just leave it in there, we can go back to it. Yeah, but it's a difficult one. A difficult one. Technically it's up to **Haven King** or well, the Admin Team, but we'll need to see what happens with Open Collective first, I think. Yeah, I like Ko-Fi, but I don't know, Open Collective will definitely suit us better if we end up using it. But, uh congratulations **Parzi**, you've spawned a whole internal conversation, without even realising it. Congrats. 
+**Gdude**: I'm not going to click it because we need **Haven King** to answer that really. So we got your question, **parzivail**. We can't answer it right now. Yeah, we can save it for next week. We'll just leave it in there, we can go back to it. Yeah, but it's a difficult one. A difficult one. Technically it's up to **Haven King** or well, the Admin Team, but we'll need to see what happens with Open Collective first, I think. Yeah, I like Ko-Fi, but I don't know, Open Collective will definitely suit us better if we end up using it. But, uh congratulations **Parzivail**, you've spawned a whole internal conversation, without even realising it. Congrats. 
 
 (**OliviaTheVampire**: "Since there is not much time left, your favorite meal? :D")
 

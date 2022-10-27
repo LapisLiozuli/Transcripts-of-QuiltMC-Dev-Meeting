@@ -1,3 +1,42 @@
+Surprsie Quilt Dev Meeting in anticipation of the beta release. No recording is currently available on the online archives.
+
+=========================
+
+**Gdude**: Hello and welcome to the QuiltMC Developer Meetings Podcast. The podcast that... isn’t really a podcast. If you’re new here, this is just a collection of recordings of each public Quilt Project Developer Meeting, lightly edited for comfort and uploaded as a podcast for ease of accessibility. Our meetings are held on Discord every two weeks, relayed from a Mumble server and recorded live by a fleet of Discord bots. Hence the lower audio quality. For more information on what the Quilt Project is and what we do here, please head to [https://quiltmc.org](https://quiltmc.org).
+
+=========================
+
+SPEAKERS:
+
+- **AlexIIL**
+- **Alizée**
+- **CheaterCodes**
+- **Gdude**
+- **Kroppeb**
+- **LambdAurora**
+- **Octal**
+- **OroArmor**
+- **Southpaw**
+- **snoozestudios**
+
+ATTENDEES:
+
+- N/A
+
+MENTIONS:
+
+- **asie**
+- **DD**
+- **Eloraam**
+- **Fusion Flux**
+- **Masa**
+- **MrMangoHands**
+- **SpaceToads**
+- **Zoe**
+- **??Boy**
+
+=========================
+
 **Gdude**: 5 minutes of so, make sure that more participants are able to join. But before all that it's time to get Craig-ed. We're now being Craig-ed. 
 
 Quet'd? (T/N: Quilt + Beta) I said Craig-ed. I'll explain that in a minute. Craig and Giarg?
@@ -44,7 +83,7 @@ Alrighty. So we're just going to start off going who's on stage at the moment an
 
 **Gdude**: That's good. Certainly seems there was a lot less friction than we expected with it. **Kroppeb**, your turn.
 
-**Kroppeb**: I don't know really. ????
+**Kroppeb**: I don't know really. ~~????~~
 
 **CheaterCodes**: Just say more about the CHASM thing. Say more about the terminology while talking about it for 3 hrs. Just use different words.
 
@@ -93,7 +132,7 @@ I think Discord is just fighting with our microphones today. That's alright, we'
 **Octal**: I was- The reason I got introduced- I got started with Quilt stuff was that I was relatively new to modding at the time. And I had heard about Quilt and the people behind it, and I thought, yeah, I agree with that. And when the Quilt Discord server become public, it become one of my favorite communities, and I applied to become a community manager.
 
 **Southpaw**: "Even though I'm not on the stage, I want to answer this:
-I got an invite to Quilt in **gdude**'s now dead Fabric Community server and a few months down the line decided to apply for moderation :pineapple:"
+I got an invite to Quilt in **Gdude**'s now dead Fabric Community server and a few months down the line decided to apply for moderation :pineapple:"
 
 **Kroppeb**: I think my story is mostly the same as Octal?
 
@@ -111,7 +150,7 @@ I got an invite to Quilt in **gdude**'s now dead Fabric Community server and a f
 
 Hopefully today. It's one of the things I've been waiting on before making an announcement. Oh, I've been pinged. It's been done apparently. Nobody told me that. There's a link in the chat.
 
-(**Octal**: "It is ready, [GitHub ing QuiltMC/quiltingexamplingmod: Official Quilt example mod.](https://github.com/QuiltMC/quiltingexamplingmod "https://github.com/QuiltMC/quiltingexamplingmod")")
+(**Octal**: "It is ready, [GitHub - QuiltMC/quilt-example-mod: Official Quilt example mod.](https://github.com/QuiltMC/quilt-example-mod))
 
 "Is there Quilt-Fabric link?"
 
@@ -155,7 +194,7 @@ That sounds like an admin question to me, **OroArmor**.
 
 **OroArmor**: So, from a player perspective, theoretically there should be very little change. It should feel like Fabric, to the point where you can take your favourite Fabric pack and mod up. We're not quite there yet, because some modders use interesting ways to get their mods working. You also, as a player, should hopefully be able to understand the issues better, especially surrounding modloading. Some people have expressed concerns over Fabric's- If you're missing a mod, that loading screen can be confusing for new players. So hopefully Quilt's screen is a lot more descriptive and easier to understand.
 
-For developers, we hope to have a larger API than Fabric. So take Fabric API and expand and improve on that. So a lot of the modules in QSL are practically 1-to-1 with Fabric and have extra stuff on top of them. Then, Quilt Mappings are a lot clearer. Fabric has a cleanroom policy, so ????, makes it a lot harder to get help for cross-platform work. Quilt mappings got rid of the cleanroom policy, ???.
+For developers, we hope to have a larger API than Fabric. So take Fabric API and expand and improve on that. So a lot of the modules in QSL are practically 1-to-1 with Fabric and have extra stuff on top of them. Then, Quilt Mappings are a lot clearer. Fabric has a cleanroom policy, so ~~????~~, makes it a lot harder to get help for cross-platform work. Quilt mappings got rid of the cleanroom policy, ~~???~~.
 
 A lot of the constants in the game are a lot harder to figure out, but with Mojmap we can now see what that is
 
@@ -307,7 +346,7 @@ This is an interesting one, but I'll excuse myself.
 
 "Who do you or did you look up to in modding?"
 
-**OroArmor**: I've only been modding since like 1.16, and I kind of came in not really knowing what I was going to do. and just started going. So I guess there's not really anyone I've been looking up to in that sense. I kind of came from the technical side, ???, but I guess **Masa** too.
+**OroArmor**: I've only been modding since like 1.16, and I kind of came in not really knowing what I was going to do. and just started going. So I guess there's not really anyone I've been looking up to in that sense. I kind of came from the technical side, ~~???~~, but I guess **Masa** too.
 
 **Gdude**: I don't really know who is or isn't a modder, so if you don't have anyone it's fine.
 
@@ -327,17 +366,17 @@ This is an interesting one, but I'll excuse myself.
 
 **Gdude**: Yeah, there's so many good people out there.
 
-**LambdAurora**: I guess I would say DD. But for a long time I didn't know who **asie** was. But **asie** is definitely one of the others I look up to.
+**LambdAurora**: I guess I would say **DD**. But for a long time I didn't know who **asie** was. But **asie** is definitely one of the others I look up to.
 
 **AlexIIL**; I've always looked up to **SpaceToads**, not because he made BuildCraft. But because he always seemed approachable. Not like we really talked much, we didn't overlap time-wise. But that's why I'm here.
 
-pgsnz: Everyone of the QSL team are fantastically smart people. **SuperCoder79**? Decompilers, that code base is one of the best codebases I've ever read. I'm not very good at modding actually, started in December. Also shoutout to **LambdAurora**. The entire team as well, the whole team in general is also super brilliant.
+**snoozestudios**: Everyone of the QSL team are fantastically smart people. **SuperCoder79**? Decompilers, that code base is one of the best codebases I've ever read. I'm not very good at modding actually, started in December. Also shoutout to **LambdAurora**. The entire team as well, the whole team in general is also super brilliant.
 
 **Gdude**: "What did you work on right before you started working on Quilt?" **OroArmor**, how's your WiFi?
 
 **OroArmor**: If the connection is established it works. If I try to make a new connection it doesn't work. Right before Quilt, let's see, trying to remember. So I think a month before rule #9, I think I had just got into the Yarn Triage Team. And so I was slowly transitioning from being a more- I only made one mod, Netherite Plus. I made some other mods but they had a couple hundred downloads each. So I ended up taking Netherite Plus and a lot of the stuff was very Mixin-heavy. Then I started geting involved in toolchain. So like de-hardcoding items so that you could have custom items, custom bows, stuff like that. Don't really remember what got me into it, something lke World Events that got me onto Pick and Yarn at the same time. And once Quilt happened  I was like, I want to join Quilt and that's what happneded
 
-**Octal**: Before I joined Quilt, I was just thinking of learning how to mod stuff which is not really much. I started a couple projects before I joined the ??. Mainly I'm working with ??Boy from Geyser, making an addon to Geyser that people on Bedrock use to join modded servers.
+**Octal**: Before I joined Quilt, I was just thinking of learning how to mod stuff which is not really much. I started a couple projects before I joined the ~~??~~. Mainly I'm working with ~~**??Boy**~~ from Geyser, making an addon to Geyser that people on Bedrock use to join modded servers.
 
 **Alizée**: I'm personally new to the Minecraft community. Before that I was working on the Python Discord server. I had some fun there, but for some reason it stopped, so I decided to move and I found Quilt. And this is a fun time.
 
@@ -367,7 +406,7 @@ pgsnz: Everyone of the QSL team are fantastically smart people. **SuperCoder79**
 
 **Gdude**: He has done a great job, I agree. Hopefully he feels better soon.
 
-**CheaterCodes**: ??? I think he worked on Fabric API quite a bit, if I'm not mistaken.
+**CheaterCodes**: ~~???~~ I think he worked on Fabric API quite a bit, if I'm not mistaken.
 
 **Gdude**: yeah, I mean it's been a ridiculous- I guess it's been a year since we went public with the server, and it's kind of insane to see the amount of effort that people put in. You guys don't see the development channels where people put in depth what they're going to work on. It's really helped to form the direction of the project since then. It's been really great to work with the development team, they've been really fantastic as well. And especially the community too.
 
@@ -379,6 +418,6 @@ pgsnz: Everyone of the QSL team are fantastically smart people. **SuperCoder79**
 
 **CheaterCodes**: In dev meeting tradition, join us in `#voice`for the after party.
 
-???: Thanks,
+~~???~~: Thanks,
 
-???: Bye.
+~~???~~: Bye.

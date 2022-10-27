@@ -57,6 +57,12 @@ ATTENDEES:
 - **Patbox**
 - **Southpaw**
 
+MENTIONS:
+
+- **glitch**
+- **Haven King**
+- **NoComment**
+
 =========================
 
 **Gdude**: Now it's that time where I ping everyone. Hello everyone, welcome to yet another Dev Meeting.

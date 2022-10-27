@@ -31,29 +31,32 @@ In this episode, the team discuss the progress made on Build Tools, Loader, and 
 
 =========================
 
-ATTENDEES:
+SPEAKERS:
 
-- **sschr15**
-- **Gdude**
-- **sciwhiz12**
-- **NoComment**
-- **OroArmor**
-- **Skyrising**
-- **woodiertexas**
-- **arathain**
-- **ThatTrollzer**
-- **any**
-- **jamalam**
 - **AlexIIL**
 - **CheaterCodes**
-- **Arathain**
-- **Octal**
-- **Whangdoodle**
+- **Gdude**
 - **Glitch**
-- **Whangd00dle**
-- **Southpaw**
-- **i509VCB**
 - **LambdAurora**
+- **OroArmor**
+
+ATTENDEES:
+
+- **Arathain**
+- **jamalam**
+- **NoComment**
+- **Octal**
+- **sciwhiz12**
+- **Southpaw**
+- **sschr15**
+- **ThatTrollzer**
+- **Whangdoodle**
+- **woodiertexas**
+
+MENTIONS:
+
+- **i509VCB**
+- **Skyrising**
 
 =========================
 
@@ -69,7 +72,7 @@ ATTENDEES:
 
 So everyone is there on the Mumble server, on the other side of that Mumble bot. That's basically the gist of it. Make space-laser noises because people are setting Avatar, not avatars, what's the word, bios, profile bios. You can turn that off. Anyway, I'll give it a couple more minutes and then we can get started. Same format as always, of course. I'm going to try and remind people to say who they are the first time they talk, so that everyone knows for the sake of the podcast. Hope you people don't mind, but that's alright I'm sure. And we'll try to read out the questions as well.
 
-Speaking of questions, if you have any, use the `/ask` command, and we'll get to them at the end of the meeting. Probably, hopefully. Don't worry, I've got a list. For those of you on Mumble BTW, I think I'm going to stay on Discord for audio. It's just much harder to mess up my audio setup that way. Is that OK? Can you record that OK, **Southpaw**? I assume you can. Nobody else will be talking on this side.
+Speaking of questions, if you have any, use the `/ask` command, and we'll get to them at the end of the meeting. Probably, hopefully. Don't worry, I've got a list. For those of you on Mumble by the way, I think I'm going to stay on Discord for audio. It's just much harder to mess up my audio setup that way. Is that OK? Can you record that OK, **Southpaw**? I assume you can. Nobody else will be talking on this side.
 
 **Southpaw**: Alright, works for me.
 
@@ -105,7 +108,7 @@ Since then, we merged the Tooltip API, which introduced some new cool bugs like 
 
 And the other module that has been merged is Networking API. What's wrong that has been due to with 22w06a, which was quite painful, because Mojang moved a lot of stuff and kind of wrecked tags. But it's for the better. Now we can actually have tags for any ~~linking trees. What I found awful there, in the API~~, so that's nice. But it caused some issues with QSL porting. Basically we had to disable the Tags API for now until it gets properly rewritten.
 
-And there was a little debate we had a month ago, that had to be brought up into the table again, which was more than two points in QSL. The main issue was, we think game entrypoints loader doesn't make a lot of sense, because it doesn't make it really game-agnostic, or version-agnostic as it needs a quite lengthy injection method, which uses raw ASM. So that's terrible for maintenance and it means that for new versions that change the entrypoint logic, it require a loader update. The thing is, game entrypoints loader are kind of useless in some way, it's because normally when you use an entrypoint, it's because you have an API to call stuff to look into. If you don't have an API, you are most likely to use entr[ mixins.
+And there was a little debate we had a month ago, that had to be brought up into the table again, which was more than two points in QSL. The main issue was, we think game entrypoints loader doesn't make a lot of sense, because it doesn't make it really game-agnostic, or version-agnostic as it needs a quite lengthy injection method, which uses raw ASM. So that's terrible for maintenance and it means that for new versions that change the entrypoint logic, it require a loader update. The thing is, game entrypoints loader are kind of useless in some way, it's because normally when you use an entrypoint, it's because you have an API to call stuff to look into. If you don't have an API, you are most likely to use entry mixins.
 
 So we did a little vote and turns out a lot of people think that it's fine to move them to QSL, so we did that. And just to be clear, the pre-launching point still in the loader, which still can be used for loading if you have a big mod. And the module the entrypoints has been moved to is the most small module of QSL. Basically it doesn't have any dependencies. It only contain the event framework. Little utility for multiple testing servers and well now, the game entrypoints. So it's generally easy to Jar-in-Jar it if needed. That's all for now. There are still a lot of new PRs to go through. Yeah, I think that's it.
 
@@ -213,7 +216,7 @@ The answer is yes. Yes, there is. This is part of- This is going to happen with 
 
 I'll has to check with the coalition. Would you like to make them? Hehe. Uh, it's a lot of work. There are no good automated solutions, or at least the ones that are good are quite expensive. So, yeah, like, we don't really has plans to do that. Nobody has the time to do it. Uh, if somebody does it, great. We can't. **AlexIIL**, I think that one's yours?
 
-**AlexIIL**: Alright, **Southpaw** asks, "If **any** libraries can be auto-downloaded, how does the loader know where to find them?"
+**AlexIIL**: Alright, **Southpaw** asks, "If *any* libraries can be auto-downloaded, how does the loader know where to find them?"
 
 How exactly this will work is going to be put into an RFC, and talked about properly, so that we have a much more specific idea of how this is going to work, and how we're going to keep it secure. Basically, how we're going to download the correct libraries and whatnot. So, it's a bit early to talk about this specifically, but just know that we will be talking about this, or we will be discussing this in more detail when we get to the point where we can actually implement this.
 
@@ -289,9 +292,9 @@ IDK if there's anyone that can answer that one. Well, **Whangdoodle**, the quest
 
 **Gdude**: Alright, we're pretty close to the end of the meeting time. We usually don't run over, which is good because we seem to just get all the questions in anyway. As always, keep an eye out for the podcast. **Southpaw** will has that up whenever they has time to do it. Yeah, the questions about transcription are good, I would like them. but someone has to do it, and it doesn't have to be one of us. So if anyone listening wants to do it, go ahead, drop a DM or a Modmail, we'll take a look. I guess we're pretty much done then. Is there anything anyone on Mumble wants to say before we finish? Well, no news is good news. Alright, thanks for coming everyone. We're going to wrap it up. See you in 2 weeks' time.
 
-**OroArmor**: We're in the `Development` channel for the after-party.
+**OroArmor**: We're in the `dev` channel for the after-party.
 
-**Glitch**: Yes, `Development` channel.
+**Glitch**: Yes, `dev` channel.
 
 **Gdude**: Yes, the voice after-party
 

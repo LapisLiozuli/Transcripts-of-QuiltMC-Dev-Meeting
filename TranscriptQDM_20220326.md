@@ -25,24 +25,30 @@ In this episode, the team discuss progress made on Chasm, Loader, Mappings, and 
 
 =========================
 
-ATTENDEES:
+SPEAKERS:
 
 - **AlexIIL**
-- **KJP12**
 - **CheaterCodes**
+- **Gdude**
+- **LambdAurora**
+- **NoComment**
+- **OroArmor**
+
+ATTENDEES:
+
+- **KJP12**
+- **isXander**
+- **Kroppeb**
+- **Patbox**
 - **Potatoboy**
 - **RTTV**
-- **Gdude**
 - **rypofalem**
-- **isXander**
-- **NoComment**
-- **Grappek**
 - **Southpaw**
-- **Patbox**
-- **OroArmor**
-- **LambdAurora**
-- **Haven King**
 - **Tropheus Jay**
+
+MENTIONS:
+
+- **Haven King**
 
 =========================
 
@@ -70,7 +76,7 @@ Currently trying to fix Gradle again because for some reason the tests are faili
 
 **CheaterCodes**: I tried to take a break from Build Tools, but Gradle haunts me.
 
-**Gdude**: **Grappek**, would you respond to the ping I just sent? Oops, looks like he's busy. In that case, **AlexIIL**, would you like to talk about Loader?
+**Gdude**: **Kroppeb**, would you respond to the ping I just sent? Oops, looks like he's busy. In that case, **AlexIIL**, would you like to talk about Loader?
 
 **AlexIIL**: Sure, so, in the last week, it turns out we had to remove Quilt Loader entrypoints since it's not really possible to convert method reference entrypoints between interfaces, so instead entrypoints will be in QSL. Which was the plan originally, but it means that we won't have Quilt Loader-specific entrypoints, which should reduce a bit of confusion. And that's really about it for Quilt Loader.
 

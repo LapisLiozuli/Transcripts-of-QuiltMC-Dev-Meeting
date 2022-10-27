@@ -48,6 +48,8 @@ ATTENDEES:
 
 - **Exo**
 - **glitch**
+- **Jaai**
+- **Janetyqua**
 - **kb1000**
 - **lenrik**
 - **sciwhiz12**
@@ -55,6 +57,10 @@ ATTENDEES:
 - **Southpaw**
 - **XanderStuff**
 - **Zaeroses**
+
+MENTIONS:
+
+- **Starchild**
 
 =========================
 
@@ -87,7 +93,7 @@ I would like to point out here that right now I'm basically solo-ing CHASM, and 
 
 **Gdude**: That's great if we could see more people working on CHASM honestly. It's going to be a fantastic tool, and it's one that's uniquely applicable to pretty much the entrance Java ecosystem and not just Quilt. So it'd be really nice to get a couple of people working on that if anyone is available and interested. Okay, thank you for that **CheaterCodes**. We'll move onto Community Tools, and that's me of course.
 
-With the road to Beta, I suppose, there were quite a few things to do and I kind of ran out of time. But I did still manage to get quite a few things done. On Discord you'll notice that Cozy has replaced our old tag system. The tag module is also available for anyone to use if they're writing a Kordex bot, which is the framework that I wrote. That's on Github, it's not documented yet, but it's there and there's examples, so if anyone wants to steal that, go ahead. It's on the Maven.
+With the road to Beta, I suppose, there were quite a few things to do and I kind of ran out of time. But I did still manage to get quite a few things done. On Discord you'll notice that Cozy has replaced our old tag system. The tag module is also available for anyone to use if they're writing a Kordex (Kord Extensions) bot, which is the framework that I wrote. That's on Github, it's not documented yet, but it's there and there's examples, so if anyone wants to steal that, go ahead. It's on the Maven.
 
 I've also been working on the `#welcome` channel system. That works. I actually added a role-picker to it, but we're not quite ready to use that yet. But again, that's on the Maven if you want to look at it, and the `#welcome` channel has already been set-up. It's kind of like a data-driven channel system.
 
@@ -292,7 +298,7 @@ does quilt have a more general goal as far as the player experience as a whole g
 
 Alrt, **LambdAurora**, go ahead and take that one. It's OK, click the other one, nobody will notice, hehe.
 
-Jaai#9049 (730700346069876776)
+**Jaai#9049** (730700346069876776)
 
 What is QSL I don't know im new to devloping?
 
@@ -300,25 +306,25 @@ What is QSL I don't know im new to devloping?
 
 **Gdude**: Alright, all good. Yeah, **AlexIIL**, you can take that. You can click the button again as well.
 
-sschr15#4563 (300606625297727489)
+**sschr15#4563** (300606625297727489)
 
 I heard before that Quilt is meant to support multiple games besides Minecraft. Any hint on what kind of other games? (@Lapis Liozuli)
 
 **AlexIIL**: This is something very specific to Quilt Loader. That it's meant to be able to customise Quilt loader in a way that you could use it for other Java-based games. But I don't think the QuiltMC Team is directly doing this in addition. We're still abstracting a lot of Quilt loader stuff away from MC specifically to make this possible. So it's not like something that we provide. But the main hint about what kind of games is other Java-based games.
 
-Jaai#9049 (730700346069876776)
+**Jaai#9049** (730700346069876776)
 
 Would be adding a standard like must download package for devloping stuff? (like Aurora just stated)
 
 **Gdude**: I have a question with some typos in. I think can guess what this means. That's basically what the Build Tools are. IDK what else to say about that. The way you develop mods for Quilt, and ideally you follow the setup in our example mod, using the example mod with our Build Tools. It's kind of hard to answer a question phrased like that, but that's how you write Quilt mods.
 
-Tt brings us to the bottom of the list of questions. We do still have a few minutes if anyone has any further questions, or if there's anything that people want to discuss. That goes for people on Mumble as well of course.
+That brings us to the bottom of the list of questions. We do still have a few minutes if anyone has any further questions, or if there's anything that people want to discuss. That goes for people on Mumble as well of course.
 
 **CheaterCodes**: I want to say a quick thank you to the community for actually helping in the Beta test and helping to give fedback on stuff that's broken.
 
 **Gdude**: Yeah, it's extremely helpful. This one wasn't asked with `/ask` but I'll answer it.
 
-Janetyqua — Today at 12:52 AM
+**Janetyqua** — Today at 12:52 AM
 when quilt will stop support fabric how will the migration work?
 
 **Gdude**: We're not planning on dropping support in the sense that like there's a timeline for it. We're just going to maintain it until it becomes too much for us to maintain, I guess. If it gets to the point where maintaining Fabric support is detrimental to the rest of the Quilt project, then what we'll do is, we'll stop maintaining it, and we'll hand it over to the community to maintain on their own. 

@@ -32,33 +32,38 @@ In this episode, the team make an exciting reveal about something...important. T
 
 =========================
 
-ATTENDEES
+SPEAKERS:
 
+- **AlexIIL**
+- **Earthcomputer**
 - **Emmaffle**
-- **ToffeeMax**
 - **Gdude**
-- **sciwhiz12**
-- **isXander**
-- **Skyrising**
+- **glitch**
+- **Haven King**
+- **i509VCB**
+- **LambdAurora**
+- **SuperCoder79**
+
+ATTENDEES:
+
+- **AManCalledSteve**
+- **diaxazine**
 - **FavoritoHJS**
 - **Haiku**
-- **AlexIIL**
-- **diaxazine**
-- **CheaterCodes**
-- **Earthcomputer**
-- **FavoritoHJS**
-- **Glitch**
-- **Slab**
-- **AManCalledSteve**
-- **Grondag**
-- **Southpaw**
-- **i509VCB**
-- **sschr15**
-- **SuperCoder79**
+- **isXander**
 - **lenrik**
-- **LambdAurora**
-- **Haven King**
+- **sciwhiz12**
+- **Skyrising**
+- **Slab**
+- **Southpaw**
+- **sschr15**
 - **The Nukelore**
+
+MENTIONS:
+
+- **CheaterCodes**
+- **Grondag**
+- **ToffeeMax**
 
 =========================
 
@@ -110,7 +115,7 @@ We've also made it so that Mixins and by extension CHASM when we get it working,
 
 There's also two issues with Quilt Loader, or a discussion I want more people to look at. And that's whether we load mods from subfolders in the mod's folder. That's Quilt Loader issue #38. Um, it's mostly for whether people want to org their mods in a better way. Basically I'd quite like a settlement on that before we release Quilt Loader properly so that we don't have to change that in the future. And possibly, whether we limit some folders by Minecraft versions. I'm less sure about that, but anyway that's issue #38 and #50 basically. I think that's about it for Quilt Loader, basically quite a lot of progress.
 
-**Gdude**: That's great, excellent work there. I guess pushing to non-snapshots is why people were posting screenshots on ATLauncher showing, "Oh, here's how you use Quilt.""  But I don't think they've actually activated that functionality on their launcher yet. But it's good to see that they pretty much already have support. Alright, thanks **AlexIIL**. Uh, **LambdAurora**, would you like to talk on QSL?
+**Gdude**: That's great, excellent work there. I guess pushing to non-snapshots is why people were posting screenshots on ATLauncher showing, "Oh, here's how you use Quilt."  But I don't think they've actually activated that functionality on their launcher yet. But it's good to see that they pretty much already have support. Alright, thanks **AlexIIL**. Uh, **LambdAurora**, would you like to talk on QSL?
 
 **LambdAurora**: Yeah, I just need to think like what to say. We got new PRs ~~in the final player~~. So we have only 3 modules in events. We got the Tags API, but it's straight for 1.18.2. We got the PR fully merged. We also got a PR of QSL ~~done eating~~ into Quilt Loader. We also got a lot of PR where you ~~use tools yet~~. We also got Items in ~~API for the final period. That's also something there.~~ That's kind of it now. Uh, also, we also got a PR for ~~Voice~~ API in the meantime. Yeah, that's it.
 
@@ -127,7 +132,8 @@ Alright, is there anything that anyone there on Mumble wants to talk about today
 **Gdude**: Alright, then let us take a look. So as always, I'm going to read the question out, and if I haven't talked, I'll say my name. I assume the others will do that as well. But I'll read the question out and I'll read out who asked the question. Alright, haha, I guess we'll go through these now. 
 
 **sciwhiz12**: "When is the new site design by `His Eminence` **Gdude** be made the public design of the QuiltMC site?"
-PR's open at the moment. I'll grab a link for you if somebody doesn't beat me to it. There is one in there, anyway. If you go to the QuiltMC.org referral on Github- I'm managing too many thing to get the link for you right now. Oh, there you go, thanks **Emmaffle**. Once this goes through, it'll be up once it's merged basically. I'm not sure what the criteria is because there's not many people around that have the time and ability to review this kind of PR but we'll see how things go at least.
+
+**Gdude**: PR's open at the moment. I'll grab a link for you if somebody doesn't beat me to it. There is one in there, anyway. If you go to the QuiltMC.org referral on Github- I'm managing too many thing to get the link for you right now. Oh, there you go, thanks **Emmaffle**. Once this goes through, it'll be up once it's merged basically. I'm not sure what the criteria is because there's not many people around that have the time and ability to review this kind of PR but we'll see how things go at least.
 
 I can take the next one as well. **sciwhiz12**: "For each bimonthly meeting, is there an agenda of items to be discussed made internally? Have you considered making this public some time before the meeting time, so people can read that and potentially decide to join due to some topic they are interested in being discussed at that time?"
 
